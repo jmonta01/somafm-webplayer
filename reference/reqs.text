@@ -114,6 +114,7 @@ Keep on Coding!
 //-- Parsing PLS
 //---------------------------
 //---------------------------
+https://gist.github.com/Offbeatmammal/1266499
 
 // Make XHR request for the pls file
 if (window.XMLHttpRequest) {
@@ -184,6 +185,9 @@ function loadPLS(whichItem) {
 //-- Angular Audio Player
 //---------------------------
 //---------------------------
+
+http://angular.github.io/peepcode-tunes/public/
+
 
 <div class="playlist">
   <h1>Playlist</h1>
