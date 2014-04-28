@@ -1,0 +1,106 @@
+
+//-- reqs
+
+Here's what we want to do with the HTML5 player. This is based on our OSX app which
+we were planning on mimicking. It's similar to the Android app in functionality.
+
+All Stations - what it says. You can either play or mark stations as favorites from
+here. Stars indicate favorites. Sort by name, popularity (number of current
+listeners), and genre.
+
+Favorite Stations - Same except limited to your favorites. Unstar something to
+remove it from your favorite. (Probably should get confirmation to remove from
+favorites on this page.)
+
+Now Playing - Shows the last 10 or so songs played. Updated from the XML Feed. I'll
+send you separate notes on that. *I THINK* we should make the play/volume control
+visible all the time, not just on this page. When you play a station from the
+channel picker list, it goes to this screen. You can favorite songs, or buy/search
+for them on Amazon from this screen.
+
+Favorite Songs - I think we'll have to make this cookie based. Not sure I want to
+build out a backend database and require logins at this time. We can omit this for a
+first release.
+
+Community - This is basically a portal to a few HTML feeds. The top buttons select
+the pages that would be displayed in an IFRAME possibly, or however you want to do
+it. If this turns out to be too much effort, we can omit this as well, as it's just
+a duplicate of what's on the website.
+
+** I'd be happy to get out the door with just 2 screens: All Stations & Now Playing.
+
+
+
+//-- LOADING XML IN ANGULAR
+
+The Finished Product
+JSON is a native object to AngularJS so working solely with JSON examples is easy. In the real world, however, you’ll probably need to deal with other types of data sources, like XML. Before I get too wordy, let’s start with what you’re really here for…the example:
+
+
+The Explanation
+While the finished product looks like the result of 15 minutes of coding, I have to admit that it took me significantly longer to figure out. If you search the Angular Developer Guide or API for “XML” you’re going to come up woefully absent of useful results. Googling won’t get you much further. As frustration began to set in, I started thinking about what made loading an XML file more difficult than loading a JSON file. The answer is: not much!
+
+Bridging the Language Gap
+Angular likes JSON, and can you blame it? Angular is a JavaScript toolset and JSON is JavaScript Object Notation, a native brethren. XML, on the other hand, is tag-based markup…a foreign language to Angular. What I needed was a way to make Angular understand what XML was trying to communicate.
+
+The key to overcoming any language gap is to have a translator. If there were a way to translate XML to JSON before handing it to the application then I could eliminate the language gap, and the problem.
+
+A quick search for xml converters turned up multiple results. I chose Abdulla Abdurakhmano’s X2JS library because it was the first one I came across, it was lightweight, and it was pretty easy to use.
+
+The code required to perform the translation is short and simple. Provide the library with XML, tell it which method to use, and receive JSON in return:
+
+
+function(xml) {
+ var x2js = new X2JS();
+ var json = x2js.xml_str2json( xml );
+ return json;
+}
+Where to Stick It
+Now that I had a solution to the language gap I needed to decide where to implement it. Angular’s $http service conveniently applies transformation functions for both requests and responses. These functions apply transformations to data when it is sent and received, and they can be overridden.
+
+Using the X2JS conversion code as a transformResponse function it was simple to get the $http service to read in XML and return JSON to the application, effectively creating the translator I needed. The results look something like this:
+
+angular.module('myApp.service',[]).
+    factory('DataSource', ['$http',function($http){
+       return {
+           get: function(callback){
+                $http.get(
+                    'data.xml',
+                    {transformResponse:function(data) {
+                      // convert the data to JSON and provide
+                      // it to the success function below
+                        var x2js = new X2JS();
+                        var json = x2js.xml_str2json( data );
+                        return json;
+                        }
+                    }
+                ).
+                success(function(data, status) {
+                    // send the converted data back
+                    // to the callback function
+                    callback(data);
+                })
+           }
+       }
+    }]);
+
+angular.module('myApp',['myApp.service']);
+
+var AppController = function($scope,DataSource) {
+
+    //This is the callback function
+    setData = function(data) {
+        $scope.dataSet = data;
+    }
+
+    DataSource.get(setData);
+
+}
+That’s really all there is to it! The example above will retrieve an xml file named “data.xml”, convert it to JSON, and assign the results to $scope.dataSet.
+
+The Caveat
+XML comes in all shapes and sizes. Some use attributes, others don’t, and many use a combination of both. Some XML files use a proper header, others are just fragments. Your application will likely require tweaking to get the data into the shape that your application requires. Always read the docs, read the comments, and experiment.
+
+The example at the beginning of this post is a great starting point. Fork it and experiment with different libraries or XML formats.
+
+Keep on Coding!

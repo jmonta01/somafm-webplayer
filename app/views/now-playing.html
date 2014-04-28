@@ -1,0 +1,49 @@
+<div ng-show="selectedStation">
+    <div class="row">
+        <div class="col-xs-2">
+            <img src="{{selectedStation.image}}" class="img-responsive" />
+        </div>
+        <div class="col-xs-10">
+            <h2>{{selectedStation.title}}</h2>
+            <p>{{selectedStation.description}}</p>
+            <p>{{selectedStation.listeners}} listeners</p>
+            <button class="btn btn-link" ng-click="removeStation(selectedStation)">
+                <span class="glyphicon glyphicon-star"></span>
+            </button>
+            <p>Music Director:
+                <a href="mailto:{{selectedStation.djmail}}" target="_blank">{{selectedStation.dj}}</a>
+            </p>
+        </div>
+    </div>
+
+    <table ng-init="getPlayList(selectedStation)" >
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Artist</th>
+            <th>Song</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="song in playList">
+            <td>{{song.length}}</td>
+            <td>{{song.artist}}</td>
+            <td>{{song.title}}</td>
+            <td>
+                <button class="btn btn-link" ng-click="toggleFavSong(song)">
+                    <span class="glyphicon {{song.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
+                </button>
+
+                <button class="btn btn-link">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </button>
+
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+

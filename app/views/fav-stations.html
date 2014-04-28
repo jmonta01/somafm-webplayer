@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-xs-6">
+        <h1>Favorite Stations</h1>
+    </div>
+    <div class="col-xs-6">
+        <ul class="list-inline">
+            <li><button class="btn {{organizeMethod === 'name' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByName()">Name</button></li>
+            <li><button class="btn {{organizeMethod === 'popularity' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByPopularity()">Popularity</button></li>
+            <li><button class="btn {{organizeMethod === 'genre' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByGenre()">Genre</button></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="row" ng-repeat="station in organizedStations">
+
+    <div class="col-xs-1">
+        <img src="{{station.image}}" class="img-responsive" />
+    </div>
+    <div class="col-xs-10">
+        <h2>{{station.title}}</h2>
+        <p>{{station.description}}</p>
+        <p>{{station.listeners}} listeners</p>
+    </div>
+    <div class="col-xs-1">
+        <button class="btn btn-link" ng-click="playStation(station)" ng-show="selectedStation !== station">
+            <span class="glyphicon glyphicon-play-circle"></span>
+        </button>
+        <button class="btn btn-link" ng-click="stopStation(station)" ng-show="selectedStation == station">
+            <span class="glyphicon glyphicon-stop"></span>
+        </button>
+        <button class="btn btn-link" ng-click="removeStation(station)">
+            <span class="glyphicon glyphicon-star"></span>
+        </button>
+    </div>
+
+</div>
