@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('StationService', [ '$http', '$log', '$q',
-        function ($http, $log, $q) {
+    .factory('StationService', [ '$http', '$log', '$q', 'Host',
+        function ($http, $log, $q, Host) {
 
             var cachedData = [];
 
@@ -25,11 +25,11 @@ angular.module('somafmPlayerApp')
             };
 
             var getAllStations = function (callback) {
-                var url = "/data/channels.xml";
+                var url = "/channels.xml";
                 if (cachedData.length > 0) {
                     callback(cachedData);
                 } else {
-                    var p = $http.get(url, {transformResponse: parseStationData});
+                    var p = $http.get(Host + url, {transformResponse: parseStationData});
                     p.then(
                         function (response) {
                             cachedData = response.data;
@@ -53,6 +53,42 @@ angular.module('somafmPlayerApp')
                 });
             };
 
+            var parsePLS = function (data) {
+                var entries = {};
+
+                angular.forEach(data.split("\n"), function (item) {
+                    var entry = item.split("=");
+                    if (entry.length > 1) {
+                        entries[entry[0].toLowerCase()] = entry[1];
+                    }
+                });
+
+                var count = entries['numberofentries'];
+                $log.log(count);
+
+                var urls = [];
+                for (var i=1; i<=count; i++) {
+                    var url = entries['file' + i];
+                    urls.push(url);
+                }
+
+                return urls;
+            };
+
+            var getPls = function (station, callback) {
+                var url = "/[STATION_ID].pls".replace("[STATION_ID]", station._id);
+                var p = $http.get(Host + url, {transformResponse: parsePLS});
+                p.then(
+                    function (response) {
+                        callback(response.data);
+                    },
+                    function (response) {
+                        $log.error("Station PLS couldn't be loaded", response);
+                        callback(response.data);
+                    }
+                );
+            };
+
             var parsePlayListData = function(data) {
 
                 var x2js = new X2JS();
@@ -74,8 +110,8 @@ angular.module('somafmPlayerApp')
             var getStationPlayList = function (station, callback) {
                 $log.log(station._id);
 
-                var url = "/data/[STATION_ID].xml".replace("[STATION_ID]", station._id);
-                var p = $http.get(url, {transformResponse: parsePlayListData});
+                var url = "/[STATION_ID].xml".replace("[STATION_ID]", station._id);
+                var p = $http.get(Host + url, {transformResponse: parsePlayListData});
                 p.then(
                     function (response) {
                         callback(response.data);
@@ -90,6 +126,7 @@ angular.module('somafmPlayerApp')
             return {
                 getAllStations: getAllStations,
                 getStationByID: getStationDetails,
+                getPls: getPls,
                 getPlayList: getStationPlayList
             }
         }

@@ -28,7 +28,6 @@
         <div id="nav">
             <ul class="nav nav-pills">
                 <li ng-repeat="view in availableViews">
-                    <a ng-href="{{view.path}}">{{view.label}}</a>
                     <button class="btn {{ selectedView === view ? 'btn-primary' : 'btn-default'}}" ng-click="changeViewTo(view)">
                         {{view.label}}
                     </button>
@@ -37,6 +36,7 @@
 
         </div>
 
+        <audio controls="controls" src="http://dcstream1.somafm.com:8032/;&amp;type=mp3"></audio>
 
         <div id="playerControls" ng-show="showPlayerControls">
             <p>Player Controls for {{selectedStation.title}}</p>

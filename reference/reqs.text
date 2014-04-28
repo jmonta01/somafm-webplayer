@@ -31,7 +31,11 @@ a duplicate of what's on the website.
 
 
 
+//---------------------------
+//---------------------------
 //-- LOADING XML IN ANGULAR
+//---------------------------
+//---------------------------
 
 The Finished Product
 JSON is a native object to AngularJS so working solely with JSON examples is easy. In the real world, however, you’ll probably need to deal with other types of data sources, like XML. Before I get too wordy, let’s start with what you’re really here for…the example:
@@ -104,3 +108,185 @@ XML comes in all shapes and sizes. Some use attributes, others don’t, and many
 The example at the beginning of this post is a great starting point. Fork it and experiment with different libraries or XML formats.
 
 Keep on Coding!
+
+//---------------------------
+//---------------------------
+//-- Parsing PLS
+//---------------------------
+//---------------------------
+
+// Make XHR request for the pls file
+if (window.XMLHttpRequest) {
+    // code for IE7 +, Firefox, Chrome, Opera, Safari
+    xhr = new XMLHttpRequest();
+} else {
+// code for IE6, IE5
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xhr.open("GET", "http://{url}/{file}.pls", false);
+xhr.send();
+xhrDoc = xhr.responseText;
+
+var pls = {};
+
+// split into lines
+pls.Entries = xhrDoc.split("\n");
+// Entry 0 is [playlist]
+// Entry 1 is NumberOfEntries=n
+pls.Count = pls.Entries[1].split("=")[1];
+// Entry 2,3,4 = File#=,Title#=,Length#=
+// repeat from 1 to NumberOfEntries
+
+pls.Items = [];
+pls.curItem = 0;
+pls.listOk = true;
+for (var i = 0; i < pls.Count; i ++ ) {
+    pls.Items.push( {
+        file: pls.Entries[i + 2].split("=")[1],
+        title: pls.Entries[i + 3].split("=")[1],
+        length: pls.Entries[i + 4].split("=")[1]
+    });
+}
+// get the audio element
+pls.audio = document.getElementById("audio");
+
+// hook onEnded and onError events to jump to next PLS item
+pls.audio.addEventListener("error", audioEvent, false);
+pls.audio.addEventListener("ended", audioEvent, false);
+
+// load audio tag with first source
+pls.listOk = loadPLS(pls.curItem ++ );
+
+function audioEvent(event) {
+// if the listOk is still true (ie not at the end of the list)
+// step to the next item either on ended or error
+    if (pls.listOk) {
+        pls.listOk = loadPLS(pls.curItem ++ );
+    } else {
+// action to indicate end of stream
+    }
+}
+function loadPLS(whichItem) {
+    if (whichItem >= pls.Count) {
+        return false;
+    } else {
+        pls.audio.autoplay = false;
+        pls.audio.src = pls.Items[whichItem].file;
+        var title = document.getElementById("title");
+        title.innerText = pls.Items[whichItem].title + "[" + pls.curItem + "/" + pls.Items[whichItem].file + "]";
+        return true;
+    }
+}
+
+
+//---------------------------
+//---------------------------
+//-- Angular Audio Player
+//---------------------------
+//---------------------------
+
+<div class="playlist">
+  <h1>Playlist</h1>
+  <nav>
+    <button ng-hide="player.playing" ng-click="player.play()" class="control play">Play</button>
+    <button ng-show="player.playing" ng-click="player.pause()" class="control pause" style="display: none;">Pause</button>
+    <button ng-click="player.previous()" class="control prev">Prev</button>
+    <button ng-click="player.next()" class="control next">Next</button>
+  </nav>
+  <ul class="albums">
+    <!-- ngRepeat: album in player.playlist -->
+  </ul>
+</div>
+
+
+
+//--- js
+
+
+
+'use strict';
+(function(window) {
+    var tunesApp = angular.module('tunesApp', []);
+    window.TunesCtrl = function($scope, $http, player) {
+        $scope.player = player;
+        $http.get('albums.json').success(function(data) {
+            $scope.albums = data;
+        });
+    };
+    tunesApp.factory('player', function(audio, $rootScope) {
+        var player,
+            playlist = [],
+            paused = false,
+            current = {
+                album: 0,
+                track: 0
+            };
+        player = {
+            playlist: playlist,
+            current: current,
+            playing: false,
+            play: function(track, album) {
+                if (!playlist.length) return;
+                if (angular.isDefined(track)) current.track = track;
+                if (angular.isDefined(album)) current.album = album;
+                if (!paused) audio.src = playlist[current.album].tracks[current.track].url;
+                audio.play();
+                player.playing = true;
+                paused = false;
+            },
+            pause: function() {
+                if (player.playing) {
+                    audio.pause();
+                    player.playing = false;
+                    paused = true;
+                }
+            },
+            reset: function() {
+                player.pause();
+                current.album = 0;
+                current.track = 0;
+            },
+            next: function() {
+                if (!playlist.length) return;
+                paused = false;
+                if (playlist[current.album].tracks.length > (current.track + 1)) {
+                    current.track++;
+                } else {
+                    current.track = 0;
+                    current.album = (current.album + 1) % playlist.length;
+                }
+                if (player.playing) player.play();
+            },
+            previous: function() {
+                if (!playlist.length) return;
+                paused = false;
+                if (current.track > 0) {
+                    current.track--;
+                } else {
+                    current.album = (current.album - 1 + playlist.length) % playlist.length;
+                    current.track = playlist[current.album].tracks.length - 1;
+                }
+                if (player.playing) player.play();
+            }
+        };
+        playlist.add = function(album) {
+            if (playlist.indexOf(album) != -1) return;
+            playlist.push(album);
+        };
+        playlist.remove = function(album) {
+            var index = playlist.indexOf(album);
+            if (index == current.album) player.reset();
+            playlist.splice(index, 1);
+        };
+        audio.addEventListener('ended', function() {
+            $rootScope.$apply(player.next);
+        }, false);
+        return player;
+    });
+// extract the audio for making the player easier to test
+    tunesApp.factory('audio', function($document) {
+        var audio = $document[0].createElement('audio');
+        return audio;
+    });
+})(window);
+

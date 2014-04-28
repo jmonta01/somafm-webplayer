@@ -7,6 +7,8 @@ angular
         'ngSanitize',
         'ngRoute'
     ])
+//    .constant('Host', 'http://somafm.com')
+    .constant('Host', '/data')
     .config(function ($routeProvider) {
         $routeProvider
             .when('/all-stations', {
