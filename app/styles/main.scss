@@ -1,6 +1,6 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
-@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
@@ -13,83 +13,278 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+
+.btn-link {
+  color: $gray-light;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+    }
+  }
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+.btn-fav {
+  color: $brand-yellow;
+  &:hover,
+  &:focus {
+    color: $brand-yellow;
+  }
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-}
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
+body, html {
+  color: #ffffff;
+  height: 100%;
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
+  .player-container {
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
 
-.container-narrow > hr {
-    margin: 30px 0;
-}
+    background: $gray-darker;
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
+    .viewstack {
+      width: 100%;
+      padding: 0;
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
+      .list-titlebar {
+        width: 100%;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 2px;
 
-.marketing p + h4 {
-    margin-top: 28px;
-}
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background: url("/images/list-titlebar-tile.png") center top repeat;
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
+        div {
+          padding-left: 5px;
+        }
+
+        .btn-group {
+          margin-top: 5px;
+          padding: 0;
+          border: 1px solid $gray-dark;
+        }
+
+        .btn {
+          background: url("/images/titlebar-buttonbar-tile") center top repeat;
+          border: none;
+        }
+
+        btn.active {
+          @include box-shadow(inset 0 3px 5px red);
+        }
+      }
+
+      .list {
+        overflow: auto;
+      }
+
+      .station-card {
+        height: 75px;
+        padding-left: 10px;
+        padding-right: 5px;
+        margin-top: 2px;
+        background: $gray-dark;
+        overflow: hidden;
+
+        .card-image {
+          float: left;
+          margin: 5px;
+          width: 65px;
+          height: 65px;
+        }
+
+        .card-content {
+          float: left;
+          margin-left: 5px;
+          width: 400px;
+
+          h4 {
+            margin: 0;
+            line-height: 1.25em;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 1.1em;
+            color: $gray-light;
+          }
+
+          p.small {
+            color: $gray-lighter;
+          }
+
+        }
+
+        .card-actions {
+          float: right;
+          .btn {
+            display: block;
+            float: left;
+            clear: both;
+            border: none;
+          }
+          .btn-lg {
+            padding: 6px;
+          }
+
+        }
+
+      }
+      .station-card:first-child {
+        margin-top: 0;
+      }
+
+      .no-station-msg {
+        margin-top: 25%;
+      }
+
+      #now-playing {
+
+        .header {
+          height: 135px;
+          padding-top: 10px;
+
+          img {
+            display: block;
+            float: left;
+            width: 120px;
+            height: 120px;
+          }
+
+          .content {
+            float: left;
+            width: 430px;
+            margin-left: 10px;
+
+            h3 {
+              margin-top: 0;
+            }
+
+            p {
+              line-height: 1.25em;
+              margin-bottom: 0;
+            }
+
+            .btn {
+              font-size: 20px;
+
+              padding: 8px 0 6px;
+            }
+
+
+          }
+
+        }
+
+        table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 2px;
+
+          thead {
+            th {
+              height: 40px;
+              padding: 0 5px;
+              margin-bottom: 2px;
+
+              background: url("/images/list-titlebar-tile.png") center top repeat;
+            }
+
+            th:first-child {
+              padding-left: 15px;
+              border-top-left-radius: 6px;
+            }
+
+            th:last-child {
+              padding-right: 15px;
+              border-top-right-radius: 6px;
+            }
+          }
+
+          tbody {
+            td {
+              height: 48px;
+              padding: 7px 5px;
+              vertical-align: top;
+              background: $gray-dark;
+
+              font-size: 14px;
+              line-height: 1.2em;
+
+              .btn {
+                padding: 0;
+              }
+            }
+            td:first-child {
+              padding-left: 15px;
+            }
+            td:last-child {
+              padding-right: 15px;
+            }
+          }
+
+        }
+
+      }
+
+
     }
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
+
+    #footer {
+      width: 100%;
+      bottom: 0;
+      padding: 2px 0;
+      padding-bottom: 10px;
+      background: $gray-darker;
+      z-index: 50;
+
+      .player-container {
+        width: 100%;
+        margin-bottom: 2px;
+        height: auto;
+
+        .player {
+          width: 100%;
+          border-radius: 6px;
+          background: $gray-dark;
+        }
+
+      }
+
+      .mainnav {
+        a {
+          cursor: pointer;
+        }
+        a.selected {
+          cursor: auto;
+        }
+        a:hover {
+          text-decoration: none;
+        }
+      }
     }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+
+
+  }
+
 }
+
+
+

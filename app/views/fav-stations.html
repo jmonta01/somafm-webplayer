@@ -1,37 +1,36 @@
-<div class="row">
-    <div class="col-xs-6">
-        <h1>Favorite Stations</h1>
+<div class="tall-header">
+    <img src="/images/list-header.jpg" />
+</div>
+<div class="list-titlebar">
+    <div class="pull-left">
+        <h4>Favorite Stations</h4>
     </div>
-    <div class="col-xs-6">
-        <ul class="list-inline">
-            <li><button class="btn {{organizeMethod === 'name' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByName()">Name</button></li>
-            <li><button class="btn {{organizeMethod === 'popularity' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByPopularity()">Popularity</button></li>
-            <li><button class="btn {{organizeMethod === 'genre' ? 'btn-primary' : 'btn-default'}}" ng-click="organizeByGenre()">Genre</button></li>
-        </ul>
+    <div class="btn-group btn-group-sm pull-right">
+        <button class="btn btn-primary {{organizeMethod === 'name' ? 'active' : ''}}" ng-click="organizeByName()">Name</button>
+        <button class="btn btn-primary {{organizeMethod === 'popularity' ? 'active' : ''}}" ng-click="organizeByPopularity()">Popularity</button>
+        <button class="btn btn-primary {{organizeMethod === 'genre' ? 'active' : ''}}" ng-click="organizeByGenre()">Genre</button>
     </div>
 </div>
 
+<list>
+    <div class="row station-card" ng-repeat="station in organizedStations">
+        <img class="card-image" src="{{station.image}}" />
+        <div class="card-content">
+            <h4>{{station.title}}</h4>
+            <p>{{station.description}}</p>
+            <p class="small">{{station.listeners}} listeners</p>
+        </div>
+        <div class="card-actions">
+            <button class="btn btn-link btn-lg" ng-click="$root.playStation(station)" ng-show="$root.selectedStation !== station">
+                <span class="glyphicon glyphicon-play-circle"></span>
+            </button>
+            <button class="btn btn-link btn-lg" ng-click="$root.stopStation(station)" ng-show="$root.selectedStation == station">
+                <span class="glyphicon glyphicon-stop"></span>
+            </button>
+            <button class="btn btn-link btn-lg btn-fav" ng-click="removeStation(station)">
+                <span class="glyphicon glyphicon-star"></span>
+            </button>
+        </div>
 
-<div class="row" ng-repeat="station in organizedStations">
-
-    <div class="col-xs-1">
-        <img src="{{station.image}}" class="img-responsive" />
     </div>
-    <div class="col-xs-10">
-        <h2>{{station.title}}</h2>
-        <p>{{station.description}}</p>
-        <p>{{station.listeners}} listeners</p>
-    </div>
-    <div class="col-xs-1">
-        <button class="btn btn-link" ng-click="playStation(station)" ng-show="selectedStation !== station">
-            <span class="glyphicon glyphicon-play-circle"></span>
-        </button>
-        <button class="btn btn-link" ng-click="stopStation(station)" ng-show="selectedStation == station">
-            <span class="glyphicon glyphicon-stop"></span>
-        </button>
-        <button class="btn btn-link" ng-click="removeStation(station)">
-            <span class="glyphicon glyphicon-star"></span>
-        </button>
-    </div>
-
-</div>
+</list>

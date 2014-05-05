@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('AllStationsCtrl', ['$scope', '$log', 'StationService', 'FavoriteStationService',
-        function ($scope, $log, StationService, FavoriteStationService) {
+    .controller('AllStationsCtrl', ['$scope', '$rootScope', '$log', 'StationService', 'FavoriteStationService',
+        function ($scope, $rootScope, $log, StationService, FavoriteStationService) {
 
             $scope.organizedStations = [];
             $scope.stations = [];

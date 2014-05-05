@@ -22,28 +22,19 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-controller="MainCtrl" >
+    <div class="container player-container" ng-controller="MainCtrl" >
+        <viewstack></viewstack>
 
-        <div id="nav">
-            <ul class="nav nav-pills">
-                <li ng-repeat="view in availableViews">
-                    <button class="btn {{ selectedView === view ? 'btn-primary' : 'btn-default'}}" ng-click="changeViewTo(view)">
-                        {{view.label}}
-                    </button>
-                </li>
-            </ul>
+        <div id="footer">
+            <audioplayer station="selectedStation" ></audioplayer>
 
+            <div class="mainnav">
+                <a ng-repeat="view in availableViews" class="{{selectedView == view ? 'selected' : ''}}" ng-click="changeViewTo(view)">
+                    <img src="/images/{{view.btnIcon}}" ng-show="selectedView != view " />
+                    <img src="/images/{{view.selectedBtnIcon}}" ng-show="selectedView == view" />
+                </a>
+            </div>
         </div>
-
-        <audio controls="controls" src="http://dcstream1.somafm.com:8032/;&amp;type=mp3"></audio>
-
-        <div id="playerControls" ng-show="showPlayerControls">
-            <p>Player Controls for {{selectedStation.title}}</p>
-        </div>
-
-
-        <div id="viewstack" ng-view="" ></div>
     </div>
 
 
@@ -91,6 +82,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/xml2json.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/directives/directives.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/services/data-service.js"></script>
     <script src="scripts/services/favorite-service.js"></script>

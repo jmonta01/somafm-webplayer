@@ -29,7 +29,9 @@ angular.module('somafmPlayerApp')
                 if (cachedData.length > 0) {
                     callback(cachedData);
                 } else {
-                    var p = $http.get(Host + url, {transformResponse: parseStationData});
+                    var p = $http.get(Host + url, {
+                        transformResponse: parseStationData
+                    });
                     p.then(
                         function (response) {
                             cachedData = response.data;

@@ -1,18 +1,18 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('MainCtrl', ['$scope', '$location', '$log', 'StationService', 'FavoriteStationService',
-        function ($scope, $location, $log, StationService, FavoriteStationService) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$log', 'StationService', 'FavoriteStationService',
+        function ($scope, $rootScope, $location, $log, StationService, FavoriteStationService) {
 
             $scope.showPlayerControls = false;
             $scope.showGlobalNav = true;
 
 
-            var allStationsView = {label: "All Stations", path: "/all-stations"};
-            var favStationsView = {label: "Favorite Stations", path: "/fav-stations"};
-            var favSongsView = {label: "Favorite Songs", path: "/fav-songs"};
-            var communityView = {label: "Community", path: "/community"};
-            var nowPlayingView = {label: "Now Playing", path: "/now-playing"};
+            var allStationsView = {label: "All Stations", path: "/all-stations", btnIcon: "all-stations-btn.png", selectedBtnIcon: "all-stations-selected-btn.png"};
+            var favStationsView = {label: "Favorite Stations", path: "/fav-stations", btnIcon: "fav-stations-btn.png", selectedBtnIcon: "fav-stations-selected-btn.png"};
+            var favSongsView = {label: "Favorite Songs", path: "/fav-songs", btnIcon: "fav-songs-btn.png", selectedBtnIcon: "fav-songs-selected-btn.png"};
+            var communityView = {label: "Community", path: "/community", btnIcon: "community-btn.png", selectedBtnIcon: "community-selected-btn.png"};
+            var nowPlayingView = {label: "Now Playing", path: "/now-playing", btnIcon: "now-playing-btn.png", selectedBtnIcon: "now-playing-selected-btn.png"};
 
             $scope.availableViews = [
                 allStationsView,
@@ -29,35 +29,33 @@ angular.module('somafmPlayerApp')
                 $location.path(newView.path);
             };
 
-            $scope.selectedStation = null;
 
-            $scope.playStation = function (station) {
+            $rootScope.selectedStation = null;
+
+            $rootScope.playStation = function (station) {
                 StationService.getPls(station, function (data) {
-                    $scope.selectedStation = station;
-                    $scope.selectedStation.urls = data;
+                    $rootScope.selectedStation = station;
+                    $rootScope.selectedStation.urls = data;
                     $scope.showPlayerControls = true;
                     $scope.changeViewTo(nowPlayingView);
-
-
-                })
+                });
             };
 
-            $scope.stopStation = function (station) {
-                $scope.selectedStation = null;
+            $rootScope.stopStation = function (station) {
+                $rootScope.selectedStation = null;
                 $scope.showPlayerControls = false;
             };
 
 
-            $scope.toggleFavStation = function (station) {
+            $rootScope.toggleFavStation = function (station) {
                 station.favorite = !station.favorite;
                 if (station.favorite) {
                     FavoriteStationService.add(station);
                 } else {
                     FavoriteStationService.remove(station);
                 }
-
-                $log.log("toggle fav:", station._id);
             };
+
 
 
         }
