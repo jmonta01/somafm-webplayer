@@ -13,21 +13,31 @@
         </div>
     </div>
 
-    <table datagrid ng-init="getPlayList($root.selectedStation)" >
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Artist</th>
-                <th>Song</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="song in playList">
-                <td>{{song.length}}</td>
-                <td>{{song.artist}}</td>
-                <td>{{song.title}}</td>
-                <td>
+    <div class="list-titlebar">
+        <div class="list-head-1">
+            <h5>Time</h5>
+        </div>
+        <div class="list-head-2">
+            <h5>Artist</h5>
+        </div>
+        <div class="list-head-3">
+            <h5>Song</h5>
+        </div>
+    </div>
+
+    <list ng-init="getPlayList($root.selectedStation)">
+        <div class="row card" ng-repeat="song in playList">
+            <div class="list-col-1">
+                <span>{{ song.date | date : "hh:mm" }}</span>
+            </div>
+            <div class="list-col-2">
+                <span>{{song.artist}}</span>
+            </div>
+            <div class="list-col-3">
+                <span>{{song.title}}</span>
+            </div>
+            <div class="list-col-4">
+                <div class="card-actions">
                     <!--
                     <button class="btn btn-link btn-large" ng-class="{'btn-fav': song.favorite}" ng-click="toggleFavSong(song)">
                         <span class="glyphicon {{song.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
@@ -37,11 +47,10 @@
                         <span class="glyphicon glyphicon-shopping-cart"></span>
                     </button>
 
-                </td>
-            </tr>
-        </tbody>
-
-        </table>
+                </div>
+            </div>
+        </div>
+    </list>
 
 </div>
 <div ng-show="!$root.selectedStation">

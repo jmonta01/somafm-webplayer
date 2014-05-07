@@ -13,7 +13,7 @@
 </div>
 
 <list>
-    <div class="row station-card" ng-repeat="station in organizedStations">
+    <div class="row card" ng-repeat="station in organizedStations">
         <img class="card-image" src="{{station.image}}" />
         <div class="card-content">
             <h4>{{station.title}}</h4>
@@ -22,7 +22,7 @@
         </div>
         <div class="card-actions">
             <button class="btn btn-link btn-lg" ng-click="$root.playStation(station)" ng-show="$root.selectedStation !== station">
-                <span class="glyphicon glyphicon-play-circle"></span>
+                <span class="glyphicon glyphicon-play"></span>
             </button>
             <button class="btn btn-link btn-lg" ng-click="$root.stopStation(station)" ng-show="$root.selectedStation == station">
                 <span class="glyphicon glyphicon-stop"></span>

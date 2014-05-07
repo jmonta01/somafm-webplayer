@@ -62,17 +62,13 @@ body, html {
       .list-titlebar {
         width: 100%;
         height: 40px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin-bottom: 2px;
 
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         background: url("/images/list-titlebar-tile.png") center top repeat;
-
-        div {
-          padding-left: 5px;
-        }
 
         .btn-group {
           margin-top: 5px;
@@ -94,17 +90,17 @@ body, html {
         overflow: auto;
       }
 
-      .station-card {
+      .card {
         height: 75px;
         padding-left: 10px;
-        padding-right: 5px;
+        padding-right: 10px;
         margin-top: 2px;
         background: $gray-dark;
         overflow: hidden;
 
         .card-image {
           float: left;
-          margin: 5px;
+          margin: 5px 5px 5px 0;
           width: 65px;
           height: 65px;
         }
@@ -174,6 +170,7 @@ body, html {
 
             h3 {
               margin-top: 0;
+              margin-bottom: 0;
             }
 
             p {
@@ -184,7 +181,7 @@ body, html {
             .btn {
               font-size: 20px;
 
-              padding: 8px 0 6px;
+              padding: 6px 0 4px;
             }
 
 
@@ -192,78 +189,104 @@ body, html {
 
         }
 
-        table {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0 2px;
+        .list-col-1, .list-head-1 {
+          float: left;
+          min-width: 55px;
+          width: 10%;
+        }
 
-          thead {
-            th {
-              height: 40px;
-              padding: 0 5px;
-              margin-bottom: 2px;
+        .list-col-2, .list-head-2 {
+          float: left;
+          min-width: 220px;
+          width: 40%;
+        }
 
-              background: url("/images/list-titlebar-tile.png") center top repeat;
-            }
+        .list-col-3, .list-head-3 {
+          float: left;
+          min-width: 220px;
+          width: 40%;
+        }
 
-            th:first-child {
-              padding-left: 15px;
-              border-top-left-radius: 6px;
-            }
+        .list-col-4, .list-head-4 {
+          float: left;
+          widows: 10%;
+        }
 
-            th:last-child {
-              padding-right: 15px;
-              border-top-right-radius: 6px;
-            }
+        .card {
+          height: auto;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          color: $gray-light;
+
+          .card-actions{
+            float:right;
           }
-
-          tbody {
-            td {
-              height: 48px;
-              padding: 7px 5px;
-              vertical-align: top;
-              background: $gray-dark;
-
-              font-size: 14px;
-              line-height: 1.2em;
-
-              .btn {
-                padding: 0;
-              }
-            }
-            td:first-child {
-              padding-left: 15px;
-            }
-            td:last-child {
-              padding-right: 15px;
-            }
-          }
-
         }
 
       }
-
-
     }
 
 
     #footer {
-      width: 100%;
+      width: 570px;
       bottom: 0;
       padding: 2px 0;
       padding-bottom: 10px;
       background: $gray-darker;
+      position: absolute;
       z-index: 50;
 
       .player-container {
         width: 100%;
         margin-bottom: 2px;
-        height: auto;
 
         .player {
           width: 100%;
           border-radius: 6px;
           background: $gray-dark;
+
+
+          .btn {
+            font-size: 24px;
+//            line-height: 0;
+//            padding: 0;
+//            margin: 0;
+          }
+
+
+
+          .slider {
+            display: inline-block;
+            width: 250px;
+            margin: 0 10px;
+//            background: red;
+
+
+
+            .slider-track {
+
+              width: 100%;
+              height: 10px;
+              border: 1px solid $gray-darker;
+              background: $gray-dark;
+              cursor: pointer;
+
+
+
+              .slider-value {
+
+                width: 50%;
+                height: 8px;
+                background: $gray-light;
+
+              }
+
+            }
+
+
+
+          }
+
         }
 
       }

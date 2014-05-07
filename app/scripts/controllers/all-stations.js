@@ -35,6 +35,8 @@ angular.module('somafmPlayerApp')
                         station.favorite = favs.indexOf(station._id) != -1;
                     });
                     $scope.organizeByName();
+
+//                    $rootScope.playStation($scope.stations[0]);;
                 });
             };
 

@@ -16,7 +16,7 @@ angular.module('somafmPlayerApp')
                     scope.updateLayout = function () {
                         var footer = angular.element(document.getElementById("footer"));
                         var view = angular.element(document.getElementById("viewstack"));
-                        view.height(angular.element($window).height() - footer.height()) ;
+                        view.height(angular.element($window).height() - footer.height() - 10) ;
                         $rootScope.viewStackHeight = view.height();
                     };
                     angular.element($window).bind( "resize", function () {
@@ -75,35 +75,6 @@ angular.module('somafmPlayerApp')
             }
         }
     ])
-    .directive("datagrid", ["$window", "$timeout", "$rootScope",
-        function ($window, $timeout, $rootScope) {
-            return {
-                restrict :"A",
-                replace: true,
-                scope: {},
-                transclude: true,
-                template:   "<div id='list' class='list' ng-transclude></div>",
-                link: function (scope, element, attr) {
-
-                    scope.updateLayout = function () {
-
-                        var header = angular.element(document.getElementById("header"));
-                        var table = angular.element(element);
-                        table.height(angular.element(element.parent()).height() - header.height()) ;
-                    };
-
-                    angular.element($window).bind( "resize", function () {
-                        scope.updateLayout();
-                    });
-
-                    $timeout(function () {
-                        scope.updateLayout();
-                    }, 300);
-
-                }
-            }
-        }
-    ])
     .directive("audioplayer", [ "$rootScope",
         function ($rootScope) {
             return {
@@ -113,13 +84,13 @@ angular.module('somafmPlayerApp')
                 scope : {
                     station: "="
                 },
-                template:   "<div class='player-container' ng-show='$root.selectedStation'>" +
+                template:   "<div class='player-container'>" +
                                 "<div class='player'>" +
                                     "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
                                     "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
                                     "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
                                     "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-                                    //"<volumebar volumne='audio.volume' change='updateVolume()'></volumebar>" +
+                                    "<volumebar volume='audio.volume' change='updateVolume()'></volumebar>" +
                                     "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
                                 "</div>" +
                             "</div>",
@@ -206,11 +177,28 @@ angular.module('somafmPlayerApp')
             },
             template:   "<div class='slider'>" +
                             "<div class='slider-track'>" +
-                                "<div class='slider-value'></div>" +
+                                "<div id='sliderValue' class='slider-value'></div>" +
                             "</div>" +
                         "</div>",
             link: function (scope, element, attr) {
+                scope.$watch('volume', function (val) {
+                   console.log("volume chnaged")
 
+
+                });
+
+                element.on('click', function (event) {
+                    var clickX = event.screenX;
+                    var orginX = 10;
+
+                    var width = clickX - orginX;
+
+                    var scrubber = angular.element(document.getElementById("sliderValue"));
+
+                    //scrubber.width(width + "%");
+
+                    console.log(width);
+                });
             }
 
         }
