@@ -90,7 +90,7 @@ angular.module('somafmPlayerApp')
                                     "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
                                     "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
                                     "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-                                    "<volumebar volume='audio.volume' change='updateVolume()'></volumebar>" +
+                                    "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
                                     "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
                                 "</div>" +
                             "</div>",
@@ -99,6 +99,8 @@ angular.module('somafmPlayerApp')
                     scope.audio = new Audio();
 
                     scope.playing = false;
+
+                    scope.volume = scope.audio.volume;
 
                     scope.$watch("station", function (val) {
 
@@ -143,26 +145,40 @@ angular.module('somafmPlayerApp')
                         if (scope.audio.volume > 0) {
                             scope.audio.volume -= .1;
                         }
+                        scope.volume = scope.audio.volume;
                     };
 
                     scope.volumeUp = function () {
                         if (scope.audio.volume < 1) {
                             scope.audio.volume += .1;
                         }
+                        scope.volume = scope.audio.volume;
                     };
 
                     scope.maxVolume = function () {
+                        if (scope.audio.muted) {
+                            scope.audio.muted = false;
+                        }
                         scope.audio.volume = 1;
+                        scope.volume = scope.audio.volume;
+                    };
+
+                    scope.updateVolume = function (val) {
+                        scope.audio.volume = val;
                     };
 
                     scope.toggleMute = function () {
                         scope.audio.muted = !scope.audio.muted;
+                        scope.volume = scope.audio.muted ? 0 : scope.audio.volume;
                     };
 
                     scope.isMuted = function () {
                         return scope.audio.muted;
                     }
 
+                    angular.element(scope.audio).on("loadedmetadata", function (event) {
+                        console.log(event);
+                    })
                 }
             }
         }
@@ -172,8 +188,8 @@ angular.module('somafmPlayerApp')
             restrict :"E",
             replace: true,
             scope: {
-                volume: "=",
-                change: "@"
+                value: "=",
+                valueChange: "&"
             },
             template:   "<div class='slider'>" +
                             "<div class='slider-track'>" +
@@ -181,24 +197,59 @@ angular.module('somafmPlayerApp')
                             "</div>" +
                         "</div>",
             link: function (scope, element, attr) {
-                scope.$watch('volume', function (val) {
-                   console.log("volume chnaged")
+                var width,
+                    offset,
+                    scrubber = angular.element(document.getElementById('sliderValue')),
+                    dragging = false;
 
-
+                scope.$watch('value', function (val) {
+                    scrubber.width(val / attr.max * 100 + "%");
                 });
 
-                element.on('click', function (event) {
-                    var clickX = event.screenX;
-                    var orginX = 10;
-
-                    var width = clickX - orginX;
-
-                    var scrubber = angular.element(document.getElementById("sliderValue"));
-
-                    //scrubber.width(width + "%");
-
-                    console.log(width);
+                element.on('mousedown', function (event) {
+                    dragging = true;
+                    if (!width) {
+                        width = angular.element(element).width();
+                    }
+                    if (!offset) {
+                        offset = angular.element(element).offset().left;
+                    }
                 });
+
+                element.on('mouseup', function (event) {
+                    dragging = false;
+                    _calcScrubberWidth(event.pageX);
+                });
+
+                element.on('mousemove', function (event) {
+                    if (dragging) {
+                        _calcScrubberWidth(event.pageX);
+                    }
+                });
+
+                function _calcScrubberWidth (x) {
+                    var dif = x - offset;
+
+                    if (dif < 0) {
+                        dif = attr.min;
+                        scrubber.width( "0%");
+                        scope.value = attr.min;
+                    }
+                    else if (dif > width) {
+                        dif = attr.max;
+                        scrubber.width( "100%");
+                        scope.value = attr.max;
+                    }
+                    else {
+                        var per = dif / width;
+                        scrubber.width(per * 100 + "%");
+                        scope.value = per * attr.max;
+                    }
+
+                    scope.valueChange({val: scope.value});
+
+                    scope.$apply();
+                }
             }
 
         }

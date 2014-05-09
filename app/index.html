@@ -26,7 +26,7 @@
         <viewstack></viewstack>
 
         <div id="footer">
-            <audioplayer station="selectedStation" ng-show='!$root.selectedStation' ></audioplayer>
+            <audioplayer station="selectedStation" ng-show='$root.selectedStation' ></audioplayer>
 
             <div class="mainnav">
                 <a ng-repeat="view in availableViews" class="{{selectedView == view ? 'selected' : ''}}" ng-click="changeViewTo(view)">
