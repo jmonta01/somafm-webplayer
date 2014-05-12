@@ -28,6 +28,7 @@ angular.module('somafmPlayerApp')
                 if (station === null) {
                     $interval.cancel(songsP);
                     songsP = undefined;
+                    $scope.playList = [];
                 } else {
                     songsP = $interval(function () {
                         $scope.getPlayList(station);

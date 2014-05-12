@@ -24,6 +24,15 @@ angular.module('somafmPlayerApp')
 
             $scope.selectedView = $scope.availableViews[0];
 
+            $scope.$on('$routeChangeSuccess', function() {
+                angular.forEach($scope.availableViews, function (view) {
+                    if (view.path === $location.path()) {
+                        $scope.selectedView = view;
+                    }
+                });
+            });
+
+
             $scope.changeViewTo = function (newView) {
                 $scope.selectedView = newView;
                 $location.path(newView.path);

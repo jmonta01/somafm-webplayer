@@ -1,32 +1,76 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('FavStationsCtrl', ['$scope', '$log', 'StationService', 'FavoriteStationService',
-        function ($scope, $log, StationService, FavoriteStationService) {
+    .controller('FavStationsCtrl', ['$scope', '$log', '$filter', 'StationService', 'FavoriteStationService',
+        function ($scope, $log, $filter, StationService, FavoriteStationService) {
 
             $scope.organizedStations = [];
+            $scope.organizedGenres = [];
             $scope.stations = [];
 
+            $scope.defaultOrganizeMethod = 'popularity';
+            var lastOrganizeMethod = '';
             $scope.organizeMethod = '';
+            $scope.organizeASC = true;
 
-            $scope.organizeByName = function () {
-                $log.log("organizeByName");
-                $scope.organizeMethod = 'name';
-                $scope.organizedStations = $scope.stations;
+            function organizeByName (src, asc) {
+                $scope.organizedStations = $filter('orderBy')(src, "title", asc);
+            }
+
+            function organizeByPopularity (src, asc) {
+                $scope.organizedStations = $filter('orderBy')(src, function (item) {
+                    return parseInt(item.listeners);
+                }, asc);
+            }
+
+            function organizeByGenre (src, asc) {
+                var genres = [];
+                var stations = {};
+                angular.forEach(src, function (station) {
+                    angular.forEach(station.genre.split("|"), function (genre) {
+
+                        if (genres.indexOf(genre) == -1) {
+                            genres.push(genre);
+                        }
+
+                        if (angular.isUndefined(stations[genre])) {
+                            stations[genre] = [];
+                        }
+                        stations[genre].push(station);
+
+                    });
+                });
+                $scope.organizedGenres = asc ? genres.sort() : genres.sort().reverse();
+
+
+                for (var key in stations) {
+                    if (stations.hasOwnProperty(key)) {
+                        stations[key] = $filter('orderBy')(stations[key], "title", false);
+                    }
+                }
+                $scope.organizedStations = stations;
+            }
+
+            $scope.sortBy = function (type) {
+                lastOrganizeMethod = $scope.organizeMethod;
+                switch (type) {
+                    case 'name':
+                        $scope.organizeMethod = 'name';
+                        $scope.organizeASC = lastOrganizeMethod !== type ? false : !$scope.organizeASC;
+                        organizeByName($scope.stations, $scope.organizeASC);
+                        break;
+                    case 'popularity':
+                        $scope.organizeMethod = 'popularity';
+                        $scope.organizeASC = lastOrganizeMethod !== type ? true : !$scope.organizeASC;
+                        organizeByPopularity($scope.stations, $scope.organizeASC);
+                        break;
+                    case 'genre':
+                        $scope.organizeMethod = 'genre';
+                        $scope.organizeASC = lastOrganizeMethod !== type ? true : !$scope.organizeASC;
+                        organizeByGenre($scope.stations, $scope.organizeASC);
+                        break;
+                }
             };
-
-            $scope.organizeByPopularity = function () {
-                $log.log("organizeByPopularity");
-                $scope.organizeMethod = 'popularity';
-                $scope.organizedStations = $scope.stations;
-            };
-
-            $scope.organizeByGenre = function () {
-                $log.log("organizeByGenre");
-                $scope.organizeMethod = 'genre';
-                $scope.organizedStations = $scope.stations;
-            };
-
 
             $scope.addStation = function (station) {
                 FavoriteStationService.add(station);
@@ -48,10 +92,11 @@ angular.module('somafmPlayerApp')
                 angular.forEach(stationIds, function (id) {
                     StationService.getStationByID(id, function (station) {
                         $scope.stations.push(station);
+                        $scope.sortBy($scope.defaultOrganizeMethod);
                     });
+
                 });
 
-                $scope.organizeByName();
             };
 
             $scope.getStations();
