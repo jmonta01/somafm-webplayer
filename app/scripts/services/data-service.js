@@ -4,7 +4,8 @@ angular.module('somafmPlayerApp')
     .factory('StationService', [ '$http', '$log', '$q', 'Host',
         function ($http, $log, $q, Host) {
 
-            var cachedData = [];
+            var parseData = true,
+                cachedData = [];
 
             var parseStationData = function(data) {
 
@@ -29,9 +30,11 @@ angular.module('somafmPlayerApp')
                 if (cachedData.length > 0) {
                     callback(cachedData);
                 } else {
-                    var p = $http.get(Host + url, {
-                        transformResponse: parseStationData
-                    });
+                    var opts = {};
+                    if (parseData) {
+                        opts['transformResponse'] = parseStationData;
+                    }
+                    var p = $http.get(Host + url, opts);
                     p.then(
                         function (response) {
                             cachedData = response.data;
@@ -79,7 +82,12 @@ angular.module('somafmPlayerApp')
 
             var getPls = function (station, callback) {
                 var url = "/[STATION_ID].pls".replace("[STATION_ID]", station._id);
-                var p = $http.get(Host + url, {transformResponse: parsePLS});
+                var opts = {};
+                if (parseData) {
+                    opts['transformResponse'] = parsePLS;
+                }
+
+                var p = $http.get(Host + url, opts);
                 p.then(
                     function (response) {
                         callback(response.data);
@@ -110,10 +118,12 @@ angular.module('somafmPlayerApp')
             };
 
             var getStationPlayList = function (station, callback) {
-                $log.log(station._id);
-
-                var url = "/[STATION_ID].xml".replace("[STATION_ID]", station._id);
-                var p = $http.get(Host + url, {transformResponse: parsePlayListData});
+               var url = "/[STATION_ID].xml".replace("[STATION_ID]", station._id);
+                var opts = {};
+                if (parseData) {
+                    opts['transformResponse'] = parsePlayListData;
+                }
+                var p = $http.get(Host + url, opts);
                 p.then(
                     function (response) {
                         callback(response.data);
@@ -129,7 +139,10 @@ angular.module('somafmPlayerApp')
                 getAllStations: getAllStations,
                 getStationByID: getStationDetails,
                 getPls: getPls,
-                getPlayList: getStationPlayList
+                getPlayList: getStationPlayList,
+                parseXML: function (val) {
+                    parseData = val;
+                }
             }
         }
     ]);

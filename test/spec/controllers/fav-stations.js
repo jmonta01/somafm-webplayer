@@ -17,7 +17,8 @@ describe('Controller: FavStationsCtrl', function () {
     }));
 
     it('should have a list of favorite stations', function () {
-        expect(scope.favStations).toBeDefined();
+        expect(scope.stations).toBeDefined();
+        expect(scope.organizedStations).toBeDefined();
     });
 
     it('should be able to load fav stations from cookie', function () {

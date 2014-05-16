@@ -20,17 +20,17 @@ describe('Controller: AllStationsCtrl', function () {
         expect(scope.stations).toBeDefined();
     });
 
-    it('stations should be able to be organized by name', function () {
-        expect(scope.organizeByName).toBeDefined();
-    });
+//    it('stations should be able to be organized by name', function () {
+//        expect(scope.organizeByName).toBeDefined();
+//    });
 
-    it('stations should be able to be organized by popularity', function () {
-        expect(scope.organizeByName).toBeDefined();
-    });
-
-    it('stations should be able to be organized by genre', function () {
-        expect(scope.organizeByGenre).toBeDefined();
-    });
+//    it('stations should be able to be organized by popularity', function () {
+//        expect(scope.organizeByName).toBeDefined();
+//    });
+//
+//    it('stations should be able to be organized by genre', function () {
+//        expect(scope.organizeByGenre).toBeDefined();
+//    });
 
 
     it('should be able to load stations from server', function () {

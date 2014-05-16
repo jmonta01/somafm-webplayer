@@ -82,7 +82,7 @@ body, html {
         }
 
         btn.active {
-          @include box-shadow(inset 0 3px 5px red);
+//          @include box-shadow(inset 0 3px 5px red);
         }
       }
 

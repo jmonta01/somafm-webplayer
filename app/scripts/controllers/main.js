@@ -7,7 +7,6 @@ angular.module('somafmPlayerApp')
             $scope.showPlayerControls = false;
             $scope.showGlobalNav = true;
 
-
             var allStationsView = {label: "All Stations", path: "/all-stations", btnIcon: "all-stations-btn.png", selectedBtnIcon: "all-stations-selected-btn.png"};
             var favStationsView = {label: "Favorite Stations", path: "/fav-stations", btnIcon: "fav-stations-btn.png", selectedBtnIcon: "fav-stations-selected-btn.png"};
             var favSongsView = {label: "Favorite Songs", path: "/fav-songs", btnIcon: "fav-songs-btn.png", selectedBtnIcon: "fav-songs-selected-btn.png"};
@@ -32,12 +31,10 @@ angular.module('somafmPlayerApp')
                 });
             });
 
-
             $scope.changeViewTo = function (newView) {
                 $scope.selectedView = newView;
                 $location.path(newView.path);
             };
-
 
             $rootScope.selectedStation = null;
 
@@ -55,7 +52,6 @@ angular.module('somafmPlayerApp')
                 $scope.showPlayerControls = false;
             };
 
-
             $rootScope.toggleFavStation = function (station) {
                 station.favorite = !station.favorite;
                 if (station.favorite) {
@@ -64,8 +60,6 @@ angular.module('somafmPlayerApp')
                     FavoriteStationService.remove(station);
                 }
             };
-
-
 
         }
     ]);
