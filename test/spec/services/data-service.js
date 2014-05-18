@@ -4,7 +4,7 @@ describe('Service: StationService', function () {
 
     var service,
         httpBackend,
-        selectedStation = "groovesalad",
+        selectedStationID = "groovesalad",
         $channelsJSON,
         $channelJSON,
         $plsJSON,
@@ -35,23 +35,21 @@ describe('Service: StationService', function () {
 
     it('should be able to load all stations', function () {
         expect(service.getAllStations).toBeDefined();
-
         httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
-
-        service.getAllStations(function (data) {
-            expect(data).toEqual($channelsJSON);
-        });
+        service.getAllStations()
+            .then(function (data) {
+                expect(data).toEqual($channelsJSON);
+            });
         httpBackend.flush();
     });
 
     it('should be able to load a station by id', function () {
         expect(service.getStationByID).toBeDefined();
-
         httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
-
-        service.getStationByID(selectedStation, function (data) {
-            expect(data).toEqual($channelsJSON);
-        });
+        service.getStationByID(selectedStationID)
+            .then(function (data) {
+                expect(data).toEqual($channelsJSON);
+            });
         httpBackend.flush();
     });
 
@@ -61,14 +59,16 @@ describe('Service: StationService', function () {
         httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
         httpBackend.expectGET("/data/groovesalad.pls").respond($plsJSON);
 
-        service.getAllStations(function (data) {
-            var station = data.query[0];
-            if (station) {
-                service.getPls(station, function (data) {
-                    expect(data).toEqual($plsJSON);
-                });
-            }
-        });
+        service.getAllStations()
+            .then(function (data) {
+                var station = data.query[0];
+                if (station) {
+                    service.getPls(station)
+                        .then(function (data) {
+                            expect(data).toEqual($plsJSON);
+                        });
+                }
+            });
         httpBackend.flush();
 
     });
@@ -79,14 +79,16 @@ describe('Service: StationService', function () {
         httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
         httpBackend.expectGET("/data/groovesalad.xml").respond($stationPlayListJSON);
 
-        service.getAllStations(function (data) {
-            var station = data.query[0];
-            if (station) {
-                service.getPlayList(station, function (data) {
-                    expect(data.query).toEqual($stationPlayListJSON.query);
-                });
-            }
-        });
+        service.getAllStations()
+            .then(function (data) {
+                var station = data.query[0];
+                if (station) {
+                    service.getPlayList(station)
+                        .then(function (data) {
+                            expect(data.query).toEqual($stationPlayListJSON.query);
+                        });
+                }
+            });
         httpBackend.flush();
     });
 

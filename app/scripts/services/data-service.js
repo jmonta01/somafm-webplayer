@@ -1,138 +1,84 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('StationService', [ '$http', '$log', '$q', 'Host',
-        function ($http, $log, $q, Host) {
+    .factory('StationService', [ '$http', '$log', '$q', 'Host', 'StationTransform', 'PlsTransform', 'PlaylistTransform',
+        function ($http, $log, $q, Host, StationTransform, PlsTransform, PlaylistTransform) {
 
             var parseData = true,
                 cachedData = [];
 
-            var parseStationData = function(data) {
-
-                var x2js = new X2JS();
-                var json = x2js.xml_str2json( data );
-
-                var parsedChannels = [],
-                    channels = json.channels.channel;
-
-                angular.forEach(channels, function (channel) {
-                    var parsedChannel = {};
-                    angular.forEach(channel, function (prop, key) {
-                        parsedChannel[key] = prop.toString();
-                    });
-                    parsedChannels.push(parsedChannel);
-                });
-                return parsedChannels;
-            };
-
-            var getAllStations = function (callback) {
+            var getAllStations = function () {
                 var url = "/channels.xml";
+                var deferred = $q.defer();
+
                 if (cachedData.length > 0) {
-                    callback(cachedData);
+                    deferred.resolve(cachedData);
                 } else {
                     var opts = {};
                     if (parseData) {
-                        opts['transformResponse'] = parseStationData;
+                        opts['transformResponse'] = StationTransform;
                     }
-                    var p = $http.get(Host + url, opts);
-                    p.then(
-                        function (response) {
-                            cachedData = response.data;
-                            callback(cachedData);
-                        },
-                        function (response) {
+                    $http.get(Host + url, opts).
+                        success(function (response) {
+                            cachedData = response;
+                            deferred.resolve(cachedData);
+                        }).
+                        error(function (response) {
                             $log.error("Station list couldn't be loaded", response);
-                            callback(cachedData);
-                        }
-                    );
+                            deferred.resolve(cachedData);
+                        });
                 }
+                return deferred.promise;
             };
 
-            var getStationDetails = function (id, callback) {
-                getAllStations(function (stations) {
-                    angular.forEach(stations, function (station) {
-                        if (station._id === id) {
-                            callback(station);
-                        }
+            var getStationDetails = function (id) {
+                var deferred = $q.defer();
+                getAllStations()
+                    .then(function (stations) {
+                        angular.forEach(stations, function (station) {
+                            if (station._id === id) {
+                                deferred.resolve(station);
+                            }
+                        });
                     });
-                });
+                return deferred.promise;
             };
 
-            var parsePLS = function (data) {
-                var entries = {};
-
-                angular.forEach(data.split("\n"), function (item) {
-                    var entry = item.split("=");
-                    if (entry.length > 1) {
-                        entries[entry[0].toLowerCase()] = entry[1];
-                    }
-                });
-
-                var count = entries['numberofentries'];
-                $log.log(count);
-
-                var urls = [];
-                for (var i=1; i<=count; i++) {
-                    var url = entries['file' + i];
-                    urls.push(url);
-                }
-
-                return urls;
-            };
-
-            var getPls = function (station, callback) {
+            var getPls = function (station) {
                 var url = "/[STATION_ID].pls".replace("[STATION_ID]", station._id);
+                var deferred = $q.defer();
                 var opts = {};
                 if (parseData) {
-                    opts['transformResponse'] = parsePLS;
+                    opts['transformResponse'] = PlsTransform;
                 }
 
-                var p = $http.get(Host + url, opts);
-                p.then(
-                    function (response) {
-                        callback(response.data);
-                    },
-                    function (response) {
+                $http.get(Host + url, opts)
+                    .success(function(response) {
+                        deferred.resolve(response);
+                    })
+                    .error(function (response) {
                         $log.error("Station PLS couldn't be loaded", response);
-                        callback(response.data);
-                    }
-                );
-            };
-
-            var parsePlayListData = function(data) {
-
-                var x2js = new X2JS();
-                var json = x2js.xml_str2json( data );
-
-                var parsedSongs = [],
-                    songs = json.songs.song;
-
-                angular.forEach(songs, function (song) {
-                    var parsedSong = {};
-                    angular.forEach(song, function (prop, key) {
-                        parsedSong[key] = prop.toString();
+                        deferred.resolve(response);
                     });
-                    parsedSongs.push(parsedSong);
-                });
-                return parsedSongs;
+                return deferred.promise;
             };
 
-            var getStationPlayList = function (station, callback) {
+            var getStationPlayList = function (station) {
                var url = "/[STATION_ID].xml".replace("[STATION_ID]", station._id);
+                var deferred = $q.defer();
                 var opts = {};
                 if (parseData) {
-                    opts['transformResponse'] = parsePlayListData;
+                    opts['transformResponse'] = PlaylistTransform;
                 }
-                var p = $http.get(Host + url, opts);
-                p.then(
-                    function (response) {
-                        callback(response.data);
-                    },
-                    function (response) {
+                $http.get(Host + url, opts)
+                    .success(function (response) {
+                        deferred.resolve(response);
+                    })
+                    .error(function(response) {
                         $log.error("Station list couldn't be loaded", response);
-                        callback(response.data);
-                    }
-                );
+                        deferred.resolve(response);
+                    });
+                return deferred.promise;
             };
 
             return {

@@ -39,12 +39,13 @@ angular.module('somafmPlayerApp')
             $rootScope.selectedStation = null;
 
             $rootScope.playStation = function (station) {
-                StationService.getPls(station, function (data) {
-                    $rootScope.selectedStation = station;
-                    $rootScope.selectedStation.urls = data;
-                    $scope.showPlayerControls = true;
-                    $scope.changeViewTo(nowPlayingView);
-                });
+                StationService.getPls(station)
+                    .then(function (data) {
+                        $rootScope.selectedStation = station;
+                        $rootScope.selectedStation.urls = data;
+                        $scope.showPlayerControls = true;
+                        $scope.changeViewTo(nowPlayingView);
+                    });
             };
 
             $rootScope.stopStation = function (station) {

@@ -74,14 +74,15 @@ angular.module('somafmPlayerApp')
             };
 
             $scope.loadStations = function () {
-                StationService.getAllStations(function (data) {
-                    $scope.stations = data;
-                    var favs = FavoriteStationService.get();
-                    angular.forEach($scope.stations, function (station) {
-                        station.favorite = favs.indexOf(station._id) != -1;
+                StationService.getAllStations()
+                    .then(function (data) {
+                        $scope.stations = data;
+                        var favs = FavoriteStationService.get();
+                        angular.forEach($scope.stations, function (station) {
+                            station.favorite = favs.indexOf(station._id) != -1;
+                        });
+                        $scope.sortBy($scope.defaultOrganizeMethod);
                     });
-                    $scope.sortBy($scope.defaultOrganizeMethod);
-                });
             };
 
             $scope.loadStations();

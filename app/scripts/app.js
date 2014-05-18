@@ -5,10 +5,14 @@ angular
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute'
+        'ngRoute',
+        'LocalStorageModule'
     ])
 //    .constant('Host', 'http://somafm.com')
     .constant('Host', '/data')
+    .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+        localStorageServiceProvider.setPrefix('somafm');
+    }])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/all-stations', {

@@ -1,14 +1,17 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('FavoriteStationService', [ '$cookieStore', '$log',
-        function ($cookieStore, $log) {
+    .factory('FavoriteStationService', [ '$cookieStore', '$log', 'localStorageService',
+        function ($cookieStore, $log, localStorageService) {
 
             var key = "somafm-fav-stations";
 
+            var lsFn = localStorageService.isSupported ?
+                        localStorageService : localStorageService.cookie;
+
             var getStations = function () {
-                var favs = $cookieStore.get(key) || '';
-                return favs.split(",");
+                var favs = lsFn.get(key) || '';
+                return favs === '' ? [] : favs.split(",");
             };
 
             var addStation = function (station) {
@@ -16,7 +19,7 @@ angular.module('somafmPlayerApp')
                 if (favs.indexOf(station._id) == -1) {
                     favs.push(station._id);
                 }
-                $cookieStore.put(key, favs.join(","));
+                lsFn.add(key, favs.join(","));
             };
 
             var removeStation = function (station) {
@@ -24,23 +27,32 @@ angular.module('somafmPlayerApp')
                 if (favs.indexOf(station._id) > -1) {
                     favs.splice(favs.indexOf(station._id), 1);
                 }
-                $cookieStore.put(key, favs.join(","));
+                lsFn.add(key, favs.join(","));
+            };
+
+            var clearStations = function () {
+                lsFn.add(key, "");
             };
 
             return {
                 get: getStations,
                 add: addStation,
-                remove: removeStation
+                remove: removeStation,
+                clear: clearStations
             }
         }
     ])
-    .factory('FavoriteSongService', [ '$cookieStore', '$log',
-        function ($cookieStore, $log) {
+    .factory('FavoriteSongService', [ '$cookieStore', '$log', 'localStorageService',
+        function ($cookieStore, $log, localStorageService) {
 
             var key = "somafm-fav-songs";
 
+            var lsFn = localStorageService.isSupported ?
+                        localStorageService : localStorageService.cookie;
+
+
             var getSongs = function () {
-                var favs = $cookieStore.get(key) || '';
+                var favs = lsFn.get(key) || '';
                 return favs.split(",");
             };
 
@@ -49,7 +61,7 @@ angular.module('somafmPlayerApp')
                 if (favs.indexOf(song._id) == -1) {
                     favs.push(song._id);
                 }
-                $cookieStore.put(key, favs.join(","));
+                lsFn.add(key, favs.join(","));
             };
 
             var removeSong = function (song) {
@@ -57,13 +69,18 @@ angular.module('somafmPlayerApp')
                 if (favs.indexOf(song._id) > -1) {
                     favs.splice(favs.indexOf(song._id), 1);
                 }
-                $cookieStore.put(key, favs.join(","));
+                lsFn.add(key, favs.join(","));
+            };
+
+            var clearSongs = function () {
+                lsFn.add(key, "");
             };
 
             return {
                 get: getSongs,
                 add: addSong,
-                remove: removeSong
+                remove: removeSong,
+                clear: clearSongs
             }
         }
     ]);

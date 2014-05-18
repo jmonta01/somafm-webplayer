@@ -2,81 +2,123 @@
 
 describe('Controller: MainCtrl', function () {
 
-    // load the controller's module
-    beforeEach(module('somafmPlayerApp'));
-
     var MainCtrl,
         scope,
         location,
-        mockStation;
+        service,
+        httpBackend,
+        selectedStationID = "groovesalad",
+        $channelsJSON,
+        $channelJSON,
+        $plsJSON,
+        $stationPlayListJSON;
 
-    // Initialize the controller and a mock scope
-    beforeEach(inject(function ($controller, $rootScope) {
-        scope = $rootScope.$new();
-        MainCtrl = $controller('MainCtrl', {
-            $scope: scope
+
+    // load the controller's module
+    beforeEach(function () {
+        module('somafmPlayerApp', 'mockData');
+
+        inject(function ($controller, $rootScope, StationService, $httpBackend, channelsJSON, channelJSON, plsJSON, stationPlayListJSON) {
+            scope = $rootScope.$new();
+            MainCtrl = $controller('MainCtrl', {
+                $scope: scope
+            });
+
+            service = StationService;
+            service.parseXML(false);
+            httpBackend = $httpBackend;
+            $channelsJSON = channelsJSON;
+            $channelJSON = channelJSON;
+            $plsJSON = plsJSON;
+            $stationPlayListJSON = stationPlayListJSON;
+
         });
-        mockStation = {
-            _id: "groovesalad",
-            description: "A nicely chilled plate ...empo beats and grooves.",
-            dj: "Rusty Hodge",
-            djmail: "rusty@somafm.com",
-            fastpls: "http://somafm.com/groov...m.com/groovesalad64.pls",
-            genre: "ambient|electronica",
-            highestpls: "http://somafm.com/groovesalad130.pls",
-            image: "http://somafm.com/img/groovesalad120.png",
-            largeimage: "http://somafm.com/logos/256/groovesalad256.png",
-            lastPlaying: "United Future Organization - The Sixth Sense",
-            listeners: "1836",
-            slowpls: "http://somafm.com/groov...m.com/groovesalad32.pls",
-            title: "Groove Salad",
-            twitter: "groovesalad",
-            updated: "1396147984",
-            xlimage: "http://somafm.com/logos/512/groovesalad512.png",
-            favorite: false
-        };
-    }));
+        scope.$apply();
+    });
+
+    // make sure no expectations were missed in your tests.
+    // (e.g. expectGET or expectPOST)
+    afterEach(function() {
+        httpBackend.verifyNoOutstandingExpectation();
+        httpBackend.verifyNoOutstandingRequest();
+    });
+
 
     it('should have a list of available views with at least one view', function () {
         expect(scope.availableViews).toBeDefined();
         expect(scope.availableViews.length).toBeGreaterThan(0);
     });
 
-    it('should have a method for switching views', function () {
-        var newView = scope.availableViews[0];
-        scope.changeViewTo(newView);
-        expect(scope.selectedView).toBe(newView);
-    });
-
-    it('should be able to toggle the fav state of a station', function () {
-        expect(mockStation.favorite).toBe(false);
-        scope.toggleFavStation(mockStation);
-        expect(mockStation.favorite).toBe(true);
-    });
-
-    it('should be able to start playing a station', function () {
-        expect(scope.selectedStation).toBe(null);
-        scope.playStation(mockStation);
-//        need to test asynchronously
-//        expect(scope.selectedStation).toBe(mockStation);
-    });
-//
-//    it('should be able to stop playing a station', function () {
-//        expect(scope.stopStation).toBeDefined();
-//    });
-
     it('should have a toggle for showing the global nav', function () {
         expect(scope.showGlobalNav).toBeDefined();
+        scope.showGlobalNav = true;
+        expect(scope.showGlobalNav).toBeTruthy();
     });
 
     it('should have a toggle for showing player controls', function () {
         expect(scope.showPlayerControls).toBeDefined();
+        scope.showPlayerControls = true;
+        expect(scope.showPlayerControls).toBeTruthy();
     });
 
-//
-//    it('should be able to toggle the fav state a station from the stations list', function () {
-//        expect(scope.toggleFavStation).toBeDefined();
-//    });
 
+    it('should have a method for switching views', function () {
+        var oldView = scope.availableViews[0];
+        var newView = scope.availableViews[1];
+        scope.selectedView = oldView;
+        scope.changeViewTo(newView);
+        expect(scope.selectedView).toBe(newView);
+    });
+
+    it('should be able to start playing a station', function () {
+        expect(scope.selectedStation).toBe(null);
+
+        httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
+        httpBackend.expectGET("/data/groovesalad.pls").respond($plsJSON);
+
+        var station;
+
+        spyOn(scope, 'changeViewTo');
+
+        service.getAllStations()
+            .then(function (data) {
+                station = data.query[0];
+                scope.playStation(station);
+            });
+        httpBackend.flush();
+
+        expect(scope.selectedStation).toBe(station);
+        expect(scope.selectedStation.urls).toBeDefined();
+        expect(scope.selectedStation.urls).toEqual($plsJSON);
+        expect(scope.showPlayerControls).toBeTruthy()
+        expect(scope.changeViewTo).toHaveBeenCalled();
+    });
+
+
+    it('should be able to stop playing a station', function () {
+        expect(scope.stopStation).toBeDefined();
+        scope.stopStation();
+        expect(scope.selectedStation).toBe(null);
+        expect(scope.showPlayerControls).toBeFalsy();
+    });
+
+    it('should be able to toggle the fav state of a station', function () {
+
+        httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
+
+        var station;
+
+        spyOn(scope, 'changeViewTo');
+
+        service.getAllStations()
+            .then(function (data) {
+                station = data.query[0];
+            });
+        httpBackend.flush();
+
+        expect(station.favorite).toBeUndefined();
+        scope.toggleFavStation(station);
+        expect(station.favorite).toBe(true);
+    });
 
 });
