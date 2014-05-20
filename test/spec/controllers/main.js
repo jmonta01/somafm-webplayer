@@ -61,7 +61,6 @@ describe('Controller: MainCtrl', function () {
         expect(scope.showPlayerControls).toBeTruthy();
     });
 
-
     it('should have a method for switching views', function () {
         var oldView = scope.availableViews[0];
         var newView = scope.availableViews[1];
@@ -82,7 +81,7 @@ describe('Controller: MainCtrl', function () {
 
         service.getAllStations()
             .then(function (data) {
-                station = data.query[0];
+                station = data[0];
                 scope.playStation(station);
             });
         httpBackend.flush();
@@ -90,7 +89,7 @@ describe('Controller: MainCtrl', function () {
         expect(scope.selectedStation).toBe(station);
         expect(scope.selectedStation.urls).toBeDefined();
         expect(scope.selectedStation.urls).toEqual($plsJSON);
-        expect(scope.showPlayerControls).toBeTruthy()
+        expect(scope.showPlayerControls).toBeTruthy();
         expect(scope.changeViewTo).toHaveBeenCalled();
     });
 
@@ -112,7 +111,7 @@ describe('Controller: MainCtrl', function () {
 
         service.getAllStations()
             .then(function (data) {
-                station = data.query[0];
+                station = data[0];
             });
         httpBackend.flush();
 

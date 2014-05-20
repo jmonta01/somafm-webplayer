@@ -48,7 +48,7 @@ describe('Service: StationService', function () {
         httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
         service.getStationByID(selectedStationID)
             .then(function (data) {
-                expect(data).toEqual($channelsJSON);
+                expect(data).toEqual($channelJSON);
             });
         httpBackend.flush();
     });
@@ -61,7 +61,7 @@ describe('Service: StationService', function () {
 
         service.getAllStations()
             .then(function (data) {
-                var station = data.query[0];
+                var station = data[0];
                 if (station) {
                     service.getPls(station)
                         .then(function (data) {
@@ -81,11 +81,11 @@ describe('Service: StationService', function () {
 
         service.getAllStations()
             .then(function (data) {
-                var station = data.query[0];
+                var station = data[0];
                 if (station) {
                     service.getPlayList(station)
                         .then(function (data) {
-                            expect(data.query).toEqual($stationPlayListJSON.query);
+                            expect(data).toEqual($stationPlayListJSON);
                         });
                 }
             });

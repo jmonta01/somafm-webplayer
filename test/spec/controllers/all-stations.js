@@ -31,7 +31,6 @@ describe('Controller: AllStationsCtrl', function () {
             });
 
             httpBackend.flush();
-
         });
     });
 
@@ -42,43 +41,83 @@ describe('Controller: AllStationsCtrl', function () {
         httpBackend.verifyNoOutstandingRequest();
     });
 
-    iit('should have a list of stations loaded at startup', function () {
-        expect(scope.stations.query).toBeDefined();
-        expect(scope.stations.query.length).toBeGreaterThan(0);
+    it('should have a list of stations loaded at startup', function () {
+        expect(scope.stations).toBeDefined();
+        expect(scope.stations.length).toBeGreaterThan(0);
     });
 
-    iit('should have a default organized list of stations loaded at startup', function () {
-        expect(scope.organizedStations.query).toBeDefined();
-        expect(scope.organizedStations.query.length).toBeGreaterThan(0);
+    it('should have a default organized list of stations loaded at startup', function () {
+        expect(scope.organizedStations).toBeDefined();
+        expect(scope.organizedStations.length).toBeGreaterThan(0);
         expect(scope.organizeMethod).toBe(scope.defaultOrganizeMethod);
     });
 
-    iit('should be able to load stations from server', function () {
-        httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
+    it('should be able to load stations from server', function () {
+        expect(scope.loadStations).toBeDefined();
         scope.loadStations();
-        httpBackend.flush();
 
-        expect(scope.stations.query).toBeDefined();
-        expect(scope.stations.query.length).toBeGreaterThan(0);
+        expect(scope.stations).toBeDefined();
+        expect(scope.stations.length).toBeGreaterThan(0);
 
-        expect(scope.organizedStations.query).toBeDefined();
-        expect(scope.organizedStations.query.length).toBeGreaterThan(0);
+        expect(scope.organizedStations).toBeDefined();
+        expect(scope.organizedStations.length).toBeGreaterThan(0);
     });
 
 
+    it('stations should be able to be organized by name', function () {
+        expect(scope.sortBy).toBeDefined();
+        scope.loadStations();
+        expect(scope.organizedStations.length).toBe(scope.stations.length);
 
-//    it('stations should be able to be organized by name', function () {
-//        expect(scope.organizeByName).toBeDefined();
-//    });
+        //initial sort
+        scope.sortBy("name");
+        expect(scope.organizeMethod).toBe("name");
+        expect(scope.organizeASC).toBe(false);
+        expect(scope.organizedStations[0]._id).toBeLessThan(scope.organizedStations[1]._id);
 
-//    it('stations should be able to be organized by popularity', function () {
-//        expect(scope.organizeByName).toBeDefined();
-//    });
-//
-//    it('stations should be able to be organized by genre', function () {
-//        expect(scope.organizeByGenre).toBeDefined();
-//    });
+        //reverse sort
+        scope.sortBy("name");
+        expect(scope.organizeMethod).toBe("name");
+        expect(scope.organizeASC).toBe(true);
+        expect(scope.organizedStations[0]._id).toBeGreaterThan(scope.organizedStations[1]._id);
+    });
 
+    it('stations should be able to be organized by popularity', function () {
+        expect(scope.sortBy).toBeDefined();
+        scope.loadStations();
+        expect(scope.organizedStations.length).toBe(scope.stations.length);
 
+        //initial sort
+        scope.sortBy("popularity");
+        expect(scope.organizeMethod).toBe("popularity");
+        expect(scope.organizeASC).toBe(false);
+        expect(scope.organizedStations[0].listeners).toBeLessThan(scope.organizedStations[1].listeners);
+
+        //reverse sort
+        scope.sortBy("popularity");
+        expect(scope.organizeMethod).toBe("popularity");
+        expect(scope.organizeASC).toBe(true);
+        expect(scope.organizedStations[0].listeners).toBeGreaterThan(scope.organizedStations[1].listeners);
+    });
+
+    it('stations should be able to be organized by genre', function () {
+        expect(scope.sortBy).toBeDefined();
+        scope.loadStations();
+        expect(scope.organizedStations.length).toBe(scope.stations.length);
+
+        //initial sort
+        scope.sortBy("genre");
+        expect(scope.organizeMethod).toBe("genre");
+        expect(scope.organizeASC).toBe(true);
+        expect(scope.organizedStations['ambient']).toBeDefined();
+        expect(scope.organizedStations['ambient'][0]).toBeDefined(scope.stations[0]);
+
+        //reverse sort
+        scope.sortBy("genre");
+        expect(scope.organizeMethod).toBe("genre");
+        expect(scope.organizeASC).toBe(false);
+        expect(scope.organizedStations['lounge']).toBeDefined();
+        expect(scope.organizedStations['lounge'][0]).toBeDefined(scope.stations[1]);
+    });
 
 });

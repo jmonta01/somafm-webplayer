@@ -25,7 +25,6 @@ angular.module('somafmPlayerApp')
             };
 
             $rootScope.$watch('selectedStation', function (station) {
-                console.log("selected station changed", station);
                 if (station === null) {
                     $interval.cancel(songsP);
                     songsP = undefined;

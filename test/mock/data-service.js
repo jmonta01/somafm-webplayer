@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('mockData', [])
-    .value('channelsJSON', {
-        query: [
+    .value('channelsJSON',
+        [
             {
                 "title":"Groove Salad",
                 "description":"A nicely chilled plate of ambient/downtempo beats and grooves.",
@@ -35,14 +35,14 @@ angular.module('mockData', [])
                 "fastpls":"http://somafm.com/secretagent.pls,http://somafm.com/secretagent64.pls",
                 "slowpls":"http://somafm.com/secretagent24.pls,http://somafm.com/secretagent32.pls",
                 "highestpls":"http://somafm.com/secretagent130.pls",
-                "listeners":"271",
+                "listeners":"5000",
                 "lastPlaying":"Batidos - Esta Osquiridad",
                 "_id":"secretagent"
             }
         ]
-    })
-    .value('channelJSON', {
-        query: {
+    )
+    .value('channelJSON',
+            {
                 "title":"Groove Salad",
                 "description":"A nicely chilled plate of ambient/downtempo beats and grooves.",
                 "dj":"Rusty Hodge",
@@ -60,17 +60,17 @@ angular.module('mockData', [])
                 "lastPlaying":"United Future Organization - The Sixth Sense",
                 "_id":"groovesalad"
             }
-    })
-    .value('plsJSON', {
-        query: [
+    )
+    .value('plsJSON',
+        [
             "http://uwstream1.somafm.com:80",
             "http://xstream1.somafm.com:8032",
             "http://uwstream2.somafm.com:8032",
             "http://ice.somafm.com/groovesalad"
         ]
-    })
-    .value('stationPlayListJSON', {
-        query: [
+    )
+    .value('stationPlayListJSON',
+        [
             {
                 "album": "Wallpaper* mach 1.5",
                 "albumart": "",
@@ -86,4 +86,4 @@ angular.module('mockData', [])
                 "title": "Mirror"
             }
         ]
-    });
+    );

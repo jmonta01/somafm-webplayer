@@ -50,7 +50,7 @@ describe('Service: FavoriteStationService', function () {
                 expect(data).toEqual($channelsJSON);
 
                 service.clear();
-                station = data.query[0];
+                station = data[0];
                 service.add(station);
             });
         httpBackend.flush();
@@ -75,7 +75,7 @@ describe('Service: FavoriteStationService', function () {
                 expect(data).toEqual($channelsJSON);
 
                 service.clear();
-                station = data.query[0];
+                station = data[0];
                 service.add(station);
             });
         httpBackend.flush();

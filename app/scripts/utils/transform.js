@@ -32,8 +32,6 @@ angular.module('somafmPlayerApp')
             });
 
             var count = entries['numberofentries'];
-            $log.log(count);
-
             var urls = [];
             for (var i=1; i<=count; i++) {
                 var url = entries['file' + i];

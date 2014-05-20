@@ -6,19 +6,21 @@ angular.module('somafmPlayerApp')
             return {
                 restrict :"E",
                 replace: true,
-                scope: {
-                    volume: "=",
-                    change: "@"
-                },
+                scope: {},
                 template:   "<div id='viewstack' class='viewstack container'' ng-view='' onload='updateLayout()'></div>",
                 link: function (scope, element, attr) {
 
                     scope.updateLayout = function () {
-                        var footer = angular.element(document.getElementById("footer"));
                         var view = angular.element(document.getElementById("viewstack"));
-                        view.height(angular.element($window).height() - footer.height() - 10) ;
-                        $rootScope.viewStackHeight = view.height();
+
+                        var winHeight = $window.innerHeight;
+                        var footerHeight = document.getElementById("footer").clientHeight;
+                        var newHeight = winHeight - footerHeight - 10;
+
+                        view.css("height", newHeight + "px");
+                        $rootScope.viewStackHeight = newHeight;
                     };
+
                     angular.element($window).bind( "resize", function () {
                         scope.updateLayout();
                     });
@@ -52,11 +54,12 @@ angular.module('somafmPlayerApp')
                             if (child.attr("id") != "list") {
                                 var mTop = Number(child.css("margin-top").replace("px", "")) || 0;
                                 var mBtm = Number(child.css("margin-bottom").replace("px", "")) || 0;
-                                availHeight -= (child.height() + mTop + mBtm);
+
+                                var childHeight = parseInt(children[i].clientHeight);
+                                availHeight -= (childHeight + mTop + mBtm);
                             }
                         }
-
-                        list.height(availHeight);
+                        list.css("height", availHeight + "px");
                     };
 
                     angular.element($window).bind( "resize", function () {
@@ -174,7 +177,7 @@ angular.module('somafmPlayerApp')
 
                     scope.isMuted = function () {
                         return scope.audio.muted;
-                    }
+                    };
 
                     angular.element(scope.audio).on("loadedmetadata", function (event) {
                         console.log(event);
@@ -203,7 +206,7 @@ angular.module('somafmPlayerApp')
                     dragging = false;
 
                 scope.$watch('value', function (val) {
-                    scrubber.width(val / attr.max * 100 + "%");
+                    scrubber.css("width", val / attr.max * 100 + "%");
                 });
 
                 element.on('mousedown', function (event) {
@@ -232,7 +235,7 @@ angular.module('somafmPlayerApp')
 
                     if (dif < 0) {
                         dif = attr.min;
-                        scrubber.width( "0%");
+                        scrubber.css("width", "0%");
                         scope.value = attr.min;
                     }
                     else if (dif > width) {
@@ -242,7 +245,7 @@ angular.module('somafmPlayerApp')
                     }
                     else {
                         var per = dif / width;
-                        scrubber.width(per * 100 + "%");
+                        scrubber.css("width", per * 100 + "%");
                         scope.value = per * attr.max;
                     }
 
