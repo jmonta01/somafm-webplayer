@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/now-playing\-btn.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/all-stations-btn.png" afterPath="$PROJECT_DIR$/app/images/all_stations_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/all-stations-selected-btn.png" afterPath="$PROJECT_DIR$/app/images/all_stations_selected_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/community-btn.png" afterPath="$PROJECT_DIR$/app/images/community_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/community-selected-btn.png" afterPath="$PROJECT_DIR$/app/images/community_selected_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/fav-songs-btn.png" afterPath="$PROJECT_DIR$/app/images/fav_songs_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/fav-songs-selected-btn.png" afterPath="$PROJECT_DIR$/app/images/fav_songs_selected_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/fav-stations-btn.png" afterPath="$PROJECT_DIR$/app/images/fav_stations_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/fav-stations-selected-btn.png" afterPath="$PROJECT_DIR$/app/images/fav_stations_selected_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/list-header.jpg" afterPath="$PROJECT_DIR$/app/images/list_header.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/list-titlebar-tile.png" afterPath="$PROJECT_DIR$/app/images/list_titlebar_tile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/now-playing-btn.png" afterPath="$PROJECT_DIR$/app/images/now_playing_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/now-playing-selected-btn.png" afterPath="$PROJECT_DIR$/app/images/now_playing_selected_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/tall-header.jpg" afterPath="$PROJECT_DIR$/app/images/tall_header.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/images/titlebar-buttonbar-tile.png" afterPath="$PROJECT_DIR$/app/images/titlebar_buttonbar_tile.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/all-stations.html" afterPath="$PROJECT_DIR$/app/views/all-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fav-stations.html" afterPath="$PROJECT_DIR$/app/views/fav-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/now-playing.html" afterPath="$PROJECT_DIR$/app/views/now-playing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="somafm-webplayer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42293233" vertical-offset="0" max-vertical-offset="705">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.02819549" vertical-offset="0" max-vertical-offset="532">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,6 +114,7 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -356,7 +342,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,7 +499,11 @@
       <created>1400560677100</created>
       <updated>1400560677100</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixing distribution build&#10;generating distribution build">
+      <created>1401428521301</created>
+      <updated>1401428521301</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -538,11 +528,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="932" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3642857" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18264015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -555,7 +546,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60570073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -608,7 +598,8 @@
     <MESSAGE value="adding in mocks and spec tests for services" />
     <MESSAGE value="refactoring and adding in unit tests&#10;added in localstorage service&#10;created transform util" />
     <MESSAGE value="fixing all tests&#10;getting the distribution build working" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing all tests&#10;getting the distribution build working" />
+    <MESSAGE value="fixing distribution build&#10;generating distribution build" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing distribution build&#10;generating distribution build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -897,6 +888,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1020">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -916,6 +908,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30905512" vertical-offset="818" max-vertical-offset="1695">
           <caret line="306" column="9" selection-start-line="306" selection-start-column="9" selection-end-line="306" selection-end-column="9" />
+          <folding>
+            <element signature="e#207#292#0" expanded="false" />
+            <element signature="e#304#491#0" expanded="false" />
+            <element signature="e#502#582#0" expanded="false" />
+            <element signature="e#760#4031#0" expanded="false" />
+            <element signature="e#4237#4957#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -961,8 +960,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42293233" vertical-offset="0" max-vertical-offset="705">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02819549" vertical-offset="0" max-vertical-offset="532">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
