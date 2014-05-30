@@ -222,7 +222,7 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>']
+        assetsDirs: ['<%= yeoman.dist %>/**/']
       }
     },
 
@@ -306,8 +306,11 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'fonts/*'
+            'images/*.{webp,png,jpg,jpeg,gif}',
+            'fonts/*',
+            'data/*',
+            'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'
+
           ]
         }, {
           expand: true,
@@ -352,7 +355,10 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // uglify: {
+    uglify: {
+        options: {
+            mangle: false
+        }
     //   dist: {
     //     files: {
     //       '<%= yeoman.dist %>/scripts/scripts.js': [
@@ -360,7 +366,7 @@ module.exports = function (grunt) {
     //       ]
     //     }
     //   }
-    // },
+    },
     // concat: {
     //   dist: {}
     // },
@@ -411,9 +417,11 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngmin',
+    'imagemin',
     'copy:dist',
     'cdnify',
     'cssmin',
+    'concat',
     'uglify',
     'rev',
     'usemin',

@@ -7,11 +7,11 @@ angular.module('somafmPlayerApp')
             $scope.showPlayerControls = false;
             $scope.showGlobalNav = true;
 
-            var allStationsView = {label: "All Stations", path: "/all-stations", btnIcon: "all-stations-btn.png", selectedBtnIcon: "all-stations-selected-btn.png"};
-            var favStationsView = {label: "Favorite Stations", path: "/fav-stations", btnIcon: "fav-stations-btn.png", selectedBtnIcon: "fav-stations-selected-btn.png"};
-            var favSongsView = {label: "Favorite Songs", path: "/fav-songs", btnIcon: "fav-songs-btn.png", selectedBtnIcon: "fav-songs-selected-btn.png"};
-            var communityView = {label: "Community", path: "/community", btnIcon: "community-btn.png", selectedBtnIcon: "community-selected-btn.png"};
-            var nowPlayingView = {label: "Now Playing", path: "/now-playing", btnIcon: "now-playing-btn.png", selectedBtnIcon: "now-playing-selected-btn.png"};
+            var allStationsView = {label: "All Stations", path: "/all-stations", class:"all-stations"};
+            var favStationsView = {label: "Favorite Stations", path: "/fav-stations", class: "fav-stations"};
+            var favSongsView = {label: "Favorite Songs", path: "/fav_songs", class: "fav-songs"};
+            var communityView = {label: "Community", path: "/community", class: "community" };
+            var nowPlayingView = {label: "Now Playing", path: "/now-playing", class: "now-playing"};
 
             $scope.availableViews = [
                 allStationsView,

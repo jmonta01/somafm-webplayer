@@ -3,7 +3,6 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
 // bower:scss
-@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
 
@@ -282,14 +281,61 @@ body, html {
 
       .mainnav {
         a {
+          display: inline-block;
+          width: 95px;
+          height: 57px;
+          margin-right: 5px;
           cursor: pointer;
         }
+        a:last-child {
+          margin-right: 0;
+        }
+
+
         a.selected {
           cursor: auto;
         }
         a:hover {
           text-decoration: none;
         }
+
+        .all-stations {
+          background: url(/images/all_stations_btn.png) no-repeat top left;
+        }
+        .all-stations.selected {
+          background: url(/images/all_stations_selected_btn.png) no-repeat top left;
+        }
+
+        .fav-stations {
+          background: url(/images/fav_stations_btn.png) no-repeat top left;
+        }
+        .fav-stations.selected {
+          background: url(/images/fav_stations_selected_btn.png) no-repeat top left;
+        }
+
+        .fav-songs {
+          background: url(/images/fav_songs_btn.png) no-repeat top left;
+        }
+        .fav-songs.selected {
+          background: url(/images/fav_songs_selected_btn.png) no-repeat top left;
+        }
+
+        .community {
+          background: url(/images/community_btn.png) no-repeat top left;
+        }
+        .community.selected {
+          background: url(/images/community_selected_btn.png) no-repeat top left;
+        }
+
+        .now-playing {
+          background: url(/images/now_playing_btn.png) no-repeat top left;
+        }
+        .now-playing.selected {
+          background: url(/images/now_playing_selected_btn.png) no-repeat top left;
+        }
+
+
+
       }
     }
 
