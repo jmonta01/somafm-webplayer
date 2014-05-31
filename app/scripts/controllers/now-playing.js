@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$log', '$interval', 'StationService',
-        function ($scope, $rootScope, $log, $interval, StationService) {
+    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$log', '$timeout', 'StationService',
+        function ($scope, $rootScope, $log, $timeout, StationService) {
 
-            var songsP;
-
+            $rootScope.timer;
             $scope.playList = [];
 
             $scope.getPlayList = function (station) {
@@ -16,25 +15,25 @@ angular.module('somafmPlayerApp')
                             angular.forEach($scope.playList, function (song) {
                                 song.favorite = Math.random() > .5;
                             });
+
+                            $timeout.cancel($rootScope.timer);
+                            $rootScope.timer = $timeout(function () {
+                                $scope.getPlayList($rootScope.selectedStation);
+                            }, 5 * 1000)
+
                         });
                 }
             };
+
+            $scope.getPlayList($rootScope.selectedStation);
+
 
             $scope.toggleFavSong = function (song) {
                 song.favorite = !song.favorite;
             };
 
-            $rootScope.$watch('selectedStation', function (station) {
-                if (station === null) {
-                    $interval.cancel(songsP);
-                    songsP = undefined;
-                    $scope.playList = [];
-                } else {
-                    songsP = $interval(function () {
-                        $scope.getPlayList(station);
-                    }, 30000);
-                }
-                //
+            $scope.$on('$destroy', function(){
+                $timeout.cancel($rootScope.timer);
             });
 
         }
