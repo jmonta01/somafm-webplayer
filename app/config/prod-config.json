@@ -1,0 +1,13 @@
+{
+    "allStations" : {
+        "url" : "/channels.xml"
+    },
+    "pls" : {
+        "url" : "/[STATION_ID].pls",
+        "key" : "[STATION_ID]"
+    },
+    "playList" : {
+        "url" : "/songs/[STATION_ID].xml",
+        "key" : "[STATION_ID]"
+    }
+}

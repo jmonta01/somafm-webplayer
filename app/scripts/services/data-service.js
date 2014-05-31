@@ -1,14 +1,13 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('StationService', [ '$http', '$log', '$q', 'Host', 'StationTransform', 'PlsTransform', 'PlaylistTransform',
-        function ($http, $log, $q, Host, StationTransform, PlsTransform, PlaylistTransform) {
+    .factory('StationService', [ '$http', '$log', '$q', 'AppURLs', 'StationTransform', 'PlsTransform', 'PlaylistTransform',
+        function ($http, $log, $q, AppURLs, StationTransform, PlsTransform, PlaylistTransform) {
 
             var parseData = true,
                 cachedData = [];
 
             var getAllStations = function () {
-                var url = "/channels.xml";
                 var deferred = $q.defer();
 
                 if (cachedData.length > 0) {
@@ -18,7 +17,7 @@ angular.module('somafmPlayerApp')
                     if (parseData) {
                         opts['transformResponse'] = StationTransform;
                     }
-                    $http.get(Host + url, opts).
+                    $http.get(AppURLs.allStations.url, opts).
                         success(function (response) {
                             cachedData = response;
                             deferred.resolve(cachedData);
@@ -45,14 +44,14 @@ angular.module('somafmPlayerApp')
             };
 
             var getPls = function (station) {
-                var url = "/[STATION_ID].pls".replace("[STATION_ID]", station._id);
+                var url = AppURLs.pls.url.replace(AppURLs.pls.key, station._id);
                 var deferred = $q.defer();
                 var opts = {};
                 if (parseData) {
                     opts['transformResponse'] = PlsTransform;
                 }
 
-                $http.get(Host + url, opts)
+                $http.get(url, opts)
                     .success(function(response) {
                         deferred.resolve(response);
                     })
@@ -64,13 +63,13 @@ angular.module('somafmPlayerApp')
             };
 
             var getStationPlayList = function (station) {
-               var url = "/[STATION_ID].xml".replace("[STATION_ID]", station._id);
+               var url = AppURLs.playList.url.replace(AppURLs.playList.key, station._id);
                 var deferred = $q.defer();
                 var opts = {};
                 if (parseData) {
                     opts['transformResponse'] = PlaylistTransform;
                 }
-                $http.get(Host + url, opts)
+                $http.get(url, opts)
                     .success(function (response) {
                         deferred.resolve(response);
                     })

@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="adding bower comps and dist to git">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/dev-config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jmontalto.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/prod-config.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/70f800ba.scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/8e3f8063.main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/views/main.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/data-service.js" afterPath="$PROJECT_DIR$/app/scripts/services/data-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -25,31 +38,140 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.041667" vertical-offset="623" max-vertical-offset="1440">
-              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.39252338" vertical-offset="0" max-vertical-offset="1425">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="5310">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11278196" vertical-offset="0" max-vertical-offset="532">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="2400">
+              <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+              <folding>
+                <element signature="e#72#85#0" expanded="false" />
+                <element signature="e#599#728#0" expanded="false" />
+                <element signature="e#825#1991#0" expanded="false" />
+                <element signature="e#846#940#0" expanded="false" />
+                <element signature="e#958#1164#0" expanded="false" />
+                <element signature="e#1094#1150#0" expanded="false" />
+                <element signature="e#1186#1303#0" expanded="false" />
+                <element signature="e#1326#1471#0" expanded="false" />
+                <element signature="e#1496#1602#0" expanded="false" />
+                <element signature="e#1628#1981#0" expanded="false" />
+                <element signature="e#1655#1742#0" expanded="false" />
+                <element signature="e#1767#1967#0" expanded="false" />
+                <element signature="e#2055#2924#0" expanded="false" />
+                <element signature="e#2078#2273#0" expanded="false" />
+                <element signature="e#2299#2517#0" expanded="false" />
+                <element signature="e#2326#2503#0" expanded="false" />
+                <element signature="e#2386#2485#0" expanded="false" />
+                <element signature="e#2537#2787#0" expanded="false" />
+                <element signature="e#2564#2773#0" expanded="false" />
+                <element signature="e#2624#2755#0" expanded="false" />
+                <element signature="e#2807#2914#0" expanded="false" />
+                <element signature="e#2834#2900#0" expanded="false" />
+                <element signature="e#3024#3456#0" expanded="false" />
+                <element signature="e#3047#3153#0" expanded="false" />
+                <element signature="e#3172#3273#0" expanded="false" />
+                <element signature="e#3293#3446#0" expanded="false" />
+                <element signature="e#3320#3386#0" expanded="false" />
+                <element signature="e#3516#3846#0" expanded="false" />
+                <element signature="e#3909#4237#0" expanded="false" />
+                <element signature="e#3932#3992#0" expanded="false" />
+                <element signature="e#4012#4227#0" expanded="false" />
+                <element signature="e#4037#4213#0" expanded="false" />
+                <element signature="e#4038#4212#0" expanded="false" />
+                <element signature="e#4324#4643#0" expanded="false" />
+                <element signature="e#4343#4462#0" expanded="false" />
+                <element signature="e#4482#4633#0" expanded="false" />
+                <element signature="e#5485#5623#0" expanded="false" />
+                <element signature="e#5512#5609#0" expanded="false" />
+                <element signature="e#5645#5741#0" expanded="false" />
+                <element signature="e#5672#5727#0" expanded="false" />
+                <element signature="e#5774#6274#0" expanded="false" />
+                <element signature="e#5797#5904#0" expanded="false" />
+                <element signature="e#5954#6095#0" expanded="false" />
+                <element signature="e#5983#6081#0" expanded="false" />
+                <element signature="e#6122#6264#0" expanded="false" />
+                <element signature="e#6151#6250#0" expanded="false" />
+                <element signature="e#6344#6757#0" expanded="false" />
+                <element signature="e#6364#6747#0" expanded="false" />
+                <element signature="e#6389#6733#0" expanded="false" />
+                <element signature="e#6416#6715#0" expanded="false" />
+                <element signature="e#6768#6841#0" expanded="false" />
+                <element signature="e#6995#7422#0" expanded="false" />
+                <element signature="e#7068#7412#0" expanded="false" />
+                <element signature="e#7136#7398#0" expanded="false" />
+                <element signature="e#7164#7380#0" expanded="false" />
+                <element signature="e#7197#7324#0" expanded="false" />
+                <element signature="e#7519#7735#0" expanded="false" />
+                <element signature="e#7655#7725#0" expanded="false" />
+                <element signature="e#7833#7923#0" expanded="false" />
+                <element signature="e#7856#7913#0" expanded="false" />
+                <element signature="e#7944#8236#0" expanded="false" />
+                <element signature="e#7964#8226#0" expanded="false" />
+                <element signature="e#7989#8212#0" expanded="false" />
+                <element signature="e#7990#8211#0" expanded="false" />
+                <element signature="e#8255#8532#0" expanded="false" />
+                <element signature="e#8275#8522#0" expanded="false" />
+                <element signature="e#8300#8508#0" expanded="false" />
+                <element signature="e#8301#8507#0" expanded="false" />
+                <element signature="e#8552#9069#0" expanded="false" />
+                <element signature="e#8572#9059#0" expanded="false" />
+                <element signature="e#8599#8813#0" expanded="false" />
+                <element signature="e#8838#9045#0" expanded="false" />
+                <element signature="e#8839#9044#0" expanded="false" />
+                <element signature="e#9080#9150#0" expanded="false" />
+                <element signature="e#9326#9579#0" expanded="false" />
+                <element signature="e#9346#9569#0" expanded="false" />
+                <element signature="e#9371#9555#0" expanded="false" />
+                <element signature="e#9372#9554#0" expanded="false" />
+                <element signature="e#9639#9736#0" expanded="false" />
+                <element signature="e#9659#9726#0" expanded="false" />
+                <element signature="e#10708#10874#0" expanded="false" />
+                <element signature="e#10975#11236#0" expanded="false" />
+                <element signature="e#10997#11045#0" expanded="false" />
+                <element signature="e#11065#11106#0" expanded="false" />
+                <element signature="e#11126#11226#0" expanded="false" />
+                <element signature="e#11247#11321#0" expanded="false" />
+                <element signature="e#11747#12068#0" expanded="false" />
+                <element signature="e#11770#11815#0" expanded="false" />
+                <element signature="e#11828#11840#0" expanded="false" />
+                <element signature="e#12078#12090#0" expanded="false" />
+                <element signature="e#12168#12290#0" expanded="false" />
+                <element signature="e#12188#12280#0" expanded="false" />
+                <element signature="e#12351#12682#0" expanded="false" />
+                <element signature="e#12384#12467#0" expanded="false" />
+                <element signature="e#12492#12674#0" expanded="false" />
+                <element signature="e#12737#12892#0" expanded="false" />
+                <element signature="e#12927#13049#0" expanded="false" />
+                <element signature="e#13484#13547#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25" vertical-offset="165" max-vertical-offset="840">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -89,11 +211,9 @@
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/test/spec/info.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/fav-stations.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/data-service.js" />
         <option value="$PROJECT_DIR$/reference/reqs.text" />
         <option value="$PROJECT_DIR$/app/scripts/utils/LocalStorage.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/favorite-service.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/scripts/utils/transform.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
         <option value="$PROJECT_DIR$/test/spec/services/data-service.js" />
@@ -109,12 +229,17 @@
         <option value="$PROJECT_DIR$/app/views/all-stations.html" />
         <option value="$PROJECT_DIR$/app/views/fav-stations.html" />
         <option value="$PROJECT_DIR$/app/views/now-playing.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/scripts/services/data-service.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/config/dev-config.json" />
+        <option value="$PROJECT_DIR$/app/config/prod-config.json" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -226,6 +351,13 @@
             <name>newer-postrun</name>
           </GruntMultiTaskState>
           <GruntMultiTaskState>
+            <name>ngconstant</name>
+            <targets>
+              <target value="development" />
+              <target value="production" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
             <name>ngmin</name>
             <targets>
               <target value="dist" />
@@ -285,7 +417,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="932" />
+    <option name="height" value="983" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -346,6 +478,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -368,11 +518,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/config" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/test/mock" />
       <recent name="$PROJECT_DIR$/test/spec/services" />
-      <recent name="$PROJECT_DIR$/app/scripts/services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/images" />
@@ -539,29 +689,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="932" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1680" height="983" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3642857" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38185892" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22620381" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18264015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15551537" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3445567" sideWeight="0.50030136" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34285715" sideWeight="0.4996986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34266517" sideWeight="0.4996986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60570073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60570073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -618,52 +768,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="865">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/channels.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14084508" vertical-offset="0" max-vertical-offset="8205">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins/_tab-focus.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="865">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.54" vertical-offset="1128" max-vertical-offset="2475">
-          <caret line="117" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="225" max-vertical-offset="12930">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins/_border-radius.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="360">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reference/SomaFM-fav_songs.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -770,13 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03314917" vertical-offset="207" max-vertical-offset="750">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.99198395" vertical-offset="0" max-vertical-offset="1035">
@@ -854,35 +955,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4536862" vertical-offset="0" max-vertical-offset="720">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9824562" vertical-offset="1530" max-vertical-offset="4050">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="553">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34026465" vertical-offset="0" max-vertical-offset="795">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fav-stations.html">
@@ -903,42 +983,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1020">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030800821" vertical-offset="0" max-vertical-offset="630">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/images/fav_stations_btn.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30905512" vertical-offset="818" max-vertical-offset="1695">
-          <caret line="306" column="9" selection-start-line="306" selection-start-column="9" selection-end-line="306" selection-end-column="9" />
-          <folding>
-            <element signature="e#207#292#0" expanded="false" />
-            <element signature="e#304#491#0" expanded="false" />
-            <element signature="e#502#582#0" expanded="false" />
-            <element signature="e#760#4031#0" expanded="false" />
-            <element signature="e#4237#4957#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.041667" vertical-offset="623" max-vertical-offset="1440">
-          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
@@ -949,42 +999,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/app/robots.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.505929" vertical-offset="2385" max-vertical-offset="6630">
-          <caret line="311" column="84" selection-start-line="311" selection-start-column="84" selection-end-line="311" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24896266" vertical-offset="0" max-vertical-offset="482">
+        <state vertical-scroll-proportion="0.22429906" vertical-offset="0" max-vertical-offset="535">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/robots.txt">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.46948355" vertical-offset="15" max-vertical-offset="735">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/scripts/9c9f8cdc.scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511">
+          <caret line="0" column="10876" selection-start-line="0" selection-start-column="10876" selection-end-line="0" selection-end-column="10876" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="524">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/dev-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="270">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/prod-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03" vertical-offset="0" max-vertical-offset="500">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8747554" vertical-offset="453" max-vertical-offset="1305">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="e#1315#1761#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11278196" vertical-offset="0" max-vertical-offset="532">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3364486" vertical-offset="0" max-vertical-offset="795">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/.bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.71028036" vertical-offset="380" max-vertical-offset="915">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="2400">
+          <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+          <folding>
+            <element signature="e#72#85#0" expanded="false" />
+            <element signature="e#599#728#0" expanded="false" />
+            <element signature="e#825#1991#0" expanded="false" />
+            <element signature="e#846#940#0" expanded="false" />
+            <element signature="e#958#1164#0" expanded="false" />
+            <element signature="e#1094#1150#0" expanded="false" />
+            <element signature="e#1186#1303#0" expanded="false" />
+            <element signature="e#1326#1471#0" expanded="false" />
+            <element signature="e#1496#1602#0" expanded="false" />
+            <element signature="e#1628#1981#0" expanded="false" />
+            <element signature="e#1655#1742#0" expanded="false" />
+            <element signature="e#1767#1967#0" expanded="false" />
+            <element signature="e#2055#2924#0" expanded="false" />
+            <element signature="e#2078#2273#0" expanded="false" />
+            <element signature="e#2299#2517#0" expanded="false" />
+            <element signature="e#2326#2503#0" expanded="false" />
+            <element signature="e#2386#2485#0" expanded="false" />
+            <element signature="e#2537#2787#0" expanded="false" />
+            <element signature="e#2564#2773#0" expanded="false" />
+            <element signature="e#2624#2755#0" expanded="false" />
+            <element signature="e#2807#2914#0" expanded="false" />
+            <element signature="e#2834#2900#0" expanded="false" />
+            <element signature="e#3024#3456#0" expanded="false" />
+            <element signature="e#3047#3153#0" expanded="false" />
+            <element signature="e#3172#3273#0" expanded="false" />
+            <element signature="e#3293#3446#0" expanded="false" />
+            <element signature="e#3320#3386#0" expanded="false" />
+            <element signature="e#3516#3846#0" expanded="false" />
+            <element signature="e#3909#4237#0" expanded="false" />
+            <element signature="e#3932#3992#0" expanded="false" />
+            <element signature="e#4012#4227#0" expanded="false" />
+            <element signature="e#4037#4213#0" expanded="false" />
+            <element signature="e#4038#4212#0" expanded="false" />
+            <element signature="e#4324#4643#0" expanded="false" />
+            <element signature="e#4343#4462#0" expanded="false" />
+            <element signature="e#4482#4633#0" expanded="false" />
+            <element signature="e#5485#5623#0" expanded="false" />
+            <element signature="e#5512#5609#0" expanded="false" />
+            <element signature="e#5645#5741#0" expanded="false" />
+            <element signature="e#5672#5727#0" expanded="false" />
+            <element signature="e#5774#6274#0" expanded="false" />
+            <element signature="e#5797#5904#0" expanded="false" />
+            <element signature="e#5954#6095#0" expanded="false" />
+            <element signature="e#5983#6081#0" expanded="false" />
+            <element signature="e#6122#6264#0" expanded="false" />
+            <element signature="e#6151#6250#0" expanded="false" />
+            <element signature="e#6344#6757#0" expanded="false" />
+            <element signature="e#6364#6747#0" expanded="false" />
+            <element signature="e#6389#6733#0" expanded="false" />
+            <element signature="e#6416#6715#0" expanded="false" />
+            <element signature="e#6768#6841#0" expanded="false" />
+            <element signature="e#6995#7422#0" expanded="false" />
+            <element signature="e#7068#7412#0" expanded="false" />
+            <element signature="e#7136#7398#0" expanded="false" />
+            <element signature="e#7164#7380#0" expanded="false" />
+            <element signature="e#7197#7324#0" expanded="false" />
+            <element signature="e#7519#7735#0" expanded="false" />
+            <element signature="e#7655#7725#0" expanded="false" />
+            <element signature="e#7833#7923#0" expanded="false" />
+            <element signature="e#7856#7913#0" expanded="false" />
+            <element signature="e#7944#8236#0" expanded="false" />
+            <element signature="e#7964#8226#0" expanded="false" />
+            <element signature="e#7989#8212#0" expanded="false" />
+            <element signature="e#7990#8211#0" expanded="false" />
+            <element signature="e#8255#8532#0" expanded="false" />
+            <element signature="e#8275#8522#0" expanded="false" />
+            <element signature="e#8300#8508#0" expanded="false" />
+            <element signature="e#8301#8507#0" expanded="false" />
+            <element signature="e#8552#9069#0" expanded="false" />
+            <element signature="e#8572#9059#0" expanded="false" />
+            <element signature="e#8599#8813#0" expanded="false" />
+            <element signature="e#8838#9045#0" expanded="false" />
+            <element signature="e#8839#9044#0" expanded="false" />
+            <element signature="e#9080#9150#0" expanded="false" />
+            <element signature="e#9326#9579#0" expanded="false" />
+            <element signature="e#9346#9569#0" expanded="false" />
+            <element signature="e#9371#9555#0" expanded="false" />
+            <element signature="e#9372#9554#0" expanded="false" />
+            <element signature="e#9639#9736#0" expanded="false" />
+            <element signature="e#9659#9726#0" expanded="false" />
+            <element signature="e#10708#10874#0" expanded="false" />
+            <element signature="e#10975#11236#0" expanded="false" />
+            <element signature="e#10997#11045#0" expanded="false" />
+            <element signature="e#11065#11106#0" expanded="false" />
+            <element signature="e#11126#11226#0" expanded="false" />
+            <element signature="e#11247#11321#0" expanded="false" />
+            <element signature="e#11747#12068#0" expanded="false" />
+            <element signature="e#11770#11815#0" expanded="false" />
+            <element signature="e#11828#11840#0" expanded="false" />
+            <element signature="e#12078#12090#0" expanded="false" />
+            <element signature="e#12168#12290#0" expanded="false" />
+            <element signature="e#12188#12280#0" expanded="false" />
+            <element signature="e#12351#12682#0" expanded="false" />
+            <element signature="e#12384#12467#0" expanded="false" />
+            <element signature="e#12492#12674#0" expanded="false" />
+            <element signature="e#12737#12892#0" expanded="false" />
+            <element signature="e#12927#13049#0" expanded="false" />
+            <element signature="e#13484#13547#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="165" max-vertical-offset="840">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5310">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39252338" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
       </provider>
