@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/538e9959.titlebar_buttonbar_tile.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+    <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="pushing stable distribution build">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/14cf8542.titlebar_buttonbar_tile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/ba7ed1b7.titlebar_buttonbar_tile_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/scripts/4dfa5a13.scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/f10f439e.main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -400,6 +402,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -591,7 +625,11 @@
       <created>1401660401851</created>
       <updated>1401660401851</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pushing stable distribution build">
+      <created>1401661162280</created>
+      <updated>1401661162280</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -694,7 +732,8 @@
     <MESSAGE value="fixing runaway polling timer" />
     <MESSAGE value="fixing relative urls in css prod builds" />
     <MESSAGE value=" fixing some parsing issues&#10; fixing css references and bad sizings&#10; added a selected state background style for the list sort button bar" />
-    <option name="LAST_COMMIT_MESSAGE" value=" fixing some parsing issues&#10; fixing css references and bad sizings&#10; added a selected state background style for the list sort button bar" />
+    <MESSAGE value="pushing stable distribution build" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing stable distribution build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
