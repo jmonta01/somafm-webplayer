@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/all-stations.html" afterPath="$PROJECT_DIR$/app/views/all-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/all-stations.html" afterPath="$PROJECT_DIR$/dist/views/all-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fav-stations.html" afterPath="$PROJECT_DIR$/app/views/fav-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/fav-stations.html" afterPath="$PROJECT_DIR$/dist/views/fav-stations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+    <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="fixing">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/utils/conversion.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/utils/xml2json.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/titlebar_buttonbar_tile.png" afterPath="$PROJECT_DIR$/app/images/titlebar_buttonbar_tile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/now-playing.html" afterPath="$PROJECT_DIR$/app/views/now-playing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/now-playing.html" afterPath="$PROJECT_DIR$/dist/views/now-playing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/somafm-webplayer.iml" afterPath="$PROJECT_DIR$/.idea/somafm-webplayer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/utils/transform.js" afterPath="$PROJECT_DIR$/app/scripts/utils/transform.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -36,7 +31,92 @@
     <favorites_list name="somafm-webplayer" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="1425">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transform.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conversion.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/utils/conversion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2010">
+              <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#initConfigDefaults#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="e#1646#1804#0" expanded="false" />
+                <element signature="n#!!block;n#initRequiredPolyfills#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#getNodeLocalName#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#getNodePrefix#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#escapeXmlChars#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#unescapeXmlChars#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#toArrayAccessForm#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#fromXmlDateTime#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#checkFromXmlDateTimePaths#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseDOMChildren#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#startTag#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#endTag#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#endsWith#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#jsonXmlSpecialElem#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#jsonXmlElemCount#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseJSONAttributes#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseJSONTextAttrs#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseJSONTextObject#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseJSONArray#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="n#!!block;n#parseJSONObject#0;n#!!block;n#X2JS#0" expanded="false" />
+                <element signature="e#18871#18977#0" expanded="false" />
+                <element signature="e#19018#19228#0" expanded="false" />
+                <element signature="e#19268#19404#0" expanded="false" />
+                <element signature="e#19445#19496#0" expanded="false" />
+                <element signature="e#19544#19709#0" expanded="false" />
+                <element signature="e#19755#19806#0" expanded="false" />
+                <element signature="e#19848#19955#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1215733" vertical-offset="993" max-vertical-offset="5055">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding>
+                <element signature="e#207#292#0" expanded="false" />
+                <element signature="e#304#491#0" expanded="false" />
+                <element signature="e#502#582#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -73,7 +153,6 @@
         <option value="$PROJECT_DIR$/reference/reqs.text" />
         <option value="$PROJECT_DIR$/app/scripts/utils/LocalStorage.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/favorite-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/utils/transform.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
         <option value="$PROJECT_DIR$/test/spec/services/data-service.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
@@ -87,18 +166,20 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/scripts/services/data-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/config/dev-config.json" />
         <option value="$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/now-playing.html" />
         <option value="$PROJECT_DIR$/app/views/all-stations.html" />
         <option value="$PROJECT_DIR$/app/views/fav-stations.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/config/prod-config.json" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/utils/transform.js" />
+        <option value="$PROJECT_DIR$/app/scripts/utils/conversion.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
       </list>
     </option>
   </component>
@@ -334,7 +415,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,7 +429,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -367,6 +448,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,7 +660,11 @@
       <created>1401560974463</created>
       <updated>1401560974463</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fixing relative urls in css prod builds">
+      <created>1401648463024</created>
+      <updated>1401648463024</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -592,7 +703,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19650392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38271606" sideWeight="0.4996986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38271606" sideWeight="0.4996986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -654,7 +765,8 @@
     <MESSAGE value="removing bower comps from git" />
     <MESSAGE value="setting up app to use env based vars loaded from config/env.json" />
     <MESSAGE value="fixing runaway polling timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing runaway polling timer" />
+    <MESSAGE value="fixing relative urls in css prod builds" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing relative urls in css prod builds" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,13 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64928055" vertical-offset="749" max-vertical-offset="1365">
           <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.99198395" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -855,14 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="524">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3364486" vertical-offset="0" max-vertical-offset="795">
@@ -903,14 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/now-playing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034762457" vertical-offset="0" max-vertical-offset="863">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5307068" vertical-offset="442" max-vertical-offset="1305">
@@ -918,14 +1007,6 @@
           <folding>
             <element signature="e#1315#1761#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.608343" vertical-offset="0" max-vertical-offset="863">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,14 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
           <caret line="0" column="104634" selection-start-line="0" selection-start-column="104634" selection-end-line="0" selection-end-column="104634" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35947713" vertical-offset="945" max-vertical-offset="5310">
-          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1094,19 +1167,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="524">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/now-playing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1206896" vertical-offset="0" max-vertical-offset="675">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42168674" vertical-offset="0" max-vertical-offset="735">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.45924765" vertical-offset="52" max-vertical-offset="735">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/utils/conversion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2010">
+          <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#initConfigDefaults#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="e#1646#1804#0" expanded="false" />
+            <element signature="n#!!block;n#initRequiredPolyfills#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#getNodeLocalName#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#getNodePrefix#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#escapeXmlChars#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#unescapeXmlChars#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#toArrayAccessForm#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#fromXmlDateTime#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#checkFromXmlDateTimePaths#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseDOMChildren#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#startTag#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#endTag#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#endsWith#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#jsonXmlSpecialElem#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#jsonXmlElemCount#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONAttributes#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONTextAttrs#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONTextObject#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONArray#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="n#!!block;n#parseJSONObject#0;n#!!block;n#X2JS#0" expanded="false" />
+            <element signature="e#18871#18977#0" expanded="false" />
+            <element signature="e#19018#19228#0" expanded="false" />
+            <element signature="e#19268#19404#0" expanded="false" />
+            <element signature="e#19445#19496#0" expanded="false" />
+            <element signature="e#19544#19709#0" expanded="false" />
+            <element signature="e#19755#19806#0" expanded="false" />
+            <element signature="e#19848#19955#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02886598" vertical-offset="91" max-vertical-offset="1425">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1215733" vertical-offset="993" max-vertical-offset="5055">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#207#292#0" expanded="false" />
+            <element signature="e#304#491#0" expanded="false" />
+            <element signature="e#502#582#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

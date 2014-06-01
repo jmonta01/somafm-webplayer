@@ -37,311 +37,318 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 }
 
 
-body, html {
-  color: #ffffff;
+html {
   height: 100%;
-
-  .player-container {
-    width: 600px;
-    height: 100%;
-    overflow: hidden;
-
+  body {
+    color: #ffffff;
     background: $gray-darker;
+    min-height: 100%;
 
-    .viewstack {
-      width: 100%;
-      padding: 0;
+    .player-container {
+      width: 600px;
+      height: 100%;
+      overflow: hidden;
 
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .list-titlebar {
-        width: 100%;
-        height: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 2px;
-
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        background: url(../images/list-titlebar-tile.png) center top repeat;
-
-        .btn-group {
-          margin-top: 5px;
-          padding: 0;
-          border: 1px solid $gray-dark;
-        }
-
-        .btn {
-          background: url(../images/titlebar-buttonbar-tile.png) center top repeat;
-          border: none;
-        }
-      }
-
-      .list {
-        overflow: auto;
-      }
-
-      .genre {
-        color: $gray-lighter;
-        padding: 15px 10px;
-        margin-bottom: -2px;
-        border-bottom: 1px solid $gray;
-      }
-
-      .card {
-        height: 75px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 2px;
-        background: $gray-dark;
-        overflow: hidden;
-
-        .card-image {
-          float: left;
-          margin: 5px 5px 5px 0;
-          width: 65px;
-          height: 65px;
-        }
-
-        .card-content {
-          float: left;
-          margin-left: 5px;
-          width: 400px;
-
-          h4 {
-            margin: 0;
-            line-height: 1.25em;
-          }
-
-          p {
-            font-size: 12px;
-            line-height: 1.1em;
-            color: $gray-light;
-          }
-
-          p.small {
-            color: $gray-lighter;
-          }
-
-        }
-
-        .card-actions {
-          float: right;
-          .btn {
-            display: block;
-            float: left;
-            clear: both;
-            border: none;
-          }
-          .btn-lg {
-            padding: 6px;
-          }
-
-        }
-
-      }
-      .station-card:first-child {
-        margin-top: 0;
-      }
-
-      .no-station-msg {
-        margin-top: 25%;
-      }
-
-      #now-playing {
-
-        .header {
-          height: 135px;
-          padding-top: 10px;
-
-          img {
-            display: block;
-            float: left;
-            width: 120px;
-            height: 120px;
-          }
-
-          .content {
-            float: left;
-            width: 430px;
-            margin-left: 10px;
-
-            h3 {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-
-            p {
-              line-height: 1.25em;
-              margin-bottom: 0;
-            }
-
-            .btn {
-              font-size: 20px;
-
-              padding: 6px 0 4px;
-            }
-
-
-          }
-
-        }
-
-        .list-col-1, .list-head-1 {
-          float: left;
-          min-width: 55px;
-          width: 10%;
-        }
-
-        .list-col-2, .list-head-2 {
-          float: left;
-          min-width: 220px;
-          width: 40%;
-        }
-
-        .list-col-3, .list-head-3 {
-          float: left;
-          min-width: 220px;
-          width: 40%;
-        }
-
-        .list-col-4, .list-head-4 {
-          float: left;
-          widows: 10%;
-        }
-
-        .card {
-          height: auto;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          color: $gray-light;
-
-          .card-actions{
-            float:right;
-          }
-        }
-
-      }
-    }
-
-
-    #footer {
-      width: 570px;
-      bottom: 0;
-      padding: 2px 0;
-      padding-bottom: 10px;
       background: $gray-darker;
-      position: absolute;
-      z-index: 50;
 
-      .player-container {
+      .viewstack {
         width: 100%;
-        margin-bottom: 2px;
+        padding: 0;
 
-        .player {
-          width: 100%;
-          border-radius: 6px;
-          background: $gray-dark;
-
-          .btn {
-            font-size: 24px;
-          }
-
-          .slider {
-            display: inline-block;
-            width: 250px;
-            margin: 0 10px;
-
-            .slider-track {
-              width: 100%;
-              height: 10px;
-              border: 1px solid $gray-darker;
-              background: $gray-dark;
-              cursor: pointer;
-
-              .slider-value {
-                width: 50%;
-                height: 8px;
-                background: $gray-light;
-
-              }
-
-            }
-
-
-
-          }
-
-        }
-
-      }
-
-      .mainnav {
-        a {
-          display: inline-block;
-          width: 95px;
-          height: 57px;
-          margin-right: 5px;
-          cursor: pointer;
-        }
-        a:last-child {
+        .row {
+          margin-left: 0;
           margin-right: 0;
         }
 
+        .list-titlebar {
+          width: 100%;
+          height: 40px;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-bottom: 2px;
 
-        a.selected {
-          cursor: auto;
-        }
-        a:hover {
-          text-decoration: none;
-        }
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          background: url(../images/list_titlebar_tile.png) center top repeat;
 
-        .all-stations {
-          background: url(../images/all_stations_btn.png) no-repeat top left;
-        }
-        .all-stations.selected {
-          background: url(../images/all_stations_selected_btn.png) no-repeat top left;
-        }
+          .btn-group {
+            margin-top: 5px;
+            padding: 0;
+            border: 1px solid $gray-dark;
+            border-radius: 4px;
+          }
 
-        .fav-stations {
-          background: url(../images/fav_stations_btn.png) no-repeat top left;
-        }
-        .fav-stations.selected {
-          background: url(../images/fav_stations_selected_btn.png) no-repeat top left;
-        }
+          .btn {
+            background: url(../images/titlebar_buttonbar_tile.png) center top repeat-x;
+            border: none;
+          }
 
-        .fav-songs {
-          background: url(../images/fav_songs_btn.png) no-repeat top left;
-        }
-        .fav-songs.selected {
-          background: url(../images/fav_songs_selected_btn.png) no-repeat top left;
-        }
+          .btn.active {
+            background: url(../images/titlebar_buttonbar_tile_selected.png) center top repeat-x;
+          }
 
-        .community {
-          background: url(../images/community_btn.png) no-repeat top left;
-        }
-        .community.selected {
-          background: url(../images/community_selected_btn.png) no-repeat top left;
         }
 
-        .now-playing {
-          background: url(../images/now_playing_btn.png) no-repeat top left;
-        }
-        .now-playing.selected {
-          background: url(../images/now_playing_selected_btn.png) no-repeat top left;
+        .list {
+          overflow: auto;
         }
 
+        .genre {
+          color: $gray-lighter;
+          padding: 15px 10px;
+          margin-bottom: -2px;
+          border-bottom: 1px solid $gray;
+        }
+
+        .card {
+          height: 75px;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-top: 2px;
+          background: $gray-dark;
+          overflow: hidden;
+
+          .card-image {
+            float: left;
+            margin: 5px 5px 5px 0;
+            width: 65px;
+            height: 65px;
+          }
+
+          .card-content {
+            float: left;
+            margin-left: 5px;
+            width: 400px;
+
+            h4 {
+              margin: 0;
+              line-height: 1.25em;
+            }
+
+            p {
+              font-size: 12px;
+              line-height: 1.1em;
+              color: $gray-light;
+            }
+
+            p.small {
+              color: $gray-lighter;
+            }
+
+          }
+
+          .card-actions {
+            float: right;
+            .btn {
+              display: block;
+              float: left;
+              clear: both;
+              border: none;
+            }
+            .btn-lg {
+              padding: 6px;
+            }
+
+          }
+
+        }
+        .station-card:first-child {
+          margin-top: 0;
+        }
+
+        .no-station-msg {
+          margin-top: 25%;
+        }
+
+        #now-playing {
+
+          .header {
+            height: 135px;
+            padding-top: 10px;
+
+            img {
+              display: block;
+              float: left;
+              width: 120px;
+              height: 120px;
+            }
+
+            .content {
+              float: left;
+              width: 430px;
+              margin-left: 10px;
+
+              h3 {
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+
+              p {
+                line-height: 1.25em;
+                margin-bottom: 0;
+              }
+
+              .btn {
+                font-size: 20px;
+
+                padding: 6px 0 4px;
+              }
 
 
+            }
+
+          }
+
+          .list-col-1, .list-head-1 {
+            float: left;
+            min-width: 55px;
+            width: 10%;
+          }
+
+          .list-col-2, .list-head-2 {
+            float: left;
+            min-width: 220px;
+            width: 40%;
+          }
+
+          .list-col-3, .list-head-3 {
+            float: left;
+            min-width: 220px;
+            width: 40%;
+          }
+
+          .list-col-4, .list-head-4 {
+            float: left;
+            widows: 10%;
+          }
+
+          .card {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: $gray-light;
+
+            .card-actions{
+              float:right;
+            }
+          }
+
+        }
       }
+
+
+      #footer {
+        width: 570px;
+        bottom: 0;
+        padding: 2px 0;
+  //      padding-bottom: 10px;
+        background: $gray-darker;
+        position: absolute;
+        z-index: 50;
+
+        .player-container {
+          width: 100%;
+          margin-bottom: 15px;
+
+          .player {
+            width: 100%;
+            border-radius: 6px;
+            background: $gray-dark;
+
+            .btn {
+              font-size: 24px;
+            }
+
+            .slider {
+              display: inline-block;
+              width: 250px;
+              margin: 0 10px;
+
+              .slider-track {
+                width: 100%;
+                height: 10px;
+                border: 1px solid $gray-darker;
+                background: $gray-dark;
+                cursor: pointer;
+
+                .slider-value {
+                  width: 50%;
+                  height: 8px;
+                  background: $gray-light;
+
+                }
+
+              }
+
+
+
+            }
+
+          }
+
+        }
+
+        .mainnav {
+          a {
+            display: inline-block;
+            width: 95px;
+            height: 57px;
+            margin-right: 5px;
+            cursor: pointer;
+          }
+          a:last-child {
+            margin-right: 0;
+          }
+          a.selected {
+            cursor: auto;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+
+          .all-stations {
+            background: url(../images/all_stations_btn.png) no-repeat top left;
+          }
+          .all-stations.selected {
+            background: url(../images/all_stations_selected_btn.png) no-repeat top left;
+          }
+
+          .fav-stations {
+            background: url(../images/fav_stations_btn.png) no-repeat top left;
+          }
+          .fav-stations.selected {
+            background: url(../images/fav_stations_selected_btn.png) no-repeat top left;
+          }
+
+          .fav-songs {
+            background: url(../images/fav_songs_btn.png) no-repeat top left;
+          }
+          .fav-songs.selected {
+            background: url(../images/fav_songs_selected_btn.png) no-repeat top left;
+          }
+
+          .community {
+            background: url(../images/community_btn.png) no-repeat top left;
+          }
+          .community.selected {
+            background: url(../images/community_selected_btn.png) no-repeat top left;
+          }
+
+          .now-playing {
+            background: url(../images/now_playing_btn.png) no-repeat top left;
+          }
+          .now-playing.selected {
+            background: url(../images/now_playing_selected_btn.png) no-repeat top left;
+          }
+
+
+        }
+      }
+
+
     }
 
-
   }
-
 }
 
 

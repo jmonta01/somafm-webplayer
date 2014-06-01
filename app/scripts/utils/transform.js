@@ -3,7 +3,8 @@ angular.module('somafmPlayerApp')
     function () {
         return function (data) {
             var x2js = new X2JS();
-            var json = x2js.xml_str2json( data );
+            var xmlDoc = x2js.parseXmlString(data);
+            var json = x2js.xml2json( xmlDoc );
 
             var parsedChannels = [],
                 channels = json.channels.channel;
