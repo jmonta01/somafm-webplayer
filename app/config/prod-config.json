@@ -3,7 +3,7 @@
         "url" : "/channels.xml"
     },
     "pls" : {
-        "url" : "/[STATION_ID].pls",
+        "url" : "/[STATION_ID].pls?popup",
         "key" : "[STATION_ID]"
     },
     "playList" : {
