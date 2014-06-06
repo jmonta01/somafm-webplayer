@@ -12,13 +12,11 @@ Make sure you have installed [Node.js](http://nodejs.org), [Git](http://git-scm.
 - `npm install`
 - `bower install`
 - `grunt ngconstant:development`
-- `grunt build`
 
 ## Run locally
 - `grunt serve`
 
-
-## Build for production
+## Build for production > clears out and rebuilds 'dist' folder
 - `grunt build`
 
 ## Test production build
