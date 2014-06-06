@@ -7,29 +7,7 @@ angular.module('somafmPlayerApp')
                 restrict :"E",
                 replace: true,
                 scope: {},
-                template:   "<div id='viewstack' class='viewstack container'' ng-view='' onload='updateLayout()'></div>",
-                link: function (scope, element, attr) {
-
-                    scope.updateLayout = function () {
-                        var view = angular.element(document.getElementById("viewstack"));
-
-                        var winHeight = $window.innerHeight;
-                        var footerHeight = document.getElementById("footer").clientHeight;
-                        var newHeight = winHeight - footerHeight - 10;
-
-                        view.css("height", newHeight + "px");
-                        $rootScope.viewStackHeight = newHeight;
-                    };
-
-                    angular.element($window).bind( "resize", function () {
-                        scope.updateLayout();
-                    });
-
-                    $timeout(function () {
-                        scope.updateLayout();
-                    }, 300);
-
-                }
+                template:   "<div id='viewstack' class='viewstack container'' ng-view='' ></div>",
             }
         }
     ])
@@ -42,7 +20,7 @@ angular.module('somafmPlayerApp')
                 transclude: true,
                 template:   "<div id='list' class='list' ng-transclude></div>",
                 link: function (scope, element, attr) {
-
+                    /*
                     scope.updateLayout = function () {
 
                         var children = element.parent().children();
@@ -73,7 +51,7 @@ angular.module('somafmPlayerApp')
                     $timeout(function () {
                         scope.updateLayout();
                     }, 300);
-
+                    */
                 }
             }
         }

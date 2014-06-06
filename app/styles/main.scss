@@ -47,12 +47,17 @@ html {
     .player-container {
       width: 600px;
       height: 100%;
-      overflow: hidden;
+      background: red;
 
       background: $gray-darker;
 
       .viewstack {
+
+        background: green;
+
         width: 100%;
+//        height: 100%;
+
         padding: 0;
 
         .row {
@@ -90,6 +95,7 @@ html {
         }
 
         .list {
+//          height: auto;
           overflow: auto;
         }
 
@@ -241,10 +247,9 @@ html {
         width: 570px;
         bottom: 0;
         margin-bottom: 5px;
-
         background: $gray-darker;
-        position: absolute;
-        z-index: 50;
+
+        background: blue;
 
         .player-container {
           width: 100%;
@@ -290,6 +295,7 @@ html {
 
         .mainnav {
           width: 100%;
+          height: 57px;
           margin-top: 5px;
 
           a {
@@ -343,7 +349,6 @@ html {
           .now-playing.selected {
             background: url(../images/now_playing_selected_btn.png) no-repeat top left;
           }
-
 
         }
       }
