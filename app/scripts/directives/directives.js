@@ -7,7 +7,29 @@ angular.module('somafmPlayerApp')
                 restrict :"E",
                 replace: true,
                 scope: {},
-                template:   "<div id='viewstack' class='viewstack container'' ng-view='' ></div>",
+                template:   "<div id='viewstack' class='viewstack container'' ng-view='' onload='updateLayout()'></div>",
+                link: function (scope, element, attr) {
+
+                    scope.updateLayout = function () {
+                        var view = angular.element(document.getElementById("viewstack"));
+
+                        var winHeight = $window.innerHeight;
+                        var footerHeight = document.getElementById("footer").clientHeight;
+                        var newHeight = winHeight - footerHeight - 10;
+
+                        view.css("height", newHeight + "px");
+                        $rootScope.viewStackHeight = newHeight;
+                    };
+
+                    angular.element($window).bind( "resize", function () {
+                        scope.updateLayout();
+                    });
+
+                    $timeout(function () {
+                        scope.updateLayout();
+                    }, 300);
+
+                }
             }
         }
     ])
@@ -20,7 +42,7 @@ angular.module('somafmPlayerApp')
                 transclude: true,
                 template:   "<div id='list' class='list' ng-transclude></div>",
                 link: function (scope, element, attr) {
-                    /*
+
                     scope.updateLayout = function () {
 
                         var children = element.parent().children();
@@ -51,7 +73,7 @@ angular.module('somafmPlayerApp')
                     $timeout(function () {
                         scope.updateLayout();
                     }, 300);
-                    */
+
                 }
             }
         }
@@ -66,15 +88,15 @@ angular.module('somafmPlayerApp')
                     station: "="
                 },
                 template:   "<div class='player-container'>" +
-                                "<div class='player'>" +
-                                    "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
-                                    "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
-                                    "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
-                                    "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-                                    "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
-                                    "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
-                                "</div>" +
-                            "</div>",
+                    "<div class='player'>" +
+                    "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
+                    "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
+                    "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
+                    "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
+                    "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
+                    "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
+                    "</div>" +
+                    "</div>",
                 link: function (scope, element, attr) {
 
                     scope.audio = new Audio();
@@ -173,10 +195,10 @@ angular.module('somafmPlayerApp')
                 valueChange: "&"
             },
             template:   "<div class='slider'>" +
-                            "<div class='slider-track'>" +
-                                "<div id='sliderValue' class='slider-value'></div>" +
-                            "</div>" +
-                        "</div>",
+                "<div class='slider-track'>" +
+                "<div id='sliderValue' class='slider-value'></div>" +
+                "</div>" +
+                "</div>",
             link: function (scope, element, attr) {
                 var width,
                     offset,

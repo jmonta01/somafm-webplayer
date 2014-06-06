@@ -7,10 +7,10 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 .btn-link {
@@ -47,17 +47,12 @@ html {
     .player-container {
       width: 600px;
       height: 100%;
-      background: red;
+      overflow: hidden;
 
       background: $gray-darker;
 
       .viewstack {
-
-        background: green;
-
         width: 100%;
-//        height: 100%;
-
         padding: 0;
 
         .row {
@@ -95,7 +90,6 @@ html {
         }
 
         .list {
-//          height: auto;
           overflow: auto;
         }
 
@@ -247,9 +241,10 @@ html {
         width: 570px;
         bottom: 0;
         margin-bottom: 5px;
-        background: $gray-darker;
 
-        background: blue;
+        background: $gray-darker;
+        position: absolute;
+        z-index: 50;
 
         .player-container {
           width: 100%;
@@ -295,7 +290,6 @@ html {
 
         .mainnav {
           width: 100%;
-          height: 57px;
           margin-top: 5px;
 
           a {
@@ -350,6 +344,7 @@ html {
             background: url(../images/now_playing_selected_btn.png) no-repeat top left;
           }
 
+
         }
       }
 
@@ -358,6 +353,5 @@ html {
 
   }
 }
-
 
 
