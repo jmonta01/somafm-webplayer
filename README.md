@@ -16,7 +16,8 @@ Make sure you have installed [Node.js](http://nodejs.org), [Git](http://git-scm.
 ## Run locally
 - `grunt serve`
 
-## Build for production > clears out and rebuilds 'dist' folder
+## Build for production
+clears out and rebuilds 'dist' folder
 - `grunt build`
 
 ## Test production build
