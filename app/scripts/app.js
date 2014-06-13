@@ -9,6 +9,17 @@ angular
         'config',
         'LocalStorageModule'
     ])
+    .constant('USE_HTML_AUDIO', (function () {
+        var elem = document.createElement("audio");
+
+        if( typeof elem.canPlayType == 'function' ) {
+            var playable = elem.canPlayType('audio/mpeg');
+            if( (playable.toLowerCase() == 'maybe') || (playable.toLowerCase() == 'probably') ) {
+                return true;
+            }
+        }
+        return false;
+    })())
     .config(['localStorageServiceProvider', function(localStorageServiceProvider){
         localStorageServiceProvider.setPrefix('somafm');
     }])
@@ -38,3 +49,5 @@ angular
                 redirectTo: '/all-stations'
             });
     });
+
+

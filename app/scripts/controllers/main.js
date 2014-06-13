@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('MainCtrl', ['$scope', '$rootScope', '$location', '$log', 'StationService', 'FavoriteStationService',
-        function ($scope, $rootScope, $location, $log, StationService, FavoriteStationService) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$window', '$location', '$log', 'StationService', 'FavoriteStationService',
+        function ($scope, $rootScope, $window, $location, $log, StationService, FavoriteStationService) {
 
             $scope.showPlayerControls = false;
             $scope.showGlobalNav = true;
@@ -39,6 +39,9 @@ angular.module('somafmPlayerApp')
             $rootScope.selectedStation = null;
 
             $rootScope.playStation = function (station) {
+                $rootScope.selectedStation = null;
+                $scope.showPlayerControls = false;
+
                 StationService.getPls(station)
                     .then(function (data) {
                         $rootScope.selectedStation = station;
@@ -61,6 +64,11 @@ angular.module('somafmPlayerApp')
                     FavoriteStationService.remove(station);
                 }
             };
+
+            //used explicitly by the flash player fallback.
+            $window.getStreams = function () {
+                return $rootScope.selectedStation ? $rootScope.selectedStation.urls : [];
+            }
 
         }
     ]);

@@ -78,8 +78,8 @@ angular.module('somafmPlayerApp')
             }
         }
     ])
-    .directive("audioplayer", [ "$rootScope",
-        function ($rootScope) {
+    .directive("audioplayer", [ "USE_HTML_AUDIO",
+        function ($rootScope, USE_HTML_AUDIO) {
             return {
                 restrict: "E",
                 replace: true,
@@ -87,7 +87,26 @@ angular.module('somafmPlayerApp')
                 scope : {
                     station: "="
                 },
-                template:   "<div class='player-container'>" +
+                template:
+                    "<div class='player-container'>" +
+                        "<htmlplayer ng-if='!USE_HTML_AUDIO' station='station' ></htmlplayer>" +
+                        "<flashplayer ng-if='USE_HTML_AUDIO' width='570' height='54' ></flashplayer>" +
+                    "</div>",
+                link: function (scope, element, attr) {
+                    console.log("USE_HTML_AUDIO", USE_HTML_AUDIO);
+                }
+            }
+        }
+    ])
+    .directive("htmlplayer", ["$rootScope",
+        function ($rootScope) {
+            return {
+                restrict : "E",
+                replace : true,
+                scope : {
+                    station: "="
+                },
+                template:
                     "<div class='player'>" +
                     "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
                     "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
@@ -95,10 +114,8 @@ angular.module('somafmPlayerApp')
                     "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
                     "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
                     "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
-                    "</div>" +
                     "</div>",
                 link: function (scope, element, attr) {
-
                     scope.audio = new Audio();
 
                     scope.playing = false;
@@ -130,8 +147,6 @@ angular.module('somafmPlayerApp')
                             scope.audio.load();
                             scope.playing = false;
                         }
-
-
                     });
 
                     scope.togglePlay = function () {
@@ -179,9 +194,6 @@ angular.module('somafmPlayerApp')
                         return scope.audio.muted;
                     };
 
-                    angular.element(scope.audio).on("loadedmetadata", function (event) {
-                        console.log(event);
-                    })
                 }
             }
         }
@@ -194,10 +206,11 @@ angular.module('somafmPlayerApp')
                 value: "=",
                 valueChange: "&"
             },
-            template:   "<div class='slider'>" +
-                "<div class='slider-track'>" +
-                "<div id='sliderValue' class='slider-value'></div>" +
-                "</div>" +
+            template:
+                "<div class='slider'>" +
+                    "<div class='slider-track'>" +
+                        "<div id='sliderValue' class='slider-value'></div>" +
+                    "</div>" +
                 "</div>",
             link: function (scope, element, attr) {
                 var width,
@@ -210,28 +223,29 @@ angular.module('somafmPlayerApp')
                 });
 
                 element.on('mousedown', function (event) {
+                    console.log("start dragging");
                     dragging = true;
-                    if (!width) {
-                        width = angular.element(element).width();
-                    }
-                    if (!offset) {
-                        offset = angular.element(element).offset().left;
-                    }
+                    width =  element[0].getBoundingClientRect().width;
+                    offset = element[0].getBoundingClientRect().left;
                 });
 
                 element.on('mouseup', function (event) {
+                    console.log("stop dragging");
                     dragging = false;
                     _calcScrubberWidth(event.pageX);
                 });
 
                 element.on('mousemove', function (event) {
                     if (dragging) {
+                        console.log("move");
                         _calcScrubberWidth(event.pageX);
                     }
                 });
 
                 function _calcScrubberWidth (x) {
                     var dif = x - offset;
+
+                    console.log(dif, width, attr.max, dif/width * attr.max);
 
                     if (dif < 0) {
                         dif = attr.min;
@@ -240,7 +254,7 @@ angular.module('somafmPlayerApp')
                     }
                     else if (dif > width) {
                         dif = attr.max;
-                        scrubber.width( "100%");
+                        scrubber.css("width", "100%");
                         scope.value = attr.max;
                     }
                     else {
@@ -255,5 +269,47 @@ angular.module('somafmPlayerApp')
                 }
             }
 
+        }
+    }])
+    .directive("flashplayer", [function () {
+        return {
+            restrict : "E",
+            replace: true,
+            scope: {
+                streams: "=",
+                width: "@",
+                height: "@"
+            },
+            template :
+                "<div class='player-container'>" +
+                    "<div id='flashplayer'></div>" +
+                "</div>",
+            link: function (scope, element, attr) {
+
+                var swfVersionStr = "10.2.0";
+                var xiSwfUrlStr = "flash/playerProductInstall.swf";
+
+                var flashvars = {};
+
+                var params = {
+                    quality: "high",
+                    wmode: "transparent",
+                    allowscriptaccess: "sameDomain"
+                };
+                var attributes = {
+                    id: "flashplayer",
+                    name: "flashplayer",
+                    align: "middle"
+                };
+
+                var el = document.getElementById("flashplayer");
+                swfobject.embedSWF(
+                    "flash/Player.swf", el,
+                    scope.width, scope.height,
+                    swfVersionStr, xiSwfUrlStr,
+                    flashvars, params, attributes);
+
+                swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            }
         }
     }]);
