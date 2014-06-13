@@ -23,6 +23,14 @@ angular.module('somafmPlayerApp')
 
             $scope.selectedView = $scope.availableViews[0];
 
+            $scope.isDisabled = function (view) {
+                var disabled = false;
+                if (view === nowPlayingView) {
+                    disabled = !$rootScope.selectedStation;
+                }
+                return disabled;
+            };
+
             $scope.$on('$routeChangeSuccess', function() {
                 angular.forEach($scope.availableViews, function (view) {
                     if (view.path === $location.path()) {
@@ -32,8 +40,15 @@ angular.module('somafmPlayerApp')
             });
 
             $scope.changeViewTo = function (newView) {
+                if (newView === nowPlayingView && !$rootScope.selectedStation) {
+                    return;
+                }
                 $scope.selectedView = newView;
                 $location.path(newView.path);
+            };
+
+            $rootScope.changeViewToDefault = function () {
+                $scope.changeViewTo(allStationsView);
             };
 
             $rootScope.selectedStation = null;

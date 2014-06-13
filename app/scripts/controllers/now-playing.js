@@ -36,5 +36,9 @@ angular.module('somafmPlayerApp')
                 $timeout.cancel($rootScope.timer);
             });
 
+            if (!$rootScope.selectedStation) {
+                $rootScope.changeViewToDefault();
+            }
+
         }
     ]);

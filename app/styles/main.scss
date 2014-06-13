@@ -343,7 +343,16 @@ html {
           .now-playing.selected {
             background: url(../images/now_playing_selected_btn.png) no-repeat top left;
           }
-
+          .now-playing.disabled {
+            cursor: auto;
+            background: url(../images/now_playing_btn.png) no-repeat top left;
+          }
+          .now-playing.disabled > .dimmer {
+            width:100%;
+            height:100%;
+            background-color:#1a1a1a;
+            opacity:0.8;
+          }
 
         }
       }

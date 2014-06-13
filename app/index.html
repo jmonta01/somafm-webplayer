@@ -29,9 +29,10 @@
 
             <div class="mainnav">
                 <a ng-repeat="view in availableViews"
-                   ng-class="{selected:selectedView == view}"
+                   ng-class="{selected:selectedView == view, disabled: isDisabled(view)}"
                    class="{{view.class}}"
-                   ng-click="changeViewTo(view)">
+                   ng-click="changeViewTo(view)" >
+                    <div class="dimmer"></div>
                 </a>
             </div>
         </div>
