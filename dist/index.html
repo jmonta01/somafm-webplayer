@@ -1,6 +1,18 @@
-<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/d983abca.main.css"><body ng-app="somafmPlayerApp"><!--[if lt IE 7]>
+<!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/254b8330.main.css"><body ng-app="somafmPlayerApp"><!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><div class="container player-container" ng-controller="MainCtrl"><viewstack></viewstack><div id="footer"><audioplayer station="selectedStation" ng-show="showPlayerControls"></audioplayer><div class="mainnav"><a ng-repeat="view in availableViews" ng-class="{selected:selectedView == view}" class="{{view.class}}" ng-click="changeViewTo(view)"></a></div></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID --><!--
+    <![endif]--><div class="container player-container" ng-controller="MainCtrl"><viewstack></viewstack><div id="footer"><audioplayer station="$root.playingStation" ng-show="$root.showControls"></audioplayer><div class="mainnav"><a ui-sref-active="selected" ui-sref="all-stations" class="all-stations"><div class="dimmer"></div></a> <a ui-sref-active="selected" ui-sref="fav-stations" class="fav-stations"><div class="dimmer"></div></a> <!--
+                <a ui-sref-active="selected"
+                   ui-sref="fav-songs"
+                   class="fav-songs">
+                    <div class="dimmer"></div>
+                </a>
+                --> <!--
+                <a ui-sref-active="selected"
+                   ui-sref="community"
+                   class="community">
+                    <div class="dimmer"></div>
+                </a>
+                --> <a ng-if="!$root.playingStation" class="now-playing disabled"><div class="dimmer"></div></a> <a ng-if="$root.playingStation" ui-sref-active="selected" ui-sref="now-playing({stationID: $root.playingStation._id})" class="now-playing"><div class="dimmer"></div></a></div></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID --><!--
     <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13,4 +25,4 @@
     --><!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]--><script src="scripts/ec0c604e.vendor.js"></script><script src="scripts/78b04bff.scripts.js"></script>
+    <![endif]--><script src="scripts/7d480a55.vendor.js"></script><script src="scripts/f9de6a72.scripts.js"></script>
