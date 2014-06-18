@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$log', '$timeout', 'StationService',
-        function ($scope, $rootScope, $log, $timeout, StationService) {
+    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'PlayerService', 'StationService', 'FavoriteSongService',
+        function ($scope, $rootScope, $timeout, $state, $stateParams, PlayerService, StationService, FavoriteSongService) {
 
-            $rootScope.timer;
+
+            $scope.station = null;
             $scope.playList = [];
 
             $scope.getPlayList = function (station) {
@@ -25,20 +26,34 @@ angular.module('somafmPlayerApp')
                 }
             };
 
-            $scope.getPlayList($rootScope.selectedStation);
-
-
-            $scope.toggleFavSong = function (song) {
-                song.favorite = !song.favorite;
-            };
-
             $scope.$on('$destroy', function(){
                 $timeout.cancel($rootScope.timer);
             });
 
-            if (!$rootScope.selectedStation) {
-                $rootScope.changeViewToDefault();
+            $scope.toggleFavSong = function (song) {
+                FavoriteSongService.toggle(song);
+            };
+
+            $rootScope.$watch("playingStation", function () {
+                if ($scope.station !== $rootScope.playingStation) {
+                    $scope.station = $rootScope.playingStation;
+                    if ($scope.station) {
+                        $scope.getPlayList($scope.station);
+                    }
+                }
+            });
+
+            if ($stateParams.stationID) {
+                if (!$rootScope.playingStation || ($rootScope.playingStation && $stateParams.stationID !== $rootScope.playingStation._id)) {
+                    StationService.getStationByID($stateParams.stationID)
+                        .then(function (data) {
+                            PlayerService.play(data);
+                        });
+                }
+            } else {
+                $state.go("all-stations");
             }
+
 
         }
     ]);

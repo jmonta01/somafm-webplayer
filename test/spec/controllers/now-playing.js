@@ -7,26 +7,38 @@ describe('Controller: NowPlayingCtrl', function () {
         service,
         httpBackend,
         $channelsJSON,
-        $stationPlayListJSON;
+        $stationPlayListJSON,
+        $plsJSON;
 
 
     // load the controller's module
     beforeEach(function () {
-        module('somafmPlayerApp', 'mockData');
+        module('somafmPlayerApp', 'mockData', 'config');
 
-        inject(function ($controller, $rootScope, StationService, $httpBackend, channelsJSON, stationPlayListJSON) {
+        inject(function ($controller, $rootScope, AppURLs, StationService, $httpBackend, channelsJSON, stationPlayListJSON, plsJSON) {
 
             service = StationService;
             service.parseXML(false);
             httpBackend = $httpBackend;
             $channelsJSON = channelsJSON;
             $stationPlayListJSON = stationPlayListJSON;
+            $plsJSON = plsJSON;
+
+            httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
+            httpBackend.expectGET("/data/groovesalad.pls").respond($plsJSON);
+            httpBackend.expectGET("/data/groovesalad.xml").respond($stationPlayListJSON);
 
             scope = $rootScope.$new();
+
             NowPlayingCtrl = $controller('NowPlayingCtrl', {
                 $scope: scope,
-                StationService: service
+                StationService: service,
+                AppURLs: AppURLs,
+                $state: {go: function () {}},
+                $stateParams: {stationID: "groovesalad"}
             });
+
+            httpBackend.flush();
 
         });
     });
@@ -39,20 +51,6 @@ describe('Controller: NowPlayingCtrl', function () {
     });
 
     it('should be able to load a playlist of songs from the currently selected station', function () {
-        expect(scope.playList).toBeDefined();
-
-        httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
-        httpBackend.expectGET("/data/groovesalad.xml").respond($stationPlayListJSON);
-
-        service.getAllStations()
-            .then(function (data) {
-                var station = data[0];
-                if (station) {
-                    scope.getPlayList(station)
-                }
-            });
-        httpBackend.flush();
-
         //due to the favorite injection, we must inspect the contents instead of the object itself
         expect(scope.playList[0].album).toEqual($stationPlayListJSON[0].album);
         expect(scope.playList[1].album).toEqual($stationPlayListJSON[1].album);
@@ -65,23 +63,13 @@ describe('Controller: NowPlayingCtrl', function () {
     });
 
     it('should be able to toggle if song is favorite', function () {
-        httpBackend.expectGET("/data/channels.xml").respond($channelsJSON);
-        httpBackend.expectGET("/data/groovesalad.xml").respond($stationPlayListJSON);
-
-        service.getAllStations()
-            .then(function (data) {
-                var station = data[0];
-                if (station) {
-                    scope.getPlayList(station)
-                }
-            });
-        httpBackend.flush();
-
-        var song = scope.playList[0];
+        var song = {};
         song.favorite = false;
         expect(song.favorite).toBe(false);
+
         scope.toggleFavSong(song);
         expect(song.favorite).toBe(true);
+
         scope.toggleFavSong(song);
         expect(song.favorite).toBe(false);
     });

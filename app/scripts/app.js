@@ -2,14 +2,15 @@
 
 angular
     .module('somafmPlayerApp', [
+        'ui.router',
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute',
         'config',
         'LocalStorageModule'
     ])
     .constant('USE_HTML_AUDIO', (function () {
+        return false;
         var elem = document.createElement("audio");
 
         if( typeof elem.canPlayType == 'function' ) {
@@ -23,31 +24,37 @@ angular
     .config(['localStorageServiceProvider', function(localStorageServiceProvider){
         localStorageServiceProvider.setPrefix('somafm');
     }])
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when('/all-stations', {
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('all-stations', {
+                url: '/all-stations',
                 templateUrl: 'views/all-stations.html',
                 controller: 'AllStationsCtrl'
             })
-             .when('/fav-stations', {
-                 templateUrl: 'views/fav-stations.html',
-                 controller: 'FavStationsCtrl'
-             })
-             .when('/fav-songs', {
-                 templateUrl: 'views/fav-songs.html',
-                 controller: 'FavSongsCtrl'
-             })
-             .when('/community', {
-                 templateUrl: 'views/community.html',
-                 controller: 'CommunityCtrl'
-             })
-             .when('/now-playing', {
-                 templateUrl: 'views/now-playing.html',
-                 controller: 'NowPlayingCtrl'
-             })
-            .otherwise({
-                redirectTo: '/all-stations'
+            .state('fav-stations', {
+                url: '/fav-stations',
+                templateUrl: 'views/fav-stations.html',
+                controller: 'FavStationsCtrl'
+            })
+            .state('fav-songs', {
+                url: '/fav-songs',
+                templateUrl: 'views/fav-songs.html',
+                controller: 'FavSongsCtrl'
+            })
+            .state('community', {
+                url: '/community',
+                templateUrl: 'views/community.html',
+                controller: 'CommunityCtrl'
+            })
+            .state('now-playing', {
+                url: '/now-playing/:stationID',
+                templateUrl: 'views/now-playing.html',
+                controller: 'NowPlayingCtrl'
             });
+
+
+        $urlRouterProvider.otherwise('/all-stations');
+
     });
 
 

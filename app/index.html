@@ -25,15 +25,47 @@
         <viewstack></viewstack>
 
         <div id="footer">
-            <audioplayer station="selectedStation" ng-show='showPlayerControls' ></audioplayer>
+            <audioplayer station="$root.playingStation" ng-show="$root.showControls"></audioplayer>
 
             <div class="mainnav">
-                <a ng-repeat="view in availableViews"
-                   ng-class="{selected:selectedView == view, disabled: isDisabled(view)}"
-                   class="{{view.class}}"
-                   ng-click="changeViewTo(view)" >
+                <a ui-sref-active="selected"
+                   ui-sref="all-stations"
+                   class="all-stations">
                     <div class="dimmer"></div>
                 </a>
+
+                <a ui-sref-active="selected"
+                   ui-sref="fav-stations"
+                   class="fav-stations">
+                    <div class="dimmer"></div>
+                </a>
+                <!--
+                <a ui-sref-active="selected"
+                   ui-sref="fav-songs"
+                   class="fav-songs">
+                    <div class="dimmer"></div>
+                </a>
+                -->
+                <!--
+                <a ui-sref-active="selected"
+                   ui-sref="community"
+                   class="community">
+                    <div class="dimmer"></div>
+                </a>
+                -->
+
+                <a ng-if="!$root.playingStation"
+                   class="now-playing disabled">
+                    <div class="dimmer"></div>
+                </a>
+
+                <a ng-if="$root.playingStation"
+                   ui-sref-active="selected"
+                   ui-sref="now-playing({stationID: $root.playingStation._id})"
+                   class="now-playing">
+                    <div class="dimmer"></div>
+                </a>
+
             </div>
         </div>
     </div>
@@ -65,7 +97,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -77,8 +109,10 @@
     <script src="scripts/utils/LocalStorage.js"></script>
     <script src="scripts/directives/directives.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/favorite-service.js"></script>
     <script src="scripts/services/data-service.js"></script>
     <script src="scripts/services/favorite-service.js"></script>
+    <script src="scripts/services/player-service.js"></script>
     <script src="scripts/controllers/all-stations.js"></script>
     <script src="scripts/controllers/fav-stations.js"></script>
     <script src="scripts/controllers/fav-songs.js"></script>

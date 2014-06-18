@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('AllStationsCtrl', ['$scope', '$rootScope', '$log', '$filter', 'StationService', 'FavoriteStationService',
-        function ($scope, $rootScope, $log, $filter, StationService, FavoriteStationService) {
+    .controller('AllStationsCtrl', ['$scope', '$rootScope', '$filter', '$location', 'StationService', 'FavoriteStationService', 'PlayerService',
+        function ($scope, $rootScope, $filter, $location, StationService, FavoriteStationService, PlayerService) {
 
 
             $scope.organizedStations = [];
@@ -86,6 +86,23 @@ angular.module('somafmPlayerApp')
             };
 
             $scope.loadStations();
+
+
+            $scope.playStation = function (station) {
+                $location.path("now-playing" + "/" + station._id);
+            };
+
+            $scope.isStationPlaying = function (station) {
+                return $rootScope.playingStation === station;
+            };
+
+            $scope.stopStation = function (station) {
+                PlayerService.stop(station);
+            };
+
+            $scope.toggleFavStation = function (station) {
+                FavoriteStationService.toggle(station);
+            };
 
         }
     ]);

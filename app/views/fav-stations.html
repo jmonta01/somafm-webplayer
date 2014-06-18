@@ -13,7 +13,7 @@
 </div>
 
 <list>
-    <div class="row card" ng-repeat="station in organizedStations" ng-show="organizeMethod !== 'genre'">
+    <div class="row card" ng-repeat="station in organizedStations" ng-if="organizeMethod !== 'genre'">
         <img class="card-image" src="{{station.image}}" />
         <div class="card-content">
             <h4>{{station.title}}</h4>
@@ -21,19 +21,19 @@
             <p class="small">{{station.listeners}} listeners</p>
         </div>
         <div class="card-actions">
-            <button class="btn btn-link btn-lg" ng-click="$root.playStation(station)" ng-show="$root.selectedStation !== station">
+            <button class="btn btn-link btn-lg" ng-click="playStation(station)" ng-show="$root.playingStation !== station">
                 <span class="glyphicon glyphicon-play"></span>
             </button>
-            <button class="btn btn-link btn-lg" ng-click="$root.stopStation(station)" ng-show="$root.selectedStation == station">
+            <button class="btn btn-link btn-lg" ng-click="stopStation(station)" ng-show="$root.playingStation === station">
                 <span class="glyphicon glyphicon-stop"></span>
             </button>
-            <button class="btn btn-link btn-lg btn-fav" ng-click="$root.toggleFavStation(station)">
+            <button class="btn btn-link btn-lg btn-fav" ng-click="removeStation(station)">
                 <span class="glyphicon glyphicon-star"></span>
             </button>
         </div>
     </div>
 
-    <div class="row" ng-repeat="genre in organizedGenres" ng-show="organizeMethod === 'genre'">
+    <div class="row" ng-repeat="genre in organizedGenres" ng-if="organizeMethod === 'genre'">
         <div class="genre">{{genre | uppercase}}</div>
 
         <div class="card" ng-repeat="station in organizedStations[genre]">
@@ -44,13 +44,13 @@
                 <p class="small">{{station.listeners}} listeners</p>
             </div>
             <div class="card-actions">
-                <button class="btn btn-link btn-lg" ng-click="$root.playStation(station)" ng-show="$root.selectedStation !== station">
+                <button class="btn btn-link btn-lg" ng-click="playStation(station)" ng-show="$root.playingStation !== station">
                     <span class="glyphicon glyphicon-play"></span>
                 </button>
-                <button class="btn btn-link btn-lg" ng-click="$root.stopStation(station)" ng-show="$root.selectedStation == station">
+                <button class="btn btn-link btn-lg" ng-click="stopStation(station)" ng-show="$root.playingStation === station">
                     <span class="glyphicon glyphicon-stop"></span>
                 </button>
-                <button class="btn btn-link btn-lg btn-fav" ng-click="$root.toggleFavStation(station)">
+                <button class="btn btn-link btn-lg btn-fav" ng-click="removeStation(station)">
                     <span class="glyphicon glyphicon-star"></span>
                 </button>
             </div>

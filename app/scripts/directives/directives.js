@@ -7,7 +7,7 @@ angular.module('somafmPlayerApp')
                 restrict :"E",
                 replace: true,
                 scope: {},
-                template:   "<div id='viewstack' class='viewstack container'' ng-view='' onload='updateLayout()'></div>",
+                template:   "<div id='viewstack' class='viewstack container'' ui-view onload='updateLayout()'></div>",
                 link: function (scope, element, attr) {
 
                     scope.updateLayout = function () {
@@ -66,10 +66,6 @@ angular.module('somafmPlayerApp')
                         scope.updateLayout();
                     });
 
-                    angular.element(element.parent()).on("onload", function () {
-                        console.log("list parent onload");
-                    });
-
                     $timeout(function () {
                         scope.updateLayout();
                     }, 300);
@@ -79,7 +75,7 @@ angular.module('somafmPlayerApp')
         }
     ])
     .directive("audioplayer", [ "USE_HTML_AUDIO",
-        function ($rootScope, USE_HTML_AUDIO) {
+        function (USE_HTML_AUDIO) {
             return {
                 restrict: "E",
                 replace: true,
@@ -223,29 +219,24 @@ angular.module('somafmPlayerApp')
                 });
 
                 element.on('mousedown', function (event) {
-                    console.log("start dragging");
                     dragging = true;
                     width =  element[0].getBoundingClientRect().width;
                     offset = element[0].getBoundingClientRect().left;
                 });
 
                 element.on('mouseup', function (event) {
-                    console.log("stop dragging");
                     dragging = false;
                     _calcScrubberWidth(event.pageX);
                 });
 
                 element.on('mousemove', function (event) {
                     if (dragging) {
-                        console.log("move");
                         _calcScrubberWidth(event.pageX);
                     }
                 });
 
                 function _calcScrubberWidth (x) {
                     var dif = x - offset;
-
-                    console.log(dif, width, attr.max, dif/width * attr.max);
 
                     if (dif < 0) {
                         dif = attr.min;

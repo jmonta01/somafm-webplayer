@@ -1,14 +1,14 @@
-<div id="now-playing" ng-show="$root.selectedStation">
+<div id="now-playing">
     <div id="header" class="header">
-        <img src="{{$root.selectedStation.image}}" />
+        <img src="{{station.image}}" />
         <div class="content">
-            <h3>{{$root.selectedStation.title}}</h3>
-            <p>{{$root.selectedStation.description}}</p>
-            <button class="btn btn-link btn-large btn-fav" ng-click="removeStation($root.selectedStation)">
-                <span class="glyphicon {{$root.selectedStation.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
+            <h3>{{station.title}}</h3>
+            <p>{{station.description}}</p>
+            <button class="btn btn-link btn-large btn-fav" ng-click="removeStation(station)">
+                <span class="glyphicon {{station.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
             </button>
             <p>Music Director:
-                <a href="mailto:{{$root.selectedStation.djmail}}" target="_blank">{{$root.selectedStation.dj}}</a>
+                <a href="mailto:{{station.djmail}}" target="_blank">{{station.dj}}</a>
             </p>
         </div>
     </div>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <list ng-init="getPlayList($root.selectedStation)">
+    <list>
         <div class="row card" ng-repeat="song in playList">
             <div class="list-col-1">
                 <span>{{ song.date | date : "hh:mm" }}</span>
@@ -43,20 +43,14 @@
                         <span class="glyphicon {{song.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
                     </button>
                     -->
+                    <!--
                     <button class="btn btn-link btn-large">
                         <span class="glyphicon glyphicon-shopping-cart"></span>
                     </button>
-
+                    -->
                 </div>
             </div>
         </div>
     </list>
 
 </div>
-<div ng-show="!$root.selectedStation">
-    <div class="tall-header">
-        <img src="../images/list_header.jpg" />
-    </div>
-    <h4 class="text-center no-station-msg">No station to play</h4>
-</div>
-

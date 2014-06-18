@@ -58,7 +58,8 @@ angular.module('mockData', [])
                 "highestpls":"http://somafm.com/groovesalad130.pls",
                 "listeners":"1836",
                 "lastPlaying":"United Future Organization - The Sixth Sense",
-                "_id":"groovesalad"
+                "_id":"groovesalad",
+                "favorite":true
             }
     )
     .value('plsJSON',

@@ -25,10 +25,6 @@ describe('Controller: FavStationsCtrl', function () {
         expect(scope.getStations).toBeDefined();
     });
 
-    it('should be able to add station to favs', function () {
-        expect(scope.addStation).toBeDefined();
-    });
-
     it('should be able to remove station from favs', function () {
         expect(scope.removeStation).toBeDefined();
     });

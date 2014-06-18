@@ -34,11 +34,21 @@ angular.module('somafmPlayerApp')
                 lsFn.add(key, "");
             };
 
+            var toggleStation = function (station) {
+                station.favorite = !station.favorite;
+                if (station.favorite) {
+                    addStation(station);
+                } else {
+                    removeStation(station);
+                }
+            };
+
             return {
                 get: getStations,
                 add: addStation,
                 remove: removeStation,
-                clear: clearStations
+                clear: clearStations,
+                toggle: toggleStation
             }
         }
     ])
@@ -76,11 +86,23 @@ angular.module('somafmPlayerApp')
                 lsFn.add(key, "");
             };
 
+
+            var toggleSong = function (song) {
+                song.favorite = !song.favorite;
+                if (song.favorite) {
+                    addSong(song);
+                } else {
+                    removeSong(song);
+                }
+            };
+
+
             return {
                 get: getSongs,
                 add: addSong,
                 remove: removeSong,
-                clear: clearSongs
+                clear: clearSongs,
+                toggle: toggleSong
             }
         }
     ]);
