@@ -4,7 +4,7 @@
         <div class="content">
             <h3>{{station.title}}</h3>
             <p>{{station.description}}</p>
-            <button class="btn btn-link btn-large btn-fav" ng-click="removeStation(station)">
+            <button class="btn btn-link btn-large btn-fav" ng-click="toggleFavStation(station)">
                 <span class="glyphicon {{station.favorite ? 'glyphicon-star' : 'glyphicon-star-empty'}}"></span>
             </button>
             <p>Music Director:

@@ -15,6 +15,7 @@ angular.module('somafmPlayerApp')
             };
 
             var addStation = function (station) {
+                station.favorite = true;
                 var favs = getStations();
                 if (favs.indexOf(station._id) == -1) {
                     favs.push(station._id);
@@ -23,6 +24,7 @@ angular.module('somafmPlayerApp')
             };
 
             var removeStation = function (station) {
+                station.favorite = false;
                 var favs = getStations();
                 if (favs.indexOf(station._id) > -1) {
                     favs.splice(favs.indexOf(station._id), 1);

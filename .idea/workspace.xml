@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/utils/transform.js" afterPath="$PROJECT_DIR$/app/scripts/utils/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/favorite-service.js" afterPath="$PROJECT_DIR$/app/scripts/services/favorite-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/now-playing.html" afterPath="$PROJECT_DIR$/app/views/now-playing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -27,22 +28,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="now-playing.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/now-playing.html">
+      <file leaf-file-name="fav-stations.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/fav-stations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="915">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+              <folding>
+                <element signature="e#628#725#0" expanded="false" />
+                <element signature="e#780#958#0" expanded="false" />
+                <element signature="e#1008#1983#0" expanded="false" />
+                <element signature="e#2107#3062#0" expanded="false" />
+                <element signature="e#3299#3381#0" expanded="false" />
+                <element signature="e#3429#3892#0" expanded="false" />
+                <element signature="e#3982#4064#0" expanded="false" />
+                <element signature="e#4124#4201#0" expanded="false" />
+                <element signature="e#4256#4316#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite-service.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/favorite-service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3446191" vertical-offset="30" max-vertical-offset="1725">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transform.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
+      <file leaf-file-name="fav-stations.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/fav-stations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56574184" vertical-offset="191" max-vertical-offset="1110">
-              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-              <folding />
+            <state vertical-scroll-proportion="-15.583333" vertical-offset="1" max-vertical-offset="840">
+              <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#list#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#1;tag#list#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,9 +114,7 @@
         <option value="$PROJECT_DIR$/app/main.scss" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/app/scripts/services/navigation-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/favorite-service.js" />
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/app/views/now-playing.html" />
         <option value="127.0.0.1:9000/#/now-playing/groovesalad" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/nav.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/nav-service.js" />
@@ -107,7 +129,6 @@
         <option value="$PROJECT_DIR$/test/spec/controllers/all-stations.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/all-stations.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/fav-stations.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/now-playing.js" />
         <option value="$PROJECT_DIR$/test/spec/controllers/main.js" />
         <option value="$PROJECT_DIR$/test/spec/services/data-service.js" />
@@ -117,6 +138,9 @@
         <option value="$PROJECT_DIR$/app/scripts/config.js" />
         <option value="$PROJECT_DIR$/dist/scripts/f9de6a72.scripts.js" />
         <option value="$PROJECT_DIR$/app/scripts/utils/transform.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
+        <option value="$PROJECT_DIR$/app/views/now-playing.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/favorite-service.js" />
       </list>
     </option>
   </component>
@@ -369,6 +393,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,7 +433,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,7 +703,11 @@
       <created>1403069358572</created>
       <updated>1403069358572</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="updating config.js to local data&#10;fixing date parsing on song history transform">
+      <created>1403140113516</created>
+      <updated>1403140113516</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -667,11 +735,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56242704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7614035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23569024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16799022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14477703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.4996986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22558923" sideWeight="0.50030136" order="7" side_tool="true" content_ui="tabs" />
@@ -681,7 +750,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2882147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -726,7 +794,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="layering in pls reading/parsing" />
     <MESSAGE value="adding reference urls in reference documentation" />
     <MESSAGE value="styling the now playing view&#10;starting to layer in volume scrubber" />
     <MESSAGE value="fixing the volume controls" />
@@ -751,7 +818,8 @@
     <MESSAGE value="full refactor to use ui-router to handle routing (for deep linking into stations)" />
     <MESSAGE value="creating build" />
     <MESSAGE value="adding unversioned selected button bar title image" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding unversioned selected button bar title image" />
+    <MESSAGE value="updating config.js to local data&#10;fixing date parsing on song history transform" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating config.js to local data&#10;fixing date parsing on song history transform" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,32 +990,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/favorite-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.265896" vertical-offset="0" max-vertical-offset="1695">
-          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="4665">
           <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/all-stations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9" vertical-offset="0" max-vertical-offset="540">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fav-stations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="540">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -990,6 +1037,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43207127" vertical-offset="466" max-vertical-offset="930">
           <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+          <folding>
+            <element signature="e#655#752#0" expanded="false" />
+            <element signature="e#807#985#0" expanded="false" />
+            <element signature="e#1035#2007#0" expanded="false" />
+            <element signature="e#2053#3100#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,24 +1053,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/fav-stations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43429846" vertical-offset="300" max-vertical-offset="765">
-          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/spec/controllers/fav-stations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5194805" vertical-offset="150" max-vertical-offset="660">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/now-playing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23608018" vertical-offset="166" max-vertical-offset="615">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1095,6 +1134,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25392985" vertical-offset="0" max-vertical-offset="827">
           <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,18 +1146,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/now-playing.html">
+    <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="915">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.56711006" vertical-offset="191" max-vertical-offset="1110">
+          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/utils/transform.js">
+    <entry file="file://$PROJECT_DIR$/app/views/all-stations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56574184" vertical-offset="191" max-vertical-offset="1110">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="690">
+          <caret line="30" column="101" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="101" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#list#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#list#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#1;tag#list#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/now-playing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1329114" vertical-offset="0" max-vertical-offset="915">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/now-playing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29020557" vertical-offset="0" max-vertical-offset="827">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="e#502#1193#0" expanded="false" />
+            <element signature="e#1621#1910#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fav-stations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.583333" vertical-offset="1" max-vertical-offset="840">
+          <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#list#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#list#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/fav-stations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+          <folding>
+            <element signature="e#628#725#0" expanded="false" />
+            <element signature="e#780#958#0" expanded="false" />
+            <element signature="e#1008#1983#0" expanded="false" />
+            <element signature="e#2107#3062#0" expanded="false" />
+            <element signature="e#3299#3381#0" expanded="false" />
+            <element signature="e#3429#3892#0" expanded="false" />
+            <element signature="e#3982#4064#0" expanded="false" />
+            <element signature="e#4124#4201#0" expanded="false" />
+            <element signature="e#4256#4316#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/favorite-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3446191" vertical-offset="30" max-vertical-offset="1725">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'PlayerService', 'StationService', 'FavoriteSongService',
-        function ($scope, $rootScope, $timeout, $state, $stateParams, PlayerService, StationService, FavoriteSongService) {
+    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'PlayerService', 'StationService', 'FavoriteSongService', 'FavoriteStationService',
+        function ($scope, $rootScope, $timeout, $state, $stateParams, PlayerService, StationService, FavoriteSongService, FavoriteStationService) {
 
 
             $scope.station = null;
@@ -29,6 +29,10 @@ angular.module('somafmPlayerApp')
             $scope.$on('$destroy', function(){
                 $timeout.cancel($rootScope.timer);
             });
+
+            $scope.toggleFavStation = function (station) {
+                FavoriteStationService.toggle(station);
+            };
 
             $scope.toggleFavSong = function (song) {
                 FavoriteSongService.toggle(song);
