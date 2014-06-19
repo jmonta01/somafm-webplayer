@@ -98,7 +98,7 @@ angular.module('somafmPlayerApp')
             $scope.getStations();
 
             $scope.playStation = function (station) {
-                $location.path("now-playing" + "/" + station._id);
+                PlayerService.play(station);
             };
 
             $scope.isStationPlaying = function (station) {
