@@ -55,7 +55,11 @@ angular.module('somafmPlayerApp')
             angular.forEach(songs, function (song) {
                 var parsedSong = {};
                 angular.forEach(song, function (prop, key) {
-                    parsedSong[key] = prop.toString();
+                    if (key === "date") {
+                        parsedSong[key] = new Date(parseInt(prop)*1000);
+                    } else {
+                        parsedSong[key] = prop.toString();
+                    }
                 });
                 parsedSongs.push(parsedSong);
             });
