@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directives/directives.js" afterPath="$PROJECT_DIR$/app/scripts/directives/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/scripts/2cd7bcfc.vendor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/scripts/9fd489ac.scripts.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/7d480a55.vendor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/f9de6a72.scripts.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/now-playing.html" afterPath="$PROJECT_DIR$/dist/views/now-playing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -52,8 +56,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18272425" vertical-offset="1360" max-vertical-offset="1965">
-              <caret line="98" column="81" selection-start-line="98" selection-start-column="81" selection-end-line="98" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.49564135" vertical-offset="1162" max-vertical-offset="1965">
+              <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -78,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/community/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/directives.js" />
         <option value="$PROJECT_DIR$/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss" />
         <option value="$PROJECT_DIR$/temp.html" />
@@ -122,13 +125,14 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/all-stations.js" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/player-service.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/now-playing.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/fav-stations.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/dist/scripts/9fd489ac.scripts.js" />
       </list>
     </option>
   </component>
@@ -364,7 +368,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,11 +382,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,7 +442,7 @@
       <recent name="$PROJECT_DIR$/app/views" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.Grunt Server - Dev">
+  <component name="RunManager" selected="Node.js.Grunt Server - Dist">
     <configuration default="false" name="all-stations.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="all-stations.js" working-dir="$PROJECT_DIR$/test/spec/controllers">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
@@ -645,7 +649,11 @@
       <created>1403237614353</created>
       <updated>1403237614353</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="adding in angular-touch to reduce delay on mobile clicks">
+      <created>1403241596352</created>
+      <updated>1403241596352</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -670,15 +678,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="22" width="1658" height="947" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56242704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5614035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7614035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23508772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23508772" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32865497" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15271838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15271838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.4996986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22558923" sideWeight="0.50030136" order="7" side_tool="true" content_ui="tabs" />
@@ -732,7 +740,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="adding in 30 second reload interval on now playing song display" />
     <MESSAGE value="finishing up sorting of stations&#10;fixing deeplinking" />
     <MESSAGE value="adding in mocks and spec tests for services" />
     <MESSAGE value="refactoring and adding in unit tests&#10;added in localstorage service&#10;created transform util" />
@@ -757,7 +764,8 @@
     <MESSAGE value="fixing broken fav toggling in nowplaying" />
     <MESSAGE value="setting playStation from all-stations/fav-stations to play in place as opposed to navigating to now-playing" />
     <MESSAGE value="fixing flash fallback player issues&#10;adding production ready flash fallback player&#10;fixing last item in fav stations sticks after being removed&#10;fixing player controls sticking when stopping playback" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing flash fallback player issues&#10;adding production ready flash fallback player&#10;fixing last item in fav stations sticks after being removed&#10;fixing player controls sticking when stopping playback" />
+    <MESSAGE value="adding in angular-touch to reduce delay on mobile clicks" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding in angular-touch to reduce delay on mobile clicks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1010,13 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/scripts/f9de6a72.scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01842752" vertical-offset="0" max-vertical-offset="814">
-          <caret line="1" column="4674" selection-start-line="1" selection-start-column="4674" selection-end-line="1" selection-end-column="4674" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25392985" vertical-offset="0" max-vertical-offset="827">
@@ -1164,10 +1165,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/scripts/9fd489ac.scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="0" column="10894" selection-start-line="0" selection-start-column="10894" selection-end-line="0" selection-end-column="10894" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18272425" vertical-offset="1360" max-vertical-offset="1965">
-          <caret line="98" column="81" selection-start-line="98" selection-start-column="81" selection-end-line="98" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.49564135" vertical-offset="1162" max-vertical-offset="1965">
+          <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
           <folding />
         </state>
       </provider>
