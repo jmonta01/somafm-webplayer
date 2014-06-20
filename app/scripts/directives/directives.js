@@ -112,15 +112,17 @@ angular.module('somafmPlayerApp')
                 },
                 template:
                     "<div class='player'>" +
-                    "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
-                    "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
-                    "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
-                    "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-                    "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
-                    "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
+                        "<audio id='audioPlayer' autoplay></audio>" +
+                        "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
+                        "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
+                        "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
+                        "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
+                        "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
+                        "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
                     "</div>",
                 link: function (scope, element, attr) {
-                    scope.audio = new Audio();
+                    scope.audio = document.getElementById("audioPlayer");
+                    scope.audio.autoplay = true;
 
                     scope.playing = false;
 
@@ -132,7 +134,7 @@ angular.module('somafmPlayerApp')
                         angular.element(scope.audio).html("");
 
                         if (val) {
-                            angular.forEach(val.urls, function (url) {
+                            angular.forEach(val.urls.reverse(), function (url) {
                                 var source = document.createElement('source');
                                 if (scope.audio.canPlayType('audio/mpeg;')) {
                                     source.type = 'audio/mpeg';
