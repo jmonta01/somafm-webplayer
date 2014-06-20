@@ -25,11 +25,6 @@ angular.module('somafmPlayerApp')
                 return $rootScope.playingStation;
             };
 
-            //used explicitly by the flash player fallback.
-            $window.getStreams = function () {
-                return playStation ? playStation.urls : [];
-            };
-
             return {
                 play: playStation,
                 stop: stopStation,

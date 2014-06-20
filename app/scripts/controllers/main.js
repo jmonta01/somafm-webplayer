@@ -20,7 +20,7 @@ angular.module('somafmPlayerApp')
 
             $scope.showPlayer = function () {
                 return PlayerService.showControls();
-            }
+            };
 
         }
     ]);

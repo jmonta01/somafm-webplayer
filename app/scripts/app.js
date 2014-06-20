@@ -10,7 +10,6 @@ angular
         'LocalStorageModule'
     ])
     .constant('USE_HTML_AUDIO', (function () {
-        return false;
         var elem = document.createElement("audio");
 
         if( typeof elem.canPlayType == 'function' ) {

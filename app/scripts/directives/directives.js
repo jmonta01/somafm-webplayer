@@ -76,6 +76,21 @@ angular.module('somafmPlayerApp')
     ])
     .directive("audioplayer", [ "USE_HTML_AUDIO",
         function (USE_HTML_AUDIO) {
+
+            function assembleTemplate () {
+                var tmp;
+                tmp = "<div class='player-container'>";
+
+                if (USE_HTML_AUDIO) {
+                    tmp += "<htmlplayer station='station' ></htmlplayer>";
+                } else {
+                    tmp += "<flashplayer width='570' height='54' ></flashplayer>";
+                }
+                tmp += "</div>";
+
+                return tmp;
+            }
+
             return {
                 restrict: "E",
                 replace: true,
@@ -83,14 +98,7 @@ angular.module('somafmPlayerApp')
                 scope : {
                     station: "="
                 },
-                template:
-                    "<div class='player-container'>" +
-                        "<htmlplayer ng-if='!USE_HTML_AUDIO' station='station' ></htmlplayer>" +
-                        "<flashplayer ng-if='USE_HTML_AUDIO' width='570' height='54' ></flashplayer>" +
-                    "</div>",
-                link: function (scope, element, attr) {
-                    console.log("USE_HTML_AUDIO", USE_HTML_AUDIO);
-                }
+                template: assembleTemplate()
             }
         }
     ])
@@ -262,25 +270,27 @@ angular.module('somafmPlayerApp')
 
         }
     }])
-    .directive("flashplayer", [function () {
+    .directive("flashplayer", ['PlayerService', function (PlayerService) {
         return {
             restrict : "E",
             replace: true,
             scope: {
-                streams: "=",
                 width: "@",
                 height: "@"
             },
             template :
-                "<div class='player-container'>" +
-                    "<div id='flashplayer'></div>" +
-                "</div>",
+                "<div id='flashplayer'></div>",
             link: function (scope, element, attr) {
 
                 var swfVersionStr = "10.2.0";
                 var xiSwfUrlStr = "flash/playerProductInstall.swf";
 
-                var flashvars = {};
+
+                var flashvars = {
+                    streams: PlayerService.station() ? PlayerService.station().urls : []
+                };
+
+                console.log(PlayerService.station().urls);
 
                 var params = {
                     quality: "high",

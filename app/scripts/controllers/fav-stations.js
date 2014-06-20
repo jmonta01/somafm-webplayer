@@ -84,15 +84,18 @@ angular.module('somafmPlayerApp')
             $scope.getStations = function () {
                 var stationIds = FavoriteStationService.get();
                 $scope.stations = [];
-                angular.forEach(stationIds, function (id) {
-                    StationService.getStationByID(id)
-                        .then(function (station) {
-                            $scope.stations.push(station);
-                            $scope.sortBy($scope.defaultOrganizeMethod);
-                        });
+                if (stationIds.length > 0) {
+                    angular.forEach(stationIds, function (id) {
+                        StationService.getStationByID(id)
+                            .then(function (station) {
+                                $scope.stations.push(station);
+                                $scope.sortBy($scope.defaultOrganizeMethod);
+                            });
 
-                });
-
+                    });
+                } else {
+                    $scope.sortBy($scope.defaultOrganizeMethod);
+                }
             };
 
             $scope.getStations();
