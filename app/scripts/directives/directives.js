@@ -76,21 +76,6 @@ angular.module('somafmPlayerApp')
     ])
     .directive("audioplayer", [ "USE_HTML_AUDIO",
         function (USE_HTML_AUDIO) {
-
-            function assembleTemplate () {
-                var tmp;
-                tmp = "<div class='player-container'>";
-
-                if (USE_HTML_AUDIO) {
-                    tmp += "<htmlplayer station='station' ></htmlplayer>";
-                } else {
-                    tmp += "<flashplayer width='570' height='54' ></flashplayer>";
-                }
-                tmp += "</div>";
-
-                return tmp;
-            }
-
             return {
                 restrict: "E",
                 replace: true,
@@ -98,12 +83,24 @@ angular.module('somafmPlayerApp')
                 scope : {
                     station: "="
                 },
-                template: assembleTemplate()
+                template: function() {
+                    var tmp;
+                    tmp = "<div class='control-bar'>";
+
+                    if (USE_HTML_AUDIO) {
+                        tmp += "<htmlplayer station='station' ></htmlplayer>";
+                    } else {
+                        tmp += "<flashplayer width='570' height='54' ></flashplayer>";
+                    }
+                    tmp += "</div>";
+
+                    return tmp;
+                }
             }
         }
     ])
-    .directive("htmlplayer", ["$rootScope",
-        function ($rootScope) {
+    .directive("htmlplayer", ["$rootScope", '$window', '$timeout',
+        function ($rootScope, $window, $timeout) {
             return {
                 restrict : "E",
                 replace : true,
@@ -113,23 +110,22 @@ angular.module('somafmPlayerApp')
                 template:
                     "<div class='player'>" +
                         "<audio id='audioPlayer' autoplay></audio>" +
-                        "<button class='btn btn-link btn-lg' ng-show='!playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
-                        "<button class='btn btn-link btn-lg' ng-show='playing' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
-                        "<button class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
-                        "<button class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-                        "<volumebar value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
-                        "<button class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
+                        "<button id='playBtn' class='btn btn-link btn-lg' ng-show='!playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
+                        "<button id='pauseBtn' class='btn btn-link btn-lg' ng-show='playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
+                        "<button id='unmuteBtn' class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
+                        "<button id='muteBtn' class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
+                        "<volumebar id='volumeslider' value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
+                        "<button id='maxvolBtn' class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
                     "</div>",
                 link: function (scope, element, attr) {
-                    scope.audio = document.getElementById("audioPlayer");
-                    scope.audio.autoplay = true;
-
+                    scope.muted = false;
                     scope.playing = false;
 
+                    scope.audio = document.getElementById("audioPlayer");
+                    scope.audio.autoplay = true;
                     scope.volume = scope.audio.volume;
 
                     scope.$watch("station", function (val) {
-
                         scope.audio.pause();
                         angular.element(scope.audio).html("");
 
@@ -153,7 +149,37 @@ angular.module('somafmPlayerApp')
                             scope.audio.load();
                             scope.playing = false;
                         }
+
+                        $timeout(function () {
+                            window.dispatchEvent(new Event('resize'));
+                        }, 50)
+
                     });
+
+                    angular.element($window).bind( "resize", function () {
+                        scope.updateLayout();
+                    });
+
+                    scope.updateLayout = function () {
+                        var totalWidth = parseInt(element.css('width').replace('px', ''));
+
+                        if (!scope.playing) {
+                            totalWidth -= parseInt(angular.element(document.getElementById('playBtn')).css('width').replace('px', ''));
+                        }   else {
+                            totalWidth -= parseInt(angular.element(document.getElementById('pauseBtn')).css('width').replace('px', ''));
+                        }
+
+                        if (!scope.isMuted()) {
+                            totalWidth -= parseInt(angular.element(document.getElementById('unmuteBtn')).css('width').replace('px', ''));
+                        }   else {
+                            totalWidth -= parseInt(angular.element(document.getElementById('muteBtn')).css('width').replace('px', ''));
+                        }
+
+                        totalWidth -= parseInt(angular.element(document.getElementById('maxvolBtn')).css('width').replace('px', ''));
+                        totalWidth -= 20;
+
+                        angular.element(document.getElementById('volumeslider')).css('width', Math.min(totalWidth, 200) + 'px');
+                    };
 
                     scope.togglePlay = function () {
                         if (scope.playing) {
@@ -192,14 +218,16 @@ angular.module('somafmPlayerApp')
                     };
 
                     scope.toggleMute = function () {
-                        scope.audio.muted = !scope.audio.muted;
-                        scope.volume = scope.audio.muted ? 0 : scope.audio.volume;
+                        scope.muted = !scope.muted;
+                        scope.audio.muted = scope.muted;
+                        scope.volume = scope.muted ? 0 : scope.audio.volume;
                     };
 
                     scope.isMuted = function () {
                         return scope.audio.muted;
                     };
 
+                    scope.updateLayout();
                 }
             }
         }

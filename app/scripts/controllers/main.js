@@ -22,5 +22,10 @@ angular.module('somafmPlayerApp')
                 return PlayerService.showControls();
             };
 
+            $scope.isSelected = function (id) {
+                var el = angular.element(document.getElementById(id));
+                return el.hasClass('selected');
+            }
+
         }
     ]);

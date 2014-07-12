@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'PlayerService', 'StationService', 'FavoriteSongService', 'FavoriteStationService',
-        function ($scope, $rootScope, $timeout, $state, $stateParams, PlayerService, StationService, FavoriteSongService, FavoriteStationService) {
+    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', '$window', 'PlayerService', 'StationService', 'FavoriteSongService', 'FavoriteStationService', 'SHOP_URI',
+        function ($scope, $rootScope, $timeout, $state, $stateParams, $window, PlayerService, StationService, FavoriteSongService, FavoriteStationService, SHOP_URI) {
 
 
             $scope.station = null;
@@ -36,6 +36,13 @@ angular.module('somafmPlayerApp')
 
             $scope.toggleFavSong = function (song) {
                 FavoriteSongService.toggle(song);
+            };
+
+            $scope.shopSong = function (song) {
+                var url = SHOP_URI;
+                url = url.replace('{ARTIST}', song.artist);
+                url = url.replace('{SONG}', song.title);
+                $window.open(url);
             };
 
             $rootScope.$watch("playingStation", function () {

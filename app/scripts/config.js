@@ -2,14 +2,14 @@ angular.module("config", [])
 
 .constant("AppURLs", {
 	"allStations": {
-		"url": "/channels.xml"
+		"url": "/data/channels.xml"
 	},
 	"pls": {
-		"url": "/[STATION_ID].pls?popup",
+		"url": "/data/[STATION_ID].pls",
 		"key": "[STATION_ID]"
 	},
 	"playList": {
-		"url": "/songs/[STATION_ID].xml",
+		"url": "/data/[STATION_ID].xml",
 		"key": "[STATION_ID]"
 	}
 })

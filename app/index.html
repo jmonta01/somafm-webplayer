@@ -24,49 +24,55 @@
     <div class="container player-container" ng-controller="MainCtrl" >
         <viewstack></viewstack>
 
-        <div id="footer">
-            <audioplayer station="$root.playingStation" ng-if="$root.showControls"></audioplayer>
+        <div id="footer" class="row">
+            <audioplayer station="$root.playingStation" ></audioplayer>
 
-            <div class="mainnav">
-                <a ui-sref-active="selected"
-                   ui-sref="all-stations"
-                   class="all-stations">
-                    <div class="dimmer"></div>
-                </a>
+            <div class="nav row">
+                <div class="col">
+                    <a id="allStationsLink" ui-sref-active="selected" ui-sref="all-stations">
+                        <img ng-if="!isSelected('allStationsLink')" src="images/all_stations_btn.png" />
+                        <img ng-if="isSelected('allStationsLink')" src="images/all_stations_selected_btn.png" />
+                   </a>
+                </div>
 
-                <a ui-sref-active="selected"
-                   ui-sref="fav-stations"
-                   class="fav-stations">
-                    <div class="dimmer"></div>
-                </a>
+                <div class="col">
+                    <a id="favStationsLink" ui-sref-active="selected" ui-sref="fav-stations">
+                        <img ng-if="!isSelected('favStationsLink')" src="images/fav_stations_btn.png" />
+                        <img ng-if="isSelected('favStationsLink')" src="images/fav_stations_selected_btn.png" />
+                    </a>
+                </div>
+
                 <!--
-                <a ui-sref-active="selected"
-                   ui-sref="fav-songs"
-                   class="fav-songs">
-                    <div class="dimmer"></div>
-                </a>
-                -->
-                <!--
-                <a ui-sref-active="selected"
-                   ui-sref="community"
-                   class="community">
-                    <div class="dimmer"></div>
-                </a>
+                <div class="col">
+                    <a id="favSongsLink" ui-sref-active="selected" ui-sref="fav-songs">
+                        <img ng-if="!isSelected('favSongsLink')" src="images/fav_songs_btn.png" />
+                        <img ng-if="isSelected('favSongsLink')" src="images/fav_songs_selected_btn.png" />
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a id="communityLink" ui-sref-active="selected" ui-sref="community">
+                        <img ng-if="!isSelected('communityLink')" src="images/community_btn.png" />
+                        <img ng-if="isSelected('communityLink')" src="images/community_selected_btn.png" />
+                    </a>
+                </div>
                 -->
 
-                <a ng-if="!$root.playingStation"
-                   class="now-playing disabled">
-                    <div class="dimmer"></div>
-                </a>
+                <div class="col">
+                    <a ng-if="!$root.playingStation" class="disabled">
+                        <div class="dimmer"></div>
+                        <img src="images/now_playing_btn.png" />
+                    </a>
 
-                <a ng-if="$root.playingStation"
-                   ui-sref-active="selected"
-                   ui-sref="now-playing({stationID: $root.playingStation._id})"
-                   class="now-playing">
-                    <div class="dimmer"></div>
-                </a>
+                    <a ng-if="$root.playingStation" id="nowPlayingLink"
+                       ui-sref-active="selected" ui-sref="now-playing({stationID: $root.playingStation._id})">
+                        <img ng-if="!isSelected('nowPlayingLink')" src="images/now_playing_btn.png" />
+                        <img ng-if="isSelected('nowPlayingLink')" src="images/now_playing_selected_btn.png" />
+                    </a>
+                </div>
 
             </div>
+
         </div>
     </div>
 
@@ -92,7 +98,20 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/swfobject/swfobject/swfobject.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>

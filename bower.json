@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.15",
+    "bootstrap-sass-official": "",
     "json3": "~3.2.6",
     "swfobject": "",
     "es5-shim": "~2.1.0",
