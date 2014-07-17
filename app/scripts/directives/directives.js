@@ -176,7 +176,7 @@ angular.module('somafmPlayerApp')
                         }
 
                         totalWidth -= parseInt(angular.element(document.getElementById('maxvolBtn')).css('width').replace('px', ''));
-                        totalWidth -= 20;
+                        totalWidth -= 30;
 
                         angular.element(document.getElementById('volumeslider')).css('width', Math.min(totalWidth, 200) + 'px');
                     };
