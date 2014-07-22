@@ -20,7 +20,7 @@ angular
         }
         return false;
     })())
-    .constant('SHOP_URI', 'http://www.amazon.com/s?ie=UTF8&index=music&keywords={ARTIST} - {SONG}&link_code=qs&tag=somaonlinenetwor')
+    .constant('SHOP_URI', 'http://macapi.somafm.com/buy/appbuy.cgi?mode=amazon&title={SONG}&artist={ARTIST}')
     .config(['localStorageServiceProvider', function(localStorageServiceProvider){
         localStorageServiceProvider.setPrefix('somafm');
     }])
