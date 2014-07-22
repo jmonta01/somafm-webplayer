@@ -1,5 +1,0 @@
-<config>
-<stream>http://somafm.com/*.pls</stream>
-<history>http://somafm.com/songs/*.xml</history>
-<songchange>http://somafm.com/recent/*.test.html</songchange>
-</config>
