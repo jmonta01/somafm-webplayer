@@ -2,6 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="implementing fav songs">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/030f20ac.now_playing_selected_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/14cf8542.titlebar_buttonbar_tile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/1e711ccb.list_titlebar_tile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/30e75cb8.tall_header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/48e3a679.fav-song-header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/5dfd509d.fav_songs_selected_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/64351fe5.fav_songs_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/6cb5afe0.community_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/71fc03b3.fav_stations_selected_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/87fd6d9d.community_selected_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/a13e6089.titlebar_buttonbar_tile_selected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/a41f4cd4.list_header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/ac346aec.all_stations_selected_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/c11867ce.fav_stations_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/cbbea56c.community-header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/dca1c5aa.all_stations_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/f9f183c4.now_playing_btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/0f07e156.main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/scripts/7a416305.scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/all-stations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/community.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/scripts/d9c2d2cc.vendor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/fav-songs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/fav-stations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/styles/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/now-playing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -48,8 +82,8 @@
       <file leaf-file-name="community.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/community.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24199288" vertical-offset="0" max-vertical-offset="843">
-              <caret line="12" column="101" selection-start-line="12" selection-start-column="6" selection-end-line="13" selection-end-column="40" />
+            <state vertical-scroll-proportion="1.3990026" vertical-offset="0" max-vertical-offset="663">
+              <caret line="33" column="72" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -361,38 +395,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="somafm-webplayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="somafm-webplayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="somafm-webplayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="somafm-webplayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -688,13 +690,13 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2865106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49385476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3190319" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42809364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19228451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19228451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.4996986" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22558923" sideWeight="0.50030136" order="7" side_tool="true" content_ui="tabs" />
@@ -1064,14 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/scripts/ec3fe4bd.scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029513888" vertical-offset="0" max-vertical-offset="576">
-          <caret line="1" column="10361" selection-start-line="1" selection-start-column="6742" selection-end-line="1" selection-end-column="6742" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64169383" vertical-offset="3261" max-vertical-offset="6596">
@@ -1241,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/community.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24199288" vertical-offset="0" max-vertical-offset="843">
-          <caret line="12" column="101" selection-start-line="12" selection-start-column="6" selection-end-line="13" selection-end-column="40" />
+        <state vertical-scroll-proportion="1.3990026" vertical-offset="0" max-vertical-offset="663">
+          <caret line="33" column="72" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
