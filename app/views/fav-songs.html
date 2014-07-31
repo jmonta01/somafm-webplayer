@@ -1,7 +1,8 @@
+<div class="tall-header row">
+    <img class="img-responsive" src="images/fav-song-header.jpg" />
+</div>
+
 <div id="fav-songs">
-    <div class="tall-header row">
-        <img class="img-responsive" src="images/list_header.jpg" />
-    </div>
 
     <div class="list-titlebar row">
         <div class="col-xs-5">
@@ -21,11 +22,11 @@
                 <p>{{song.title}}</p>
             </div>
             <div class="col-xs-2">
-                <button class="btn btn-link btn-large pull-right" ng-click="shopSong(song)">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                </button>
                 <button class="btn btn-link btn-large btn-fav pull-right" ng-click="remove(song)">
                     <span class="glyphicon glyphicon-star"></span>
+                </button>
+                <button class="btn btn-link btn-large pull-right" ng-click="shopSong(song)">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
                 </button>
             </div>
 

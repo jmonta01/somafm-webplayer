@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('FavStationsCtrl', ['$scope', '$filter', '$location', 'StationService', 'FavoriteStationService', 'PlayerService',
-        function ($scope, $filter, $location, StationService, FavoriteStationService, PlayerService) {
+    .controller('FavStationsCtrl', ['$scope', '$filter', '$state', 'StationService', 'FavoriteStationService', 'PlayerService',
+        function ($scope, $filter, $state, StationService, FavoriteStationService, PlayerService) {
 
             $scope.organizedStations = [];
             $scope.organizedGenres = [];
@@ -102,6 +102,7 @@ angular.module('somafmPlayerApp')
 
             $scope.playStation = function (station) {
                 PlayerService.play(station);
+                $state.go('now-playing', {stationID: station._id});
             };
 
             $scope.isStationPlaying = function (station) {
