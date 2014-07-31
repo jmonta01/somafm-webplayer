@@ -25,6 +25,7 @@
     "grunt-ngmin": "~0.0.2",
     "grunt-rev": "~0.1.0",
     "grunt-svgmin": "~0.2.0",
+    "grunt-text-replace": "^0.3.12",
     "grunt-usemin": "~2.0.0",
     "jpegtran-bin": "0.2.0",
     "jshint-stylish": "~0.1.3",

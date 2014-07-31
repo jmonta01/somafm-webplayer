@@ -213,8 +213,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                        '<%= yeoman.dist %>/styles/fonts/*'
+                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                     ]
                 }
             }
@@ -332,10 +331,7 @@ module.exports = function (grunt) {
                         '*.html',
                         'views/{,*/}*.html',
                         'images/*.{webp,png,jpg,jpeg,gif}',
-                        'styles/fonts/*',
-                        //'data/*',
-                        'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'
-
+                        'styles/fonts/*'
                     ]
                 },
                 {
@@ -350,6 +346,27 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            }
+        },
+
+        //Text replace to replace bower paths to local paths
+        replace: {
+            bower_css: {
+                src: ['<%= yeoman.dist %>/styles/*.css'], // includes files in dir
+                overwrite: true,
+                replacements: [
+                    {
+                        from: '/bower_components/bootstrap/dist/fonts/',
+                        to: 'fonts/'
+                    },
+                    {
+                        from: [
+                                '/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap',
+                                '/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/'
+                               ],
+                        to: 'fonts/'
+                    }
+                ]
             }
         },
 
@@ -407,6 +424,8 @@ module.exports = function (grunt) {
     });
 
 
+    grunt.loadNpmTasks('grunt-text-replace');
+
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -452,7 +471,8 @@ module.exports = function (grunt) {
         'uglify',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'replace'
     ]);
 
     grunt.registerTask('default', [

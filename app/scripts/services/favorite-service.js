@@ -59,52 +59,76 @@ angular.module('somafmPlayerApp')
 
             var key = "somafm-fav-songs";
 
-            var lsFn = localStorageService.isSupported ?
-                        localStorageService : localStorageService.cookie;
+            var lsFn = localStorageService;
 
+            var isSupported = function () {
+                return localStorageService.isSupported;
+            };
 
             var getSongs = function () {
-                var favs = lsFn.get(key) || '';
-                return favs.split(",");
+                var favs = lsFn.get(key) || [];
+                angular.forEach(favs, function (song) {
+                    song.favorite = true;
+                });
+                return favs;
             };
 
             var addSong = function (song) {
                 var favs = getSongs();
-                if (favs.indexOf(song._id) == -1) {
-                    favs.push(song._id);
-                }
-                lsFn.add(key, favs.join(","));
+                angular.forEach(favs, function (fav) {
+                    if (song.artist === fav.artist && song.title === fav.title) {
+                        return false;
+                    }
+                });
+                song.favorite = true;
+                favs.push(song);
+                lsFn.add(key, favs);
             };
 
             var removeSong = function (song) {
                 var favs = getSongs();
-                if (favs.indexOf(song._id) > -1) {
-                    favs.splice(favs.indexOf(song._id), 1);
+                for (var i=0; i<favs.length; i++) {
+                    var fav = favs[i];
+                    if (song.artist === favs[i].artist && song.title === favs[i].title) {
+                        song.favorite = false;
+                        favs.splice(i, 1);
+                    }
+
                 }
-                lsFn.add(key, favs.join(","));
+                lsFn.add(key, favs);
+            };
+
+            var isFav = function (song) {
+                var favs = getSongs();
+                for (var i=0; i<favs.length; i++) {
+                    var fav = favs[i];
+                    if (song.artist === favs[i].artist && song.title === favs[i].title) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+
+            var toggleSongs = function (song) {
+                if (isFav(song)) {
+                    removeSong(song);
+                } else {
+                    addSong(song);
+                }
             };
 
             var clearSongs = function () {
                 lsFn.add(key, "");
             };
 
-
-            var toggleSong = function (song) {
-                song.favorite = !song.favorite;
-                if (song.favorite) {
-                    addSong(song);
-                } else {
-                    removeSong(song);
-                }
-            };
-
-
             return {
                 get: getSongs,
                 add: addSong,
                 remove: removeSong,
                 clear: clearSongs,
-                toggle: toggleSong
+                toggle: toggleSongs,
+                isFav: isFav,
+                isSupported: isSupported
             }
         }
     ]);

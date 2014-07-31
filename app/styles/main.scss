@@ -226,7 +226,7 @@ html {
       margin-top: 25%;
     }
 
-    #now-playing {
+    #now-playing, #fav-songs {
       width: 100%;
 
       .header {
@@ -441,7 +441,7 @@ html {
       }
 
 
-      #now-playing {
+      #now-playing, #fav-songs {
         .header {
 
           .content_col {

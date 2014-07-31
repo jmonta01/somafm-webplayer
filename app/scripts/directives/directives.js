@@ -109,7 +109,7 @@ angular.module('somafmPlayerApp')
                 },
                 template:
                     "<div class='player'>" +
-                        "<audio id='audioPlayer' autoplay></audio>" +
+                        "<audio id='audioPlayer' autoplay='true' preload='none'></audio>" +
                         "<button id='playBtn' class='btn btn-link btn-lg' ng-show='!playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
                         "<button id='pauseBtn' class='btn btn-link btn-lg' ng-show='playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-pause'></span></button>" +
                         "<button id='unmuteBtn' class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
@@ -122,7 +122,6 @@ angular.module('somafmPlayerApp')
                     scope.playing = false;
 
                     scope.audio = document.getElementById("audioPlayer");
-                    scope.audio.autoplay = true;
                     scope.volume = scope.audio.volume;
 
                     scope.$watch("station", function (val) {

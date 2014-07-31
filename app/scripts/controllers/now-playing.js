@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', '$window', 'PlayerService', 'StationService', 'FavoriteSongService', 'FavoriteStationService', 'SHOP_URI',
-        function ($scope, $rootScope, $timeout, $state, $stateParams, $window, PlayerService, StationService, FavoriteSongService, FavoriteStationService, SHOP_URI) {
+    .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', '$window', 'PlayerService', 'StationService', 'FavoriteSongService', 'FavoriteStationService', 'SHOP_URI', 'POLL_INT',
+        function ($scope, $rootScope, $timeout, $state, $stateParams, $window, PlayerService, StationService, FavoriteSongService, FavoriteStationService, SHOP_URI, POLL_INT) {
 
 
             $scope.station = null;
@@ -14,13 +14,12 @@ angular.module('somafmPlayerApp')
                         .then(function (playList) {
                             $scope.playList = playList;
                             angular.forEach($scope.playList, function (song) {
-                                song.favorite = Math.random() > .5;
+                                song.favorite = FavoriteSongService.isFav(song);
                             });
-
                             $timeout.cancel($rootScope.timer);
                             $rootScope.timer = $timeout(function () {
-                                $scope.getPlayList($rootScope.selectedStation);
-                            }, 5 * 1000)
+                                $scope.getPlayList($rootScope.playingStation);
+                            }, POLL_INT)
 
                         });
                 }
