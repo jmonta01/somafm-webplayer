@@ -9,5 +9,8 @@
     "playList" : {
         "url" : "/songs/[STATION_ID].xml",
         "key" : "[STATION_ID]"
+    },
+    "news" : {
+        "url" : "/news.html"
     }
 }

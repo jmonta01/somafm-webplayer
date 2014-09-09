@@ -11,23 +11,8 @@
 </div>
 
 <list>
-    <div ng-if="selectedView == 'news'">
-        <p>news</p>
-    </div>
-
-    <div ng-if="selectedView == 'twitter'">
-        <p>twitter</p>
-        <a href="https://dev.twitter.com/">https://dev.twitter.com/</a>
-    </div>
-
-    <div ng-if="selectedView == 'flickr'">
-        <p>flickr</p>
-        <a href="https://www.flickr.com/services/api/">https://www.flickr.com/services/api/</a>
-    </div>
-
-    <div ng-if="selectedView == 'facebook'">
-        <p>facebook</p>
-        <a href="https://developers.facebook.com/">https://developers.facebook.com/</a>
-    </div>
-
+    <news ng-if="selectedView == 'news'"></news>
+    <twitter ng-if="selectedView == 'twitter'"></twitter>
+    <flickr ng-if="selectedView == 'flickr'"></flickr>
+    <facebook ng-if="selectedView == 'facebook'"></facebook>
 </list>

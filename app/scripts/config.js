@@ -11,6 +11,9 @@ angular.module("config", [])
 	"playList": {
 		"url": "/data/[STATION_ID].xml",
 		"key": "[STATION_ID]"
+	},
+	"news": {
+		"url": "/data/news.html"
 	}
 })
 

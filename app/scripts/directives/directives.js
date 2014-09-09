@@ -342,4 +342,90 @@ angular.module('somafmPlayerApp')
                 swfobject.createCSS("#flashContent", "display:block;text-align:left;");
             }
         }
-    }]);
+    }])
+    .directive("news", ["$rootScope", 'CommunityService',
+        function ($rootScope, CommunityService) {
+            return {
+                restrict :"E",
+                replace: true,
+                scope: {},
+                template: "<div class='news'></div>",
+                link: function (scope, element, attr) {
+                    //source http://somafm.com/app/news.html
+                    CommunityService.loadNews().then(
+                        function (response) {
+                            var regEx = new RegExp('<body[^>]*>((.|[\n\r])*)<\/body>', 'g');
+                            var matches = response.match(regEx);
+                            var content = matches[0];
+                            content = content.replace('<body>', '').replace('</body>', '');
+                            console.log(content);
+                            element.append(content);
+                        }
+                    )
+                }
+            }
+        }
+    ])
+    .directive("twitter", ["$rootScope", 'CommunityService',
+        function ($rootScope, CommunityService) {
+            return {
+                restrict :"E",
+                replace: true,
+                scope: {},
+                template: function () {
+                    return  "<div id='twitter'>" +
+                                "<a class='twitter-timeline' href='https://twitter.com/somafm' data-widget-id='388388647927414784'>Tweets by @somafm</a>" +
+                            "</div>";
+                },
+                link: function (scope, element, attr) {
+                    //source http://somafm.com/app/twitter.html
+                    var load = function (d, s, id) {
+                        var js,
+                            fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + "://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    };
+                    load(document, "script", "twitter-wjs");
+                }
+            }
+        }
+    ])
+    .directive("flickr", ["$rootScope", 'CommunityService',
+        function ($rootScope, CommunityService) {
+            return {
+                restrict :"E",
+                replace: true,
+                scope: {},
+                template: function () {
+                    return  "<div>" +
+                                "<h1>Here are SomaFM listeners from around the world. Send us your pictures with your SomaFM gear to <a href='dj@somafm.com'>dj@somafm.com</a> and we'll post them on Flickr.</h1>" +
+                                "<div id='imagediv'></div>" +
+                                "<h1>More on Flickr at <a href='http://flickr.com/SomaFM'> www.flickr.com/SomaFM </a></h1>" +
+                            "</div>";
+                },
+                link: function (scope, element, attr) {
+                    //source http://somafm.com/app/flickr.html
+                }
+            }
+        }
+    ])
+    .directive("facebook", ["$rootScope", 'CommunityService',
+        function ($rootScope, CommunityService) {
+            return {
+                restrict :"E",
+                replace: true,
+                scope: {},
+                template: "<div></div>",
+                link: function (scope, element, attr) {
+                    //source  http://somafm.com/app/facebook.html
+
+                }
+            }
+        }
+    ]);

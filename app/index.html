@@ -49,14 +49,12 @@
                     </a>
                 </div>
 
-                <!--
                 <div class="col">
                     <a id="communityLink" ui-sref-active="selected" ui-sref="community">
                         <img ng-if="!isSelected('communityLink')" src="images/community_btn.png" />
                         <img ng-if="isSelected('communityLink')" src="images/community_selected_btn.png" />
                     </a>
                 </div>
-                -->
 
                 <div class="col">
                     <a ng-if="!$root.playingStation" class="disabled">
@@ -133,6 +131,7 @@
     <script src="scripts/services/data-service.js"></script>
     <script src="scripts/services/favorite-service.js"></script>
     <script src="scripts/services/player-service.js"></script>
+    <script src="scripts/services/community-service.js"></script>
     <script src="scripts/controllers/all-stations.js"></script>
     <script src="scripts/controllers/fav-stations.js"></script>
     <script src="scripts/controllers/fav-songs.js"></script>
