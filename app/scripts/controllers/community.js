@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-  .controller('CommunityCtrl', function ($scope) {
+  .controller('CommunityCtrl', ['$scope', 'AppURLs',
+        function ($scope, AppURLs) {
 
-        $scope.views = ["news", "twitter", "flickr", "facebook"];
+        $scope.views = AppURLs.community.sections;
 
         $scope.selectedView = $scope.views[0];
 
@@ -11,4 +12,5 @@ angular.module('somafmPlayerApp')
             $scope.selectedView = view;
         }
     
-  });
+      }
+    ]);

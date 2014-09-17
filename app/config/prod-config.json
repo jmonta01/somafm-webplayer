@@ -10,6 +10,9 @@
         "url" : "/songs/[STATION_ID].xml",
         "key" : "[STATION_ID]"
     },
+    "community" : {
+        "sections" : ["news", "flickr"]
+    },
     "news" : {
         "url" : "/news.html"
     }

@@ -2,18 +2,24 @@ angular.module("config", [])
 
 .constant("AppURLs", {
 	"allStations": {
-		"url": "/data/channels.xml"
+		"url": "/channels.xml"
 	},
 	"pls": {
-		"url": "/data/[STATION_ID].pls",
+		"url": "/[STATION_ID].pls?popup",
 		"key": "[STATION_ID]"
 	},
 	"playList": {
-		"url": "/data/[STATION_ID].xml",
+		"url": "/songs/[STATION_ID].xml",
 		"key": "[STATION_ID]"
 	},
+	"community": {
+		"sections": [
+			"news",
+			"flickr"
+		]
+	},
 	"news": {
-		"url": "/data/news.html"
+		"url": "/news.html"
 	}
 })
 

@@ -10,6 +10,9 @@
         "url" : "/data/[STATION_ID].xml",
         "key" : "[STATION_ID]"
     },
+    "community" : {
+        "sections" : ["news", "twitter", "flickr", "facebook"]
+    },
     "news" : {
         "url" : "/data/news.html"
     }
