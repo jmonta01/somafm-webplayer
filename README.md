@@ -11,9 +11,9 @@ Make sure you have installed [Node.js](http://nodejs.org), [Git](http://git-scm.
 
 - `npm install`
 - `bower install`
-- `grunt ngconstant:development`
 
 ## Run locally
+- `grunt ngconstant:development`
 - `grunt serve`
 
 ## Build for production
