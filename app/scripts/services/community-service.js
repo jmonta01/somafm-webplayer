@@ -1,17 +1,23 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('CommunityService', [ '$http', '$q', '$log', 'AppURLs',
-        function ($http, $q, $log, AppURLs) {
+    .factory('CommunityService', [ '$http', '$q', '$log', 'AppURLs', 'NewsTransform',
+        function ($http, $q, $log, AppURLs, NewsTransform) {
+
+            var parseData = true;
 
             var loadNews = function () {
                 var deferred = $q.defer();
-                $http.get(AppURLs.news.url, {}).
+                var opts = {};
+                if (parseData) {
+                    opts['transformResponse'] = NewsTransform;
+                }
+                $http.get(AppURLs.news.url, opts).
                     success(function (response) {
                         deferred.resolve(response);
                     }).
                     error(function (response) {
-                        $log.error("Station list couldn't be loaded", response);
+                        $log.error("News couldn't be loaded", response);
                         deferred.resolve(null);
                     });
                 return deferred.promise;
@@ -45,7 +51,7 @@ angular.module('somafmPlayerApp')
                         deferred.resolve(response);
                     }).
                     error(function (response) {
-                        $log.error("Station list couldn't be loaded", response);
+                        $log.error("Flickr feed couldn't be loaded", response);
                         deferred.resolve(null);
                     });
                 return deferred.promise;

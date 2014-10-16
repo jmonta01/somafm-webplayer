@@ -19,7 +19,7 @@ angular.module("config", [])
 		]
 	},
 	"news": {
-		"url": "/news.html"
+		"url": "/news.xml"
 	}
 })
 

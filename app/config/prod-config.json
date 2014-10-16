@@ -14,6 +14,6 @@
         "sections" : ["news", "flickr"]
     },
     "news" : {
-        "url" : "/news.html"
+        "url" : "/news.xml"
     }
 }

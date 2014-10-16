@@ -410,8 +410,6 @@ html {
     color: #1a9096;
   }
 
-
-
   /* headline style */
   h1 {
     font-family: "Trebuchet MS", "verdana", "Sans-Serif";
@@ -480,6 +478,20 @@ html {
     padding: 0.5em;
   }
 
+  .banner {
+    line-height: 1.25em;
+  }
+
+  dl {
+    dt {
+      font-size: 1.15em;
+    }
+
+    dd {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 iframe {
