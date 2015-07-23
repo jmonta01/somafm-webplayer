@@ -21,7 +21,7 @@ angular
         return false;
     })())
     .constant('POLL_INT', 30000)
-    .constant('SHOP_URI', 'http://macapi.somafm.com/buy/appbuy.cgi?mode=amazon&title={SONG}&artist={ARTIST}')
+    .constant('SHOP_URI', 'http://somafm.com/buy/appbuy.cgi?mode=amazon&title={SONG}&artist={ARTIST}')
     .config(['localStorageServiceProvider', function(localStorageServiceProvider){
         localStorageServiceProvider.setPrefix('somafm');
     }])
