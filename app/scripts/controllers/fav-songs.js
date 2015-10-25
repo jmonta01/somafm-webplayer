@@ -1,28 +1,28 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-  .controller('FavSongsCtrl', ['$scope', '$window', 'FavoriteSongService', 'SHOP_URI',
-        function ($scope, $window, FavoriteSongService, SHOP_URI) {
+  .controller('FavSongsCtrl', ['$scope', '$window', 'FavoritesService', 'SHOP_URI',
+    function ($scope, $window, FavoritesService, SHOP_URI) {
 
-            $scope.songs = [];
+      $scope.songs = [];
 
-            $scope.refresh = function () {
-                $scope.songs = FavoriteSongService.get();
-            };
+      $scope.refresh = function () {
+        $scope.songs = FavoritesService.song.get();
+      };
 
-            $scope.remove = function (song) {
-                FavoriteSongService.remove(song);
-                $scope.refresh();
-            };
+      $scope.remove = function (song) {
+        FavoritesService.song.remove(song);
+        $scope.refresh();
+      };
 
-            $scope.shopSong = function (song) {
-                var url = SHOP_URI;
-                url = url.replace('{ARTIST}', song.artist);
-                url = url.replace('{SONG}', song.title);
-                $window.open(url);
-            };
+      $scope.shopSong = function (song) {
+        var url = SHOP_URI;
+        url = url.replace('{ARTIST}', song.artist);
+        url = url.replace('{SONG}', song.title);
+        $window.open(url);
+      };
 
 
-            $scope.refresh();
-      }
-    ]);
+      $scope.refresh();
+    }
+  ]);

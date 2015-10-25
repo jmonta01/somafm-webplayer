@@ -1,35 +1,35 @@
 'use strict';
 
 angular.module('somafmPlayerApp')
-    .factory('PlayerService', [ '$log', '$rootScope', '$window', 'StationService',
-        function ($log, $rootScope, $window, StationService) {
+  .factory('PlayerService', [ '$log', '$rootScope', '$window', 'StationService',
+    function ($log, $rootScope, $window, StationService) {
 
-            var playStation = function (station) {
-                $rootScope.playingStation = null;
-                $rootScope.showControls = false;
+      var playStation = function (station) {
+        $rootScope.playingStation = null;
+        $rootScope.showControls = false;
 
-                StationService.getPls(station)
-                    .then(function (data) {
-                        $rootScope.playingStation = station;
-                        $rootScope.playingStation.urls = data;
-                        $rootScope.showControls = true;
-                    });
-            };
+        StationService.getPls(station)
+          .then(function (data) {
+            $rootScope.playingStation = station;
+            $rootScope.playingStation.urls = data;
+            $rootScope.showControls = true;
+          });
+      };
 
-            var stopStation = function (station) {
-                $rootScope.playingStation = null;
-                $rootScope.showControls = false;
-            };
+      var stopStation = function (station) {
+        $rootScope.playingStation = null;
+        $rootScope.showControls = false;
+      };
 
-            var getStation = function () {
-                return $rootScope.playingStation;
-            };
+      var getStation = function () {
+        return $rootScope.playingStation;
+      };
 
-            return {
-                play: playStation,
-                stop: stopStation,
-                station: getStation,
-                showControls: $rootScope.showControls
-            }
-        }
-    ]);
+      return {
+        play: playStation,
+        stop: stopStation,
+        station: getStation,
+        showControls: $rootScope.showControls
+      }
+    }
+  ]);

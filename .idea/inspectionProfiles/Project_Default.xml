@@ -3,12 +3,5 @@
     <option name="myName" value="Project Default" />
     <option name="myLocal" value="false" />
     <inspection_tool class="CssUnknownTarget" enabled="false" level="ERROR" enabled_by_default="false" />
-    <inspection_tool class="TaskInspection" enabled="true" level="INFO" enabled_by_default="true">
-      <option name="suppressedTasks">
-        <set>
-          <option value="SCSS" />
-        </set>
-      </option>
-    </inspection_tool>
   </profile>
 </component>
