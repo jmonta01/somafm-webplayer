@@ -17,16 +17,12 @@ angular.module('somafmPlayerApp')
             var list = angular.element(document.getElementById("list"));
             var availHeight = $rootScope.viewStackHeight;
 
-            for (var i=0; i<children.length; i++) {
-              var child = angular.element(children[i]);
-              if (child.attr("id") != "list") {
-                var mTop = Number(child.css("margin-top").replace("px", "")) || 0;
-                var mBtm = Number(child.css("margin-bottom").replace("px", "")) || 0;
-
-                var childHeight = parseInt(children[i].clientHeight);
-                availHeight -= (childHeight + mTop + mBtm);
+            angular.forEach(children, function (child) {
+              if (child.id != "list") {
+                availHeight -= child.offsetHeight;
               }
-            }
+            });
+
             list.css("height", availHeight + "px");
           };
 
@@ -34,10 +30,7 @@ angular.module('somafmPlayerApp')
             scope.updateLayout();
           });
 
-          $timeout(function () {
-            scope.updateLayout();
-          }, 300);
-
+          $timeout(scope.updateLayout, 100);
         }
       }
     }

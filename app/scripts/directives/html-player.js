@@ -12,12 +12,12 @@ angular.module('somafmPlayerApp')
         template:
           "<div class='player'>" +
           "<audio id='audioPlayer' autoplay='true' preload='none'></audio>" +
-          "<button id='playBtn' class='btn btn-link btn-lg' ng-show='!playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
-          "<button id='stopBtn' class='btn btn-link btn-lg' ng-show='playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-stop'></span></button>" +
-          "<button id='unmuteBtn' class='btn btn-link btn-lg' ng-show='!isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
-          "<button id='muteBtn' class='btn btn-link btn-lg' ng-show='isMuted()' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
-          "<volumebar id='volumeslider' value='volume' min='0' max='1' value-change='updateVolume(val)'></volumebar>" +
-          "<button id='maxvolBtn' class='btn btn-link btn-lg' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
+          "<button id='playBtn' class='btn btn-link btn-lg' ng-if='!playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-play'></span></button>" +
+          "<button id='stopBtn' class='btn btn-link btn-lg' ng-if='playing' ng-disabled='!station' ng-click='togglePlay()'><span class='glyphicon glyphicon-stop'></span></button>" +
+          "<button id='unmuteBtn' class='btn btn-link btn-lg' ng-if='!isMuted()' ng-disabled='!station' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-down'></span></button>" +
+          "<button id='muteBtn' class='btn btn-link btn-lg' ng-if='isMuted()' ng-disabled='!station' ng-click='toggleMute()'><span class='glyphicon glyphicon-volume-off'></span></button>" +
+          "<volumebar id='volumeslider' value='volume' min='0' max='1' ng-disabled='!station' value-change='updateVolume(val)'></volumebar>" +
+          "<button id='maxvolBtn' class='btn btn-link btn-lg' ng-disabled='!station' ng-click='maxVolume()'><span class='glyphicon glyphicon-volume-up'></span></button>" +
           "</div>",
         link: function (scope, element, attr) {
           var volumeKey = 'volume', lastVolume, stationData = null;
@@ -49,21 +49,14 @@ angular.module('somafmPlayerApp')
           });
 
           scope.updateLayout = function () {
-            var totalWidth = parseInt(element.css('width').replace('px', ''));
+            var totalWidth = element[0].clientWidth;
 
-            if (!scope.playing) {
-              totalWidth -= parseInt(angular.element(document.getElementById('playBtn')).css('width').replace('px', ''));
-            }   else {
-              totalWidth -= parseInt(angular.element(document.getElementById('stopBtn')).css('width').replace('px', ''));
-            }
+            angular.forEach(element.children(), function (child) {
+              if (child.tagName.toLowerCase() == 'button') {
+                totalWidth -= child.clientWidth;
+              }
+            });
 
-            if (!scope.isMuted()) {
-              totalWidth -= parseInt(angular.element(document.getElementById('unmuteBtn')).css('width').replace('px', ''));
-            }   else {
-              totalWidth -= parseInt(angular.element(document.getElementById('muteBtn')).css('width').replace('px', ''));
-            }
-
-            totalWidth -= parseInt(angular.element(document.getElementById('maxvolBtn')).css('width').replace('px', ''));
             totalWidth -= 30;
 
             angular.element(document.getElementById('volumeslider')).css('width', Math.min(totalWidth, 200) + 'px');
