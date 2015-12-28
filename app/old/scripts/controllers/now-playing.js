@@ -4,7 +4,6 @@ angular.module('somafmPlayerApp')
   .controller('NowPlayingCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', '$window', 'PlayerService', 'StationService', 'FavoritesService', 'SHOP_URI', 'POLL_INT',
     function ($scope, $rootScope, $timeout, $state, $stateParams, $window, PlayerService, StationService, FavoritesService, SHOP_URI, POLL_INT) {
 
-
       $scope.station = null;
       $scope.playList = [];
 
@@ -25,7 +24,7 @@ angular.module('somafmPlayerApp')
         }
       };
 
-      $scope.$on('$destroy', function(){
+      $scope.$on('$destroy', function() {
         $timeout.cancel($rootScope.timer);
       });
 

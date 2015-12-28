@@ -1,0 +1,20 @@
+.footer {
+
+  .player {
+    height: $player-height;
+  }
+
+  .nav {
+    height: $nav-height;
+
+    a {
+      float: left;
+      margin: 5px 0 0 5px;
+
+      &:first-child {
+        margin-left : 0;
+      }
+    }
+  }
+
+}

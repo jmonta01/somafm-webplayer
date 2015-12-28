@@ -1,0 +1,123 @@
+.body {
+  .all-stations {
+    $list-header-height:    40px;
+
+    height: 100%;
+
+    .list-header {
+      height: $list-header-height;
+      margin-bottom: 2px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      @include linear-gradient(to bottom, #454545 0%,#404040 25%,#383838 50%,#2f3030 75%,#292929 100%);
+
+      .title {
+        margin: 11px 0 0 15px;
+        padding: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .btn-group {
+        margin: 7px 15px 0 0;
+        padding: 0;
+
+        border: 1px solid $gray-dark;
+        border-radius: 4px;
+
+        .btn {
+          background-color: #383838;
+          border: none;
+          font-size: 10px;
+          padding: 5px 8px 4px;
+
+          &:focus, &:active {
+            outline: none;
+          }
+
+          &.active {
+            background-color: #292929;
+          }
+        }
+      }
+    }
+
+
+    .list-body {
+      height: calc(100% - #{$list-header-height} - 2px);
+      overflow-y: auto;
+
+      .genre {
+        color: $gray-light;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px 15px;
+        margin-bottom: -2px;
+        border-bottom: 1px solid $gray;
+      }
+
+
+      .card {
+        margin-top: 2px;
+        background: $gray-dark;
+        overflow: hidden;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .img-col {
+          padding-right: 0;
+
+          img {
+            margin: 2px 0;
+          }
+        }
+
+        .copy-col {
+
+          padding-left: 10px;
+
+          h4 {
+            @include transition(font-size .3s ease-out);
+            margin: 0;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 1.25em;
+          }
+
+          p {
+            @include transition(font-size .3s ease-out);
+            margin: 0 0 4px 0;
+            font-size: 11px;
+            line-height: 1.1em;
+            color: $gray-light;
+          }
+
+          p.small {
+            color: $gray-lighter;
+          }
+        }
+
+        .btn {
+          @include transition(color .15s ease-out);
+          display: block;
+          float: left;
+          clear: both;
+          border: none;
+
+          &:focus, &:focus {
+            outline: none;
+          }
+
+        }
+        .btn-lg {
+          padding: 6px;
+        }
+      }
+
+
+
+    }
+  }
+}

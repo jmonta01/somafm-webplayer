@@ -1,0 +1,36 @@
+<div class="now-playing">
+  <div class="list-header">
+    <div class="row">
+      <div class="col-xs-2">
+        <h5>Time</h5>
+      </div>
+      <div class="col-xs-3">
+        <h5>Artist</h5>
+      </div>
+      <div class="col-xs-7">
+        <h5>Song</h5>
+      </div>
+    </div>
+  </div>
+  <div class="list-body">
+    <div class="row card" ng-repeat="song in songs">
+      <div class="col-xs-2">
+        <p>{{ song.date | date : "hh:mm" }}</p>
+      </div>
+      <div class="col-xs-3">
+        <p>{{song.artist}}</p>
+      </div>
+      <div class="col-xs-5">
+        <p>{{song.title}}</p>
+      </div>
+      <div class="col-xs-2">
+        <button class="btn btn-link btn-lg pull-right" ng-class="{'btn-fav': song.favorite}" ng-click="toggleFavSong(song)">
+          <i class="fa" ng-class="{'fa-star': song.favorite, 'fa-star-o': !song.favorite}"></i>
+        </button>
+        <button class="btn btn-link btn-lg pull-right" ng-click="shopSong(song)">
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

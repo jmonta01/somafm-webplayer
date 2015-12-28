@@ -1,0 +1,10 @@
+.header {
+  margin-top: 15px;
+  max-height: $base-header-height;
+  overflow: hidden;
+
+  &.has-large-header {
+    max-height: $large-header-height;
+  }
+
+}

@@ -1,0 +1,18 @@
+<div class="now-playing">
+  <div class="row">
+    <div class="col-xs-2 img_col">
+      <img class="img-responsive" src="{{station.image}}" />
+    </div>
+    <div class="col-xs-10 content_col">
+      <h4>{{station.title}}</h4>
+      <p>{{station.description}}</p>
+      <p>
+        <button class="btn btn-link btn-large btn-fav" ng-click="toggleFavStation(station)">
+          <i class="fa"  ng-class="{'fa-star': station.favorite, 'fa-star-o': !station.favorite}"></i>
+        </button>
+        Music Director:
+        <a href="mailto:{{station.djmail}}" target="_blank">{{station.dj}}</a>
+      </p>
+    </div>
+  </div>
+</div>

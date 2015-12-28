@@ -1,0 +1,53 @@
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: linear-gradient($direction, $color-stops);
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html {
+  height: 100%;
+  body {
+    color: #ffffff;
+    background: $gray-darker;
+    height: 100%;
+
+    .container {
+      min-width: 320px;
+      max-width: 600px;
+      height: 100%;
+    }
+
+  }
+}
+
+
+.btn-link {
+  color: $gray-light;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $white;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+    }
+  }
+}
+
+.btn-fav {
+  color: $brand-yellow;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $brand-yellow;
+  }
+}

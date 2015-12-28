@@ -1,0 +1,32 @@
+<div class="fav-songs">
+  <div class="list-header">
+    <div class="row">
+      <div class="col-xs-4">
+        <h5>Artist</h5>
+      </div>
+      <div class="col-xs-4">
+        <h5>Song</h5>
+      </div>
+    </div>
+  </div>
+  <div class="list-body">
+    <div class="row card" ng-repeat="song in songs">
+      <div class="col-xs-4">
+        <p>{{song.artist}}</p>
+      </div>
+      <div class="col-xs-4">
+        <p>{{song.title}}</p>
+      </div>
+      <div class="col-xs-4">
+        <button class="btn btn-link btn-lg pull-right" ng-click="shopSong(song)">
+          <i class="fa fa-fw fa-shopping-cart"></i>
+        </button>
+        <button class="btn btn-link btn-lg btn-fav pull-right" ng-click="remove(song)">
+          <i class="fa fa-fw fa-star"></i>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+</div>

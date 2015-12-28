@@ -1,0 +1,12 @@
+.body {
+
+  height: calc(100% - #{$base-header-height} - #{$nav-height});
+
+  &.has-large-header {
+    height: calc(100% - #{$large-header-height} - #{$nav-height});
+  }
+
+  &.has-player {
+
+  }
+}

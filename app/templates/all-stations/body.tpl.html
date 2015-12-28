@@ -1,0 +1,80 @@
+<div class="all-stations">
+  <div class="list-header">
+    <div class="row">
+      <div class="col-xs-4">
+        <h3 class="title">All Stations</h3>
+      </div>
+      <div class="col-xs-8">
+        <div class="btn-group btn-group-sm pull-right">
+          <button ng-repeat="sortType in sort.types"
+                  class="btn btn-primary"
+                  ng-class="{active: sortType === sort.selectedType}"
+                  ng-click="setSort(sortType)">
+            {{sortType.label}}
+            <i class="fa" ng-class="{'fa-caret-down': sort.asc, 'fa-caret-up': !sort.asc}"
+               ng-if="sortType === sort.selectedType"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-body">
+
+    <div class="row card" ng-repeat="station in sort.stations" ng-if="sort.selectedType.type !== 'genre'">
+      <div class="col-xs-2 img-col">
+        <img class="img-responsive" src="{{station.image}}"/>
+      </div>
+      <div class="col-xs-8 copy-col">
+        <h4>{{station.title}}</h4>
+        <p>{{station.description}}</p>
+        <p class="small">{{station.listeners}} listeners</p>
+      </div>
+      <div class="col-xs-2">
+        <button class="btn btn-link btn-lg pull-right" ng-click="playStation(station)"
+                ng-show="$root.playingStation !== station">
+          <i class="fa fa-play"></i>
+        </button>
+        <button class="btn btn-link btn-lg pull-right" ng-click="stopStation(station)"
+                ng-show="$root.playingStation === station">
+          <i class="fa fa-stop"></i>
+        </button>
+        <button class="btn btn-link btn-lg pull-right" ng-class="{'btn-fav': station.favorite}"
+                ng-click="toggleFavStation(station)">
+          <i class="fa" ng-class="{'fa-star': station.favorite, 'fa-star-o': !station.favorite}"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row" ng-repeat="genre in sort.stations" ng-if="sort.selectedType.type === 'genre'">
+      <div class="col-xs-12">
+        <div class="genre">{{genre.label | uppercase}}</div>
+        <div class="row card" ng-repeat="station in genre.stations">
+          <div class="col-xs-2 img-col">
+            <img class="img-responsive" src="{{station.image}}"/>
+          </div>
+          <div class="col-xs-8 copy-col">
+            <h4>{{station.title}}</h4>
+
+            <p>{{station.description}}</p>
+
+            <p class="small">{{station.listeners}} listeners</p>
+          </div>
+          <div class="col-xs-2">
+            <button class="btn btn-link btn-lg pull-right" ng-click="playStation(station)"
+                    ng-show="$root.playingStation !== station">
+              <i class="fa fa-play"></i>
+            </button>
+            <button class="btn btn-link btn-lg pull-right" ng-click="stopStation(station)"
+                    ng-show="$root.playingStation === station">
+              <i class="fa fa-stop"></i>
+            </button>
+            <button class="btn btn-link btn-lg pull-right" ng-class="{'btn-fav': station.favorite}"
+                    ng-click="toggleFavStation(station)">
+              <i class="fa" ng-class="{'fa-star': station.favorite, 'fa-star-o': !station.favorite}"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
