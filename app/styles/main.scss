@@ -35,7 +35,7 @@ $icon-font-path: "fonts/";
 $base-header-height:    95px;
 $large-header-height:   122px;
 
-$player-height:         95px;
+$player-height:         45px;
 $nav-height:            95px;
 
 
@@ -44,6 +44,7 @@ $nav-height:            95px;
 @import "app/common/header";
 @import "app/common/body";
 @import "app/common/footer";
+@import "app/common/player";
 
 @import "app/all-stations/header";
 @import "app/all-stations/body";

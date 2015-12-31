@@ -26,6 +26,9 @@
       height: calc(100% - #{$list-header-height} - 2px);
       overflow-y: auto;
 
+      border-bottom-left-radius: $border-radius-large;
+      border-bottom-right-radius: $border-radius-large;
+
       .card {
         padding-top: 5px;
         padding-bottom: 5px;

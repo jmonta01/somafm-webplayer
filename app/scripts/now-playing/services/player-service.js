@@ -12,8 +12,8 @@ angular.module('somafmPlayerApp')
         return $q(function (resolve, reject) {
           StationService.getStationPls(station._id).then(
             function (data) {
+              station.streamUrls = data;
               playingStation = station;
-              streamUrls = data;
               resolve();
             },
             reject
@@ -29,12 +29,13 @@ angular.module('somafmPlayerApp')
         });
       };
 
-
       return {
         play: play,
         stop: stop,
-        playingStation: playingStation,
+        getPlayingStation: function () {
+          return playingStation;
+        },
         streamUrls: streamUrls
-      }
+      };
     }
   ]);

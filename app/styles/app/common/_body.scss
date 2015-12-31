@@ -2,11 +2,17 @@
 
   height: calc(100% - #{$base-header-height} - #{$nav-height});
 
+
+  &.has-player {
+    height: calc(100% - #{$base-header-height} - #{$nav-height} - #{$player-height} - 2px);
+  }
+
   &.has-large-header {
     height: calc(100% - #{$large-header-height} - #{$nav-height});
   }
 
-  &.has-player {
-
+  &.has-large-header.has-player {
+    height: calc(100% - #{$large-header-height} - #{$nav-height} - #{$player-height} - 2px);
   }
+
 }

@@ -1,3 +1,4 @@
 <div class="player">
-
+  <sf-flash-player ng-if="!useHtmlPlayer" station="station"></sf-flash-player>
+  <sf-html-player ng-if="useHtmlPlayer" station="station"></sf-html-player>
 </div>

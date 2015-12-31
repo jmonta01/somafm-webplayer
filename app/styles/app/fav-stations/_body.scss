@@ -47,6 +47,9 @@
       height: calc(100% - #{$list-header-height} - 2px);
       overflow-y: auto;
 
+      border-bottom-left-radius: $border-radius-large;
+      border-bottom-right-radius: $border-radius-large;
+
       .genre {
         color: $gray-light;
         font-size: 12px;
@@ -55,7 +58,6 @@
         margin-bottom: -2px;
         border-bottom: 1px solid $gray;
       }
-
 
       .card {
         margin-top: 2px;
@@ -115,8 +117,6 @@
           padding: 6px;
         }
       }
-
-
 
     }
   }
