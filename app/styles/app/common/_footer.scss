@@ -1,5 +1,94 @@
 .footer {
 
+  .player {
+    position: relative;
+    width: 100%;
+    height: $player-height;
+
+    margin-top: 4px;
+
+    border: 1px solid $gray-dark;
+    border-radius: $border-radius-large;
+
+    background: $gray-dark;
+    overflow: hidden;
+
+    .background {
+      @extend .row;
+
+      position: absolute;
+
+      margin: 0;
+      width: 100%;
+      height: $player-height;
+
+      border-radius: $border-radius-large;
+
+      .station-img {
+        @extend .col-xs-2;
+
+        padding: 0 10px 0 0;
+        margin-top: -19px;
+      }
+    }
+
+    .controls-container {
+      position: relative;
+
+      width: 100%;
+      height: $player-height;
+
+      padding: 5px 0 0;
+
+      @include linear-gradient(to right, rgba($gray-dark, 0) 10%, rgba($gray-dark, 1) 15%);
+
+      .controls {
+        @extend .col-xs-offset-2;
+        @extend .col-xs-10;
+
+        padding-left: 0;
+
+        $btn-width:   50px;
+
+        .btn-link {
+          position: relative;
+          width: $btn-width;
+          border: none;
+        }
+
+        .volumebar {
+          display: inline-block;
+          position: relative;
+
+          width: calc(100% - (#{$btn-width} * 3) - 12px);
+          height: 10px;
+
+          padding: 2px 0 0;
+
+          .track {
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            border: 1px solid $gray-darker;
+            background: $gray-dark;
+            cursor: pointer;
+          }
+
+          .value {
+            position: absolute;
+            left: 0;
+            width: 50%;
+
+            @include transition(all .15s ease-out);
+            height: 8px;
+            background: $gray-light;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
   .nav {
     height: $nav-height;
 
@@ -10,6 +99,16 @@
       &:first-child {
         margin-left : 0;
       }
+
+      &.disabled {
+        cursor: auto;
+        background-color:#1a1a1a;
+
+        & > img {
+          opacity:0.2;
+        }
+      }
+
     }
   }
 

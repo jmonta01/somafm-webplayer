@@ -14,7 +14,7 @@ angular.module('somafmPlayerApp')
         link: function (scope, element, attr) {
 
           scope.isSelected = function (name) {
-            return $state.current.name === name;
+            return $state.current.name == name;
           }
 
         }

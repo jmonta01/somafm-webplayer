@@ -2,8 +2,8 @@
 
 angular.module('somafmPlayerApp')
   .controller('MainCtrl', [
-    '$scope', '$state', 'PlayerService',
-    function ($scope, $state, PlayerService) {
+    '$rootScope', '$scope', '$state', 'PlayerService',
+    function ($rootScope, $scope, $state, PlayerService) {
       var self = this;
       self.config = {
         largeHeader: false,
@@ -21,14 +21,9 @@ angular.module('somafmPlayerApp')
         }
       );
 
-      $scope.$watch(
-        function () {
-          return PlayerService.getPlayingStation();
-        },
-        function (playingStation) {
-          self.config.hasPlayer = playingStation != null;
-        }
-      );
+      $rootScope.$watch('playingStation', function (playingStation) {
+        self.config.hasPlayer = playingStation != null;
+      });
 
 
     }

@@ -10,7 +10,7 @@ angular.module('somafmPlayerApp')
           value: "=",
           valueChange: "&"
         },
-        templateUrl: 'common/player/volumebar.tpl.html',
+        templateUrl: 'common/volumebar.tpl.html',
         link: function (scope, element, attr) {
           var width,
             offset,

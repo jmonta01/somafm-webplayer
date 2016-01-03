@@ -30,11 +30,11 @@
       </div>
       <div class="col-xs-2">
         <button class="btn btn-link btn-lg pull-right" ng-click="playStation(station)"
-                ng-show="$root.playingStation !== station">
+                ng-show="!isStationPlaying(station)">
           <i class="fa fa-play"></i>
         </button>
         <button class="btn btn-link btn-lg pull-right" ng-click="stopStation(station)"
-                ng-show="$root.playingStation === station">
+                ng-show="isStationPlaying(station)">
           <i class="fa fa-stop"></i>
         </button>
         <button class="btn btn-link btn-lg pull-right" ng-class="{'btn-fav': station.favorite}"

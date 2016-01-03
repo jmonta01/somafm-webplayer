@@ -23,8 +23,8 @@
         <img src="../../images/nav/now_playing_btn.png" />
       </a>
       <a ng-if="$root.playingStation" ui-sref-active="selected" ui-sref="now-playing({stationID: $root.playingStation._id})">
-        <img ng-if="!isSelected('now_playing')" src="../../images/nav/now_playing_btn.png" />
-        <img ng-if="isSelected('now_playing')" src="../../images/nav/now_playing_selected_btn.png" />
+        <img ng-if="!isSelected('now-playing')" src="../../images/nav/now_playing_btn.png" />
+        <img ng-if="isSelected('now-playing')" src="../../images/nav/now_playing_selected_btn.png" />
       </a>
     </div>
   </div>

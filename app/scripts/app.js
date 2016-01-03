@@ -92,7 +92,7 @@ angular
         .state('now-playing', {
           url: '/now-playing/:stationID',
           data: {
-            largeHeader: true
+            largeHeader: false
           },
           views: {
             header: {

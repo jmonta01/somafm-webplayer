@@ -17,10 +17,15 @@ html {
     background: $gray-darker;
     height: 100%;
 
+
     .container {
       min-width: 320px;
-      max-width: 600px;
+      max-width: 525px;
+
+      min-height: 380px;
       height: 100%;
+
+      overflow: hidden;
     }
 
   }

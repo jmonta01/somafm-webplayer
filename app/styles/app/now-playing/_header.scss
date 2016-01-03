@@ -1,5 +1,38 @@
 .header {
   .now-playing {
 
+    .row {
+      margin: 0;
+
+      .img_col {
+        padding: 0;
+      }
+
+      .content_col {
+        padding: 0 0 0 10px;
+
+        h4 {
+          @include transition(font-size .3s ease-out);
+          margin: 0;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.5em;
+        }
+
+        p {
+          @include transition(font-size .3s ease-out);
+          margin: 0 0 4px 0;
+          font-size: 12px;
+          line-height: 1.15em;
+          color: $gray-light;
+        }
+
+        .btn {
+          font-size: 20px;
+          line-height: 1.15;
+          padding: 0 5px 0 0;
+        }
+      }
+    }
   }
 }

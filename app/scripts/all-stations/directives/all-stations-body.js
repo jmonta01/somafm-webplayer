@@ -11,8 +11,8 @@ angular.module('somafmPlayerApp')
         link: function (scope, element, attr) {
           scope.sort = {
             types: [
-              {label: 'Name', type: 'name', defaultAsc: true},
               {label: 'Popularity', type: 'popularity', defaultAsc: false},
+              {label: 'Name', type: 'name', defaultAsc: true},
               {label: 'Genre', type: 'genre', defaultAsc: true}
             ],
             selectedType: null,
@@ -84,15 +84,14 @@ angular.module('somafmPlayerApp')
           };
 
           scope.playStation = function (station) {
-            PlayerService.play(station);
             $state.go('now-playing', {stationID: station._id});
           };
 
           scope.isStationPlaying = function (station) {
-            return PlayerService.playingStation === station;
+            return PlayerService.isPlaying(station);
           };
 
-          scope.stopStation = function (station) {
+          scope.stopStation = function () {
             PlayerService.stop();
           };
 
@@ -107,7 +106,7 @@ angular.module('somafmPlayerApp')
             )
           };
 
-          scope.setSort(_.first(scope.sort.types));
+          scope.setSort(_.findWhere(scope.sort.types));
         }
       }
     }
