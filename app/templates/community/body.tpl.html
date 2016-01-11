@@ -1,3 +1,26 @@
 <div class="community">
-  community body
+  <div class="list-header">
+    <div class="row">
+      <div class="col-xs-4">
+        <h3 class="title">Community</h3>
+      </div>
+      <div class="col-xs-8">
+        <div class="btn-group btn-group-sm pull-right">
+          <button ng-repeat="view in views"
+                  class="btn btn-primary"
+                  ng-class="{'active': selectedView === view}"
+                  ng-click="show(view)">
+            {{view}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-body" ng-switch="selectedView">
+    <sf-community-news-view ng-switch-when="news"></sf-community-news-view>
+    <sf-community-twitter-view ng-switch-when="twitter"></sf-community-twitter-view>
+    <sf-community-flickr-view ng-switch-when="flickr"></sf-community-flickr-view>
+    <sf-community-facebook-view ng-switch-when="facebook"></sf-community-facebook-view>
+  </div>
 </div>

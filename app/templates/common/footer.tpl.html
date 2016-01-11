@@ -3,28 +3,28 @@
   <div class="row nav">
     <div class="col-xs-12">
       <a ui-sref-active="selected" ui-sref="all-stations">
-        <img ng-if="!isSelected('all-stations')" src="../../images/nav/all_stations_btn.png" />
-        <img ng-if="isSelected('all-stations')" src="../../images/nav/all_stations_selected_btn.png" />
+        <img ng-if="!isSelected('all-stations')" class="img-responsive" src="../../images/nav/all_stations_btn.png" />
+        <img ng-if="isSelected('all-stations')" class="img-responsive" src="../../images/nav/all_stations_selected_btn.png" />
       </a>
       <a ui-sref-active="selected" ui-sref="fav-stations">
-        <img ng-if="!isSelected('fav-stations')" src="../../images/nav/fav_stations_btn.png" />
-        <img ng-if="isSelected('fav-stations')" src="../../images/nav/fav_stations_selected_btn.png" />
+        <img ng-if="!isSelected('fav-stations')" class="img-responsive" src="../../images/nav/fav_stations_btn.png" />
+        <img ng-if="isSelected('fav-stations')" class="img-responsive" src="../../images/nav/fav_stations_selected_btn.png" />
       </a>
       <a ui-sref-active="selected" ui-sref="fav-songs">
-        <img ng-if="!isSelected('fav-songs')" src="../../images/nav/fav_songs_btn.png" />
-        <img ng-if="isSelected('fav-songs')" src="../../images/nav/fav_songs_selected_btn.png" />
+        <img ng-if="!isSelected('fav-songs')" class="img-responsive" src="../../images/nav/fav_songs_btn.png" />
+        <img ng-if="isSelected('fav-songs')" class="img-responsive" src="../../images/nav/fav_songs_selected_btn.png" />
       </a>
       <a ui-sref-active="selected" ui-sref="community">
-        <img ng-if="!isSelected('community')" src="../../images/nav/community_btn.png" />
-        <img ng-if="isSelected('community')" src="../../images/nav/community_selected_btn.png" />
+        <img ng-if="!isSelected('community')" class="img-responsive" src="../../images/nav/community_btn.png" />
+        <img ng-if="isSelected('community')" class="img-responsive" src="../../images/nav/community_selected_btn.png" />
       </a>
       <a ng-if="!$root.playingStation" class="disabled">
         <div class="dimmer"></div>
-        <img src="../../images/nav/now_playing_btn.png" />
+        <img class="img-responsive" src="../../images/nav/now_playing_btn.png" />
       </a>
       <a ng-if="$root.playingStation" ui-sref-active="selected" ui-sref="now-playing({stationID: $root.playingStation._id})">
-        <img ng-if="!isSelected('now-playing')" src="../../images/nav/now_playing_btn.png" />
-        <img ng-if="isSelected('now-playing')" src="../../images/nav/now_playing_selected_btn.png" />
+        <img ng-if="!isSelected('now-playing')" class="img-responsive" src="../../images/nav/now_playing_btn.png" />
+        <img ng-if="isSelected('now-playing')" class="img-responsive" src="../../images/nav/now_playing_selected_btn.png" />
       </a>
     </div>
   </div>

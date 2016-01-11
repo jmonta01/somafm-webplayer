@@ -1,9 +1,165 @@
 .body {
   .community {
+    $list-header-height:    40px;
+    height: 100%;
 
-    //height: calc(100% - #{$list-header-height} - 2px);
-    //overflow-y: auto;
+    .list-header {
+      height: $list-header-height;
+      margin-bottom: 2px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      @include linear-gradient(to bottom, #454545 0%,#404040 25%,#383838 50%,#2f3030 75%,#292929 100%);
 
+      .title {
+        margin: 11px 0 0 15px;
+        padding: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
 
+      .btn-group {
+        margin: 7px 15px 0 0;
+        padding: 0;
+
+        border: 1px solid $gray-dark;
+        border-radius: 4px;
+
+        .btn {
+          background-color: #383838;
+          border: none;
+          font-size: 10px;
+          padding: 5px 8px 4px;
+
+          &:focus, &:active {
+            outline: none;
+          }
+
+          &.active {
+            background-color: #292929;
+          }
+        }
+      }
+    }
+
+    .list-body {
+      height: calc(100% - #{$list-header-height} - 2px);
+      overflow-y: auto;
+
+      border-bottom-left-radius: $border-radius-large;
+      border-bottom-right-radius: $border-radius-large;
+
+      .news {
+        font-size: 12px;
+        color: #eeeeee;
+
+        p {
+          margin:  0 0 1.5em;
+        }
+
+        blockquote {
+          margin: 1em 0;
+          font-style: oblique;
+          color: #1a9096;
+        }
+
+        /* headline style */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Trebuchet MS", "verdana", "Sans-Serif";
+          color: #f9a11b;
+          margin: 1em 0;
+        }
+
+        h1 {
+          font-weight: 500;
+          font-size: 150%;
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 125%;
+        }
+
+        h3 {
+          font-weight: 400;
+          font-size: 100%;
+          color: #1a9096;
+        }
+
+        h4 {
+          font-size: 90%;
+        }
+
+        h5 {
+          font-size: 70%;
+        }
+
+        h6 {
+          font-size: 60%;
+        }
+
+        a {
+          color: #f9a11b;
+          text-decoration: none;
+
+          &:active {
+            color: #eeeeee;
+          }
+
+          &:hover {
+            color: #E7BDAD;
+            text-decoration: underline;
+          }
+
+          &:visited {
+            color: #D8A24D;
+          }
+        }
+
+        .thumbnail {
+
+          &.with-caption {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+
+            & h2 {
+              font-size: 100%;
+              margin: 0;
+              padding: 0.5em;
+            }
+          }
+        }
+
+        .banner {
+          @extend h2;
+          line-height: 1.25em;
+        }
+
+        dl {
+          dt {
+            font-size: 1.15em;
+          }
+
+          dd {
+            font-size: 1em;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .twitter {
+        width: 100%;
+        height: 100%;
+
+        a.twitter-timeline {
+          display: block;
+          margin: 20px 15px;
+
+          color: $gray-lighter;
+        }
+      }
+
+    }
   }
 }

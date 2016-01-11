@@ -1,7 +1,6 @@
 .body {
   .all-stations {
     $list-header-height:    40px;
-
     height: 100%;
 
     .list-header {
@@ -41,7 +40,6 @@
         }
       }
     }
-
 
     .list-body {
       height: calc(100% - #{$list-header-height} - 2px);
@@ -114,12 +112,66 @@
           }
 
         }
+
         .btn-lg {
           padding: 6px;
         }
       }
 
+    }
+  }
+}
 
+@media (max-width: $screen-sm-min) {
+  .body {
+    .all-stations {
+
+      .list-header {
+        height: 40px;
+
+        .title {
+          margin: 13px 0 0 7px;
+          font-size: 12px;
+        }
+
+        .btn-group {
+          margin: 7px 5px 0 0;
+        }
+
+        .btn {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+      }
+
+      .list-body {
+
+        .genre {
+          padding: 15px;
+          font-size: 14px;
+        }
+
+        .card {
+
+          .copy-col {
+            h4 {
+              margin: 3px 0 0 0;
+              font-size: 12px;
+              line-height: 1.3em;
+            }
+
+            p {
+              font-size: 10px;
+              line-height: 1.15em;
+              margin-bottom: 5px;
+            }
+          }
+
+          .btn-lg {
+            padding: 3px 6px;
+          }
+        }
+      }
 
     }
   }

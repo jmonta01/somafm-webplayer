@@ -94,6 +94,7 @@
 
     a {
       float: left;
+      max-width: 20%;
       margin: 5px 0 0 5px;
 
       &:first-child {
@@ -113,3 +114,27 @@
   }
 
 }
+
+/*
+@media (min-width: $screen-xs-min) {
+  .footer {
+    background: blue;
+    .player {
+      background: red;
+      .btn {
+        padding: 10px 16px;
+      }
+    }
+
+    .nav {
+      background: red;
+
+      a {
+        width: 19%;
+        margin: 5px 0 0 3px;
+      }
+
+    }
+  }
+}
+*/
