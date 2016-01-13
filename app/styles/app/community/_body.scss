@@ -13,8 +13,8 @@
       .title {
         margin: 11px 0 0 15px;
         padding: 0;
-        font-size: 14px;
-        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.1;
       }
 
       .btn-group {
@@ -49,8 +49,11 @@
       border-bottom-right-radius: $border-radius-large;
 
       .news {
+        padding: 15px;
+        background: $gray-dark;
+
         font-size: 12px;
-        color: #eeeeee;
+        color: $gray-light;
 
         p {
           margin:  0 0 1.5em;
@@ -164,6 +167,41 @@
         width: 100%;
         height: 100%;
 
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: $screen-sm-min) {
+  .body {
+    .community {
+
+      .list-header {
+
+        .title {
+          font-size: 14px;
+        }
+
+        .btn-group {
+          margin: 7px 15px 0 0;
+
+          .btn {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
+        }
+      }
+
+      .list-body {
+
+        .card {
+
+          p {
+            font-size: 13px;
+          }
+        }
       }
 
     }

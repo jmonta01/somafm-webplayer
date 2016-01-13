@@ -20,16 +20,18 @@
       <div class="col-xs-3">
         <p>{{song.artist}}</p>
       </div>
-      <div class="col-xs-5">
+      <div class="col-xs-4">
         <p>{{song.title}}</p>
       </div>
-      <div class="col-xs-2">
-        <button class="btn btn-link btn-lg pull-right" ng-class="{'btn-fav': song.favorite}" ng-click="toggleFavSong(song)">
-          <i class="fa" ng-class="{'fa-star': song.favorite, 'fa-star-o': !song.favorite}"></i>
-        </button>
-        <button class="btn btn-link btn-lg pull-right" ng-click="shopSong(song)">
-          <i class="fa fa-shopping-cart"></i>
-        </button>
+      <div class="col-xs-3">
+        <div class="pull-right">
+          <button class="btn btn-link btn-lg" ng-click="shopSong(song)">
+            <i class="fa fa-fw fa-shopping-cart"></i>
+          </button>
+          <button class="btn btn-link btn-lg btn-fav" ng-class="{'btn-fav': song.favorite}" ng-click="toggleFavSong(song)">
+            <i class="fa fa-fw " ng-class="{'fa-star': song.favorite, 'fa-star-o': !song.favorite}"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>

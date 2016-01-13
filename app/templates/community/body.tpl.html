@@ -17,10 +17,10 @@
     </div>
   </div>
 
-  <div class="list-body" ng-switch="selectedView">
-    <sf-community-news-view ng-switch-when="news"></sf-community-news-view>
-    <sf-community-twitter-view ng-switch-when="twitter"></sf-community-twitter-view>
-    <sf-community-flickr-view ng-switch-when="flickr"></sf-community-flickr-view>
-    <sf-community-facebook-view ng-switch-when="facebook"></sf-community-facebook-view>
+  <div class="list-body">
+    <sf-community-news-view ng-show="selectedView == 'news'"></sf-community-news-view>
+    <sf-community-twitter-view ng-show="selectedView == 'twitter'"></sf-community-twitter-view>
+    <sf-community-flickr-view ng-show="selectedView == 'flickr'"></sf-community-flickr-view>
+    <sf-community-facebook-view ng-show="selectedView == 'facebook'"></sf-community-facebook-view>
   </div>
 </div>

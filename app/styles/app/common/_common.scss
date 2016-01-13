@@ -19,10 +19,10 @@ html {
 
 
     .container {
-      min-width: 320px;
-      max-width: 525px;
+      min-width: $min-window-width;
+      max-width: $max-window-width;
 
-      min-height: 380px;
+      min-height: $min-window-height;
       height: 100%;
 
       overflow: hidden;

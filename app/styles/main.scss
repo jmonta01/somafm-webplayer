@@ -32,6 +32,10 @@ $icon-font-path: "fonts/";
 @import "bootstrap/responsive-utilities";
 
 
+$min-window-width:      350px;
+$max-window-width:      525px;
+$min-window-height:     380px;
+
 $base-header-height:    95px;
 $large-header-height:   122px;
 

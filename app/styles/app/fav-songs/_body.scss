@@ -16,8 +16,7 @@
 
       h5 {
         margin-top: 11px;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 12px;
         line-height: 1.1;
       }
     }
@@ -40,15 +39,52 @@
 
         p {
           margin: 0;
-          font-size: 14px;
+          font-size: 11px;
           line-height: 1.5em;
           color: $gray-light;
         }
 
         .btn-link {
           padding: 6px 2px;
+
+          &:hover, &:focus {
+            outline: none;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
         }
 
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: $screen-sm-min) {
+  .body {
+    .fav-songs {
+
+      .list-header {
+
+        h5 {
+          margin-top: 11px;
+          font-size: 14px;
+          line-height: 1.1;
+        }
+
+      }
+
+      .list-body {
+
+        .card {
+
+          p {
+            font-size: 13px;
+          }
+        }
       }
 
     }

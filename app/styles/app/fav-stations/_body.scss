@@ -12,14 +12,14 @@
       @include linear-gradient(to bottom, #454545 0%,#404040 25%,#383838 50%,#2f3030 75%,#292929 100%);
 
       .title {
-        margin: 11px 0 0 15px;
         padding: 0;
-        font-size: 14px;
+        margin: 13px 0 0 7px;
+        font-size: 12px;
         font-weight: bold;
       }
 
       .btn-group {
-        margin: 7px 15px 0 0;
+        margin: 7px 5px 0 0;
         padding: 0;
 
         border: 1px solid $gray-dark;
@@ -42,7 +42,6 @@
       }
     }
 
-
     .list-body {
       height: calc(100% - #{$list-header-height} - 2px);
       overflow-y: auto;
@@ -52,9 +51,9 @@
 
       .genre {
         color: $gray-light;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: bold;
-        padding: 10px 15px;
+        padding: 15px;
         margin-bottom: -2px;
         border-bottom: 1px solid $gray;
       }
@@ -82,17 +81,18 @@
 
           h4 {
             @include transition(font-size .3s ease-out);
-            margin: 0;
-            font-size: 13px;
+
+            margin: 3px 0 0 0;
+            font-size: 12px;
             font-weight: bold;
-            line-height: 1.25em;
+            line-height: 1.3em;
           }
 
           p {
             @include transition(font-size .3s ease-out);
+            font-size: 10px;
+            line-height: 1.15em;
             margin: 0 0 4px 0;
-            font-size: 11px;
-            line-height: 1.1em;
             color: $gray-light;
           }
 
@@ -113,8 +113,64 @@
           }
 
         }
+
         .btn-lg {
-          padding: 6px;
+          padding: 3px 6px;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: $screen-sm-min) {
+  .body {
+    .fav-stations {
+
+      .list-header {
+
+        .title {
+          margin: 11px 0 0 15px;
+          font-size: 14px;
+        }
+
+        .btn-group {
+          margin: 7px 15px 0 0;
+
+          .btn {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
+        }
+      }
+
+      .list-body {
+
+        .genre {
+          padding: 10px 15px;
+          font-size: 12px;
+        }
+
+        .card {
+
+          .copy-col {
+            h4 {
+              margin: 0;
+              font-size: 13px;
+              line-height: 1.25em;
+            }
+
+            p {
+              margin: 0 0 4px 0;
+              font-size: 11px;
+              line-height: 1.1em;
+            }
+          }
+
+          .btn-lg {
+            padding: 6px;
+          }
         }
       }
 
