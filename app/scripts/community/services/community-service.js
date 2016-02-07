@@ -12,7 +12,10 @@ angular.module('somafmPlayerApp')
           if (parseData) {
             opts['transformResponse'] = NewsTransform;
           }
-          $http.get(AppURLs.news.url, opts).
+
+          var url = _.findWhere(AppURLs.community.sections, {key: 'news'}).config.dataUrl;
+
+          $http.get(url, opts).
             success(function (result) {
               resolve(result);
             }).

@@ -29,10 +29,10 @@
       border-bottom-right-radius: $border-radius-large;
 
       .card {
+        margin: 2px 0 0;
+
         padding-top: 5px;
         padding-bottom: 5px;
-
-        margin: 2px 0 0;
 
         background: $gray-dark;
         color: $gray-light;
@@ -57,7 +57,6 @@
         }
 
       }
-
     }
   }
 }

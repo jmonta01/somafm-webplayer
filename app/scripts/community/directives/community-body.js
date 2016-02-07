@@ -10,7 +10,9 @@ angular.module('somafmPlayerApp')
         scope: {},
         templateUrl: 'community/body.tpl.html',
         link: function (scope, element, attr) {
-          scope.views = AppURLs.community.sections;
+          scope.views = _.filter(AppURLs.community.sections, function (section) {
+            return section.active;
+          });
           scope.selectedView = _.first(scope.views);
           scope.show = function (view) {
             scope.selectedView = view;
