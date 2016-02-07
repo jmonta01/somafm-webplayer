@@ -4,15 +4,13 @@
   "dependencies": {
     "angular": "1.4.7",
     "json3": "~3.3.2",
-    "swfobject": "",
     "es5-shim": "~4.1.15",
     "angular-resource": "1.4.7",
     "angular-cookies": "1.4.7",
     "angular-sanitize": "1.4.7",
-    "angular-ui-router": "0.2.15",
+    "angular-ui-router": "ui-router#~0.2.15",
     "angular-touch": "~1.4.7",
     "angular-animate": "~1.3.0",
-    "angular-ui-router": "ui-router#~0.2.15",
     "underscore": "~1.8.3"
   },
   "devDependencies": {

@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2bdcd1-dbf8-4cac-8609-2a829b548cd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app/all-stations/_body.scss" afterPath="$PROJECT_DIR$/app/styles/app/all-stations/_body.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app/fav-songs/_body.scss" afterPath="$PROJECT_DIR$/app/styles/app/fav-songs/_body.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app/fav-stations/_body.scss" afterPath="$PROJECT_DIR$/app/styles/app/fav-stations/_body.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app/now-playing/_body.scss" afterPath="$PROJECT_DIR$/app/styles/app/now-playing/_body.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/community/body.tpl.html" afterPath="$PROJECT_DIR$/app/templates/community/body.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/community/directives/community-body.js" afterPath="$PROJECT_DIR$/app/scripts/community/directives/community-body.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/community/services/community-service.js" afterPath="$PROJECT_DIR$/app/scripts/community/services/community-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/now-playing/services/web-audio-player-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/dev-config.json" afterPath="$PROJECT_DIR$/app/config/dev-config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js" afterPath="$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/common/directives/player.js" afterPath="$PROJECT_DIR$/app/scripts/common/directives/player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/common/player.tpl.html" afterPath="$PROJECT_DIR$/app/templates/common/player.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="somafm-webplayer.iws" />
@@ -30,35 +31,57 @@
     <favorites_list name="somafm-webplayer" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44993895">
+    <splitter split-orientation="horizontal" split-proportion="0.4041514">
       <split-first>
         <leaf>
-          <file leaf-file-name="body.tpl.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/templates/community/body.tpl.html">
+          <file leaf-file-name="community-service.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/scripts/community/services/community-service.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.875">
-                  <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="15" column="89" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="89" />
+                  <folding>
+                    <element signature="e#836#1185#0" expanded="false" />
+                    <element signature="e#1223#1663#0" expanded="false" />
+                    <element signature="e#1703#2053#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="twitter.tpl.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/templates/community/views/twitter.tpl.html">
+          <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/scripts/common/directives/player.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.25">
-                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#769#818#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
+          <file leaf-file-name="now-playing-body.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.259366">
-                  <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-                  <folding />
+                <state vertical-scroll-proportion="0.63076925">
+                  <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#1581#1636#0" expanded="false" />
+                    <element signature="e#1682#1867#0" expanded="false" />
+                    <element signature="e#1913#1962#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="player.tpl.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/templates/common/player.tpl.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.875">
+                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -67,25 +90,65 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="community-body.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/scripts/community/directives/community-body.js">
+          <file leaf-file-name="web-audio-player-service.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/services/web-audio-player-service.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-                  <folding />
+                <state vertical-scroll-proportion="0.3723077">
+                  <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#1250#2010#0" expanded="false" />
+                    <element signature="e#2054#2171#0" expanded="false" />
+                    <element signature="e#2203#2471#0" expanded="false" />
+                    <element signature="e#2508#2571#0" expanded="false" />
+                    <element signature="e#2609#2686#0" expanded="false" />
+                    <element signature="e#2728#2886#0" expanded="false" />
+                    <element signature="e#2924#3094#0" expanded="false" />
+                    <element signature="e#3135#3282#0" expanded="false" />
+                    <element signature="e#3318#3380#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="community-service.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/scripts/community/services/community-service.js">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.32420748">
-                  <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
                   <folding>
-                    <element signature="e#836#1185#0" expanded="false" />
-                    <element signature="e#1223#1663#0" expanded="false" />
-                    <element signature="e#1703#2053#0" expanded="false" />
+                    <element signature="e#52#204#0" expanded="false" />
+                    <element signature="e#249#551#0" expanded="false" />
+                    <element signature="e#348#529#0" expanded="false" />
+                    <element signature="e#493#523#0" expanded="false" />
+                    <element signature="e#815#943#0" expanded="false" />
+                    <element signature="e#884#942#0" expanded="false" />
+                    <element signature="e#955#3046#0" expanded="false" />
+                    <element signature="e#1051#3042#0" expanded="false" />
+                    <element signature="e#1105#1460#0" expanded="false" />
+                    <element signature="e#1155#1198#0" expanded="false" />
+                    <element signature="e#1217#1450#0" expanded="false" />
+                    <element signature="e#1239#1330#0" expanded="false" />
+                    <element signature="e#1350#1438#0" expanded="false" />
+                    <element signature="e#1493#1847#0" expanded="false" />
+                    <element signature="e#1543#1586#0" expanded="false" />
+                    <element signature="e#1605#1837#0" expanded="false" />
+                    <element signature="e#1627#1718#0" expanded="false" />
+                    <element signature="e#1738#1825#0" expanded="false" />
+                    <element signature="e#1877#2217#0" expanded="false" />
+                    <element signature="e#1924#1968#0" expanded="false" />
+                    <element signature="e#1987#2207#0" expanded="false" />
+                    <element signature="e#2009#2094#0" expanded="false" />
+                    <element signature="e#2114#2195#0" expanded="false" />
+                    <element signature="e#2247#2587#0" expanded="false" />
+                    <element signature="e#2294#2338#0" expanded="false" />
+                    <element signature="e#2357#2577#0" expanded="false" />
+                    <element signature="e#2379#2464#0" expanded="false" />
+                    <element signature="e#2484#2565#0" expanded="false" />
+                    <element signature="e#2619#2980#0" expanded="false" />
+                    <element signature="e#2679#2723#0" expanded="false" />
+                    <element signature="e#2742#2970#0" expanded="false" />
+                    <element signature="e#2764#2853#0" expanded="false" />
+                    <element signature="e#2873#2958#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -120,9 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/scripts/common/services/storage-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/fav-songs/services/fav-songs-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-header.js" />
         <option value="$PROJECT_DIR$/app/scripts/common/directives/body.js" />
         <option value="$PROJECT_DIR$/app/templates/common/player/flash-player.tpl.html" />
         <option value="$PROJECT_DIR$/app/scripts/common/directives/player/flash-player.js" />
@@ -137,11 +197,7 @@
         <option value="$PROJECT_DIR$/app/templates/all-stations/body.tpl.html" />
         <option value="$PROJECT_DIR$/app/scripts/all-stations/directives/all-stations-body.js" />
         <option value="$PROJECT_DIR$/app/scripts/fav-stations/directives/fav-stations-body.js" />
-        <option value="$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js" />
-        <option value="$PROJECT_DIR$/app/scripts/now-playing/services/player-service.js" />
-        <option value="$PROJECT_DIR$/app/scripts/common/directives/player.js" />
         <option value="$PROJECT_DIR$/app/scripts/common/directives/footer.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/templates/now-playing/header.tpl.html" />
         <option value="$PROJECT_DIR$/app/styles/app/now-playing/_header.scss" />
         <option value="$PROJECT_DIR$/app/old/scripts/directives/news.js" />
@@ -154,7 +210,6 @@
         <option value="$PROJECT_DIR$/app/templates/community/views/facebook.tpl.html" />
         <option value="$PROJECT_DIR$/app/scripts/community/directives/views/facebook.js" />
         <option value="$PROJECT_DIR$/app/templates/common/footer.tpl.html" />
-        <option value="$PROJECT_DIR$/app/templates/common/player.tpl.html" />
         <option value="$PROJECT_DIR$/app/styles/app/common/_footer.scss" />
         <option value="$PROJECT_DIR$/app/styles/app/common/_common.scss" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
@@ -171,6 +226,14 @@
         <option value="$PROJECT_DIR$/app/scripts/community/directives/community-body.js" />
         <option value="$PROJECT_DIR$/app/scripts/config.js" />
         <option value="$PROJECT_DIR$/app/scripts/community/services/community-service.js" />
+        <option value="$PROJECT_DIR$/app/config/dev-config.json" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/templates/common/player.tpl.html" />
+        <option value="$PROJECT_DIR$/app/scripts/now-playing/services/player-service.js" />
+        <option value="$PROJECT_DIR$/app/scripts/now-playing/services/web-audio-player-service.js" />
+        <option value="$PROJECT_DIR$/app/scripts/common/directives/player.js" />
+        <option value="$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js" />
       </list>
     </option>
   </component>
@@ -595,6 +658,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="now-playing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="now-playing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="community" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -614,6 +765,128 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="community" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="community" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="old" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="somafm-webplayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -659,11 +932,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/scripts/now-playing/services" />
       <recent name="$PROJECT_DIR$/app/scripts/community/directives/views" />
       <recent name="$PROJECT_DIR$/app/templates/community/views" />
       <recent name="$PROJECT_DIR$/app/templates/community" />
       <recent name="$PROJECT_DIR$/app/scripts/common/directives/player" />
-      <recent name="$PROJECT_DIR$/app/templates/common/player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/templates/common" />
@@ -763,12 +1036,6 @@
       <created>1398397327197</created>
       <option name="number" value="Default" />
       <updated>1398397327197</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adding reference urls in reference documentation">
-      <created>1398667077921</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1398667077921</updated>
     </task>
     <task id="LOCAL-00003" summary="styling the now playing view&#10;starting to layer in volume scrubber">
       <created>1399442718268</created>
@@ -1058,7 +1325,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452672567630</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="setting news as the only active community, until true api based implementation can be created">
+      <created>1454873170109</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1454873170109</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1087,13 +1360,13 @@
     <layout>
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17359856" sideWeight="0.5090293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4996986" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31715575" sideWeight="0.51054853" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.51282054" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21428572" sideWeight="0.49097064" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3154961" sideWeight="0.4996986" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18510158" sideWeight="0.48945147" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22558923" sideWeight="0.50030136" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1147,7 +1420,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="adding unversioned selected button bar title image" />
     <MESSAGE value="updating config.js to local data&#10;fixing date parsing on song history transform" />
     <MESSAGE value="fixing broken fav toggling in nowplaying" />
     <MESSAGE value="setting playStation from all-stations/fav-stations to play in place as opposed to navigating to now-playing" />
@@ -1172,78 +1444,16 @@
     <MESSAGE value="styling and updating the notes &amp; twitter widgets" />
     <MESSAGE value="start of styling of updated facebook widget" />
     <MESSAGE value="responsive styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive styling" />
+    <MESSAGE value="setting news as the only active community, until true api based implementation can be created" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting news as the only active community, until true api based implementation can be created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/fav-stations/directives/fav-stations-body.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4851229">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/all-stations/directives/all-stations-body.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32988358">
-          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/services/player-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6209573">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/common/directives/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1461837">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/old/scripts/directives/html-player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18499354">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/common/directives/footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31047866">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/now-playing/header.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app/now-playing/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58077437">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/old/scripts/controllers/community.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.625">
@@ -1360,13 +1570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/common/player.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="69" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1675,16 +1878,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/community/directives/community-body.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.36312848">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/dev-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.958333">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023076924">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/community/services/community-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32420748">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="89" />
           <folding>
             <element signature="e#836#1185#0" expanded="false" />
             <element signature="e#1223#1663#0" expanded="false" />
@@ -1693,11 +1912,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/config.js">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.259366">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.14376996">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#52#204#0" expanded="false" />
+            <element signature="e#249#551#0" expanded="false" />
+            <element signature="e#348#529#0" expanded="false" />
+            <element signature="e#493#523#0" expanded="false" />
+            <element signature="e#815#943#0" expanded="false" />
+            <element signature="e#884#942#0" expanded="false" />
+            <element signature="e#955#3046#0" expanded="false" />
+            <element signature="e#1051#3042#0" expanded="false" />
+            <element signature="e#1105#1460#0" expanded="false" />
+            <element signature="e#1155#1198#0" expanded="false" />
+            <element signature="e#1217#1450#0" expanded="false" />
+            <element signature="e#1239#1330#0" expanded="false" />
+            <element signature="e#1350#1438#0" expanded="false" />
+            <element signature="e#1493#1847#0" expanded="false" />
+            <element signature="e#1543#1586#0" expanded="false" />
+            <element signature="e#1605#1837#0" expanded="false" />
+            <element signature="e#1627#1718#0" expanded="false" />
+            <element signature="e#1738#1825#0" expanded="false" />
+            <element signature="e#1877#2217#0" expanded="false" />
+            <element signature="e#1924#1968#0" expanded="false" />
+            <element signature="e#1987#2207#0" expanded="false" />
+            <element signature="e#2009#2094#0" expanded="false" />
+            <element signature="e#2114#2195#0" expanded="false" />
+            <element signature="e#2247#2587#0" expanded="false" />
+            <element signature="e#2294#2338#0" expanded="false" />
+            <element signature="e#2357#2577#0" expanded="false" />
+            <element signature="e#2379#2464#0" expanded="false" />
+            <element signature="e#2484#2565#0" expanded="false" />
+            <element signature="e#2619#2980#0" expanded="false" />
+            <element signature="e#2679#2723#0" expanded="false" />
+            <element signature="e#2742#2970#0" expanded="false" />
+            <element signature="e#2764#2853#0" expanded="false" />
+            <element signature="e#2873#2958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/common/player.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/services/player-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8153846">
+          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+          <folding>
+            <element signature="e#911#1671#0" expanded="false" />
+            <element signature="e#958#1661#0" expanded="false" />
+            <element signature="e#1086#1263#0" expanded="false" />
+            <element signature="e#1269#1650#0" expanded="false" />
+            <element signature="e#1361#1601#0" expanded="false" />
+            <element signature="e#1715#1832#0" expanded="false" />
+            <element signature="e#2302#2379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/old/scripts/directives/audio-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/old/scripts/directives/html-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/common/directives/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#769#818#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/directives/now-playing-body.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63076925">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#1581#1636#0" expanded="false" />
+            <element signature="e#1682#1867#0" expanded="false" />
+            <element signature="e#1913#1962#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/now-playing/services/web-audio-player-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3723077">
+          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+          <folding>
+            <element signature="e#1250#2010#0" expanded="false" />
+            <element signature="e#2054#2171#0" expanded="false" />
+            <element signature="e#2203#2471#0" expanded="false" />
+            <element signature="e#2508#2571#0" expanded="false" />
+            <element signature="e#2609#2686#0" expanded="false" />
+            <element signature="e#2728#2886#0" expanded="false" />
+            <element signature="e#2924#3094#0" expanded="false" />
+            <element signature="e#3135#3282#0" expanded="false" />
+            <element signature="e#3318#3380#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,6 +25,8 @@ angular
   .constant('POLL_INT', 30000)
   .constant('SHOP_URI', 'http://somafm.com/buy/appbuy.cgi?mode=amazon&title={SONG}&artist={ARTIST}')
   .constant('X2JS', window.X2JS)
+  .constant('Audio', window.Audio)
+  .constant('AudioContext', window.AudioContext)
   .config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('somafm');
   }])

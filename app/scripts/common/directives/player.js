@@ -2,8 +2,8 @@
 
 angular.module('somafmPlayerApp')
   .directive("sfPlayer", [
-    '$rootScope', '$timeout', 'PlayerService',
-    function ($rootScope, $timeout, PlayerService) {
+    '$rootScope', '$timeout', 'PlayerService', 'WebAudioPlayerService',
+    function ($rootScope, $timeout, PlayerService, WebAudioPlayerService) {
       return {
         restrict :"E",
         replace: true,
@@ -13,11 +13,11 @@ angular.module('somafmPlayerApp')
           scope.playing = false;
 
           scope.play = function (station) {
-            PlayerService.play(station);
+            WebAudioPlayerService.play(station);
           };
 
           scope.stop = function () {
-            PlayerService.stop();
+            WebAudioPlayerService.stop();
           };
 
           scope.maxVolume = function () {
@@ -29,22 +29,20 @@ angular.module('somafmPlayerApp')
           };
 
           scope.setVolume = function (value) {
-            scope.volume = PlayerService.setVolume(value);
+            scope.volume = WebAudioPlayerService.setVolume(value);
           };
 
           scope.toggleMute = function () {
-            PlayerService.toggleMute();
+            WebAudioPlayerService.toggleMute();
           };
 
           scope.isMuted = function () {
-            return PlayerService.getMuted();
+            return WebAudioPlayerService.getMuted();
           };
 
           scope.init = function () {
-            PlayerService.registerNode(document.getElementById("audioPlayer"));
-            $timeout(function () {
-              scope.volume = PlayerService.initVolume();
-            });
+            WebAudioPlayerService.init(document.getElementById("audioPlayer"));
+            scope.volume = WebAudioPlayerService.getVolume();
           };
 
           scope.init();

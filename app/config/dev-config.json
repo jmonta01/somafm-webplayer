@@ -11,9 +11,26 @@
         "key" : "[STATION_ID]"
     },
     "community" : {
-        "sections" : ["news", "twitter", "flickr", "facebook"]
-    },
-    "news" : {
-        "url" : "/data/news.xml"
+        "sections" : [
+          {
+            "key": "news",
+            "active": true,
+            "config": {
+              "dataUrl": "/data/news.xml"
+            }
+          },
+          {
+            "key": "twitter",
+            "active": false
+          },
+          {
+            "key": "flickr",
+            "active": false
+          },
+          {
+            "key": "facebook",
+            "active": false
+          }
+        ]
     }
 }

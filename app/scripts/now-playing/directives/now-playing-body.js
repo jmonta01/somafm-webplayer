@@ -3,10 +3,10 @@
 angular.module('somafmPlayerApp')
   .directive("sfNowPlayingBody", [
     '$q', '$timeout', '$window', '$state', '$stateParams',
-    'PlayerService', 'StationService', 'FavStationsService', 'FavSongsService',
+    'PlayerService', 'WebAudioPlayerService', 'StationService', 'FavStationsService', 'FavSongsService',
     'POLL_INT', 'SHOP_URI',
     function ($q, $timeout, $window, $state, $stateParams,
-              PlayerService, StationService, FavStationsService, FavSongsService,
+              PlayerService, WebAudioPlayerService, StationService, FavStationsService, FavSongsService,
               POLL_INT, SHOP_URI) {
       return {
         restrict :"E",
@@ -58,7 +58,7 @@ angular.module('somafmPlayerApp')
             StationService.getStationDetails($stateParams.stationID).then(
               function (station) {
                 scope.station = station;
-                PlayerService.play(scope.station);
+                WebAudioPlayerService.play(scope.station);
               }
             );
           } else {
