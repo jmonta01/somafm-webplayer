@@ -73,7 +73,6 @@ angular.module('somafmPlayerApp')
                     });
                     if (!scope.sort.asc) sortedStation.reverse();
                     scope.sort.stations = sortedStation;
-                    console.log(scope.sort.stations);
                     break;
                 }
               },
