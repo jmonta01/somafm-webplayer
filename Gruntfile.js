@@ -151,7 +151,7 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: ['.tmp', '<%= yeoman.app %>/.tmp']
     },
 
     // Add vendor prefixed styles
@@ -201,7 +201,7 @@ module.exports = function (grunt) {
           sourceMap: false
         },
         files: {
-          '<%= yeoman.dist %>/styles/app.css': '<%= yeoman.app %>/.tmp/styles/app.scss'
+          '<%= yeoman.app %>/.tmp/styles/app.css': '<%= yeoman.app %>/styles/main.scss'
         }
       }
     },
@@ -246,7 +246,7 @@ module.exports = function (grunt) {
         quoteChar: '\'',
         useStrict: true
       },
-      development: {
+      core: {
         src: ['<%= yeoman.app %>/templates/**/*.tpl.html'],
         dest: '<%= yeoman.app %>/.tmp/templates.js'
       }
@@ -295,10 +295,12 @@ module.exports = function (grunt) {
       js: ['<%= yeoman.dist %>/**/*.js'],
       css: ['<%= yeoman.dist %>/styles/**/*.css'],
       options: {
-        dirs: ['<%= yeoman.dist %>'],
-        basedir: '<%= yeoman.dist %>',
-        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
-
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
+        patterns: {
+          js: [
+            [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+          ]
+        }
       }
     },
 
@@ -373,9 +375,9 @@ module.exports = function (grunt) {
             src: [
               '*.{ico,png,txt}',
               '.htaccess',
-              '*.html',
-              'views/{,*/}*.html',
-              'images/*.{webp,png,jpg,jpeg,gif}',
+              '(!index)*.html',
+              'views/**/*.html',
+              'images/**/*.{webp,png,jpg,jpeg,gif}',
               'styles/fonts/*'
             ]
           },
@@ -470,7 +472,7 @@ module.exports = function (grunt) {
       'clean:server',
       'bowerInstall',
       'ngconstant:development',
-      'html2js:development',
+      'html2js',
       'includeSource:development',
       'concurrent:server',
       'autoprefixer',
@@ -491,6 +493,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'bowerInstall',
     'ngconstant:production',
+    'html2js',
     'includeSource:dist',
     'useminPrepare',
     'concurrent:dist',
