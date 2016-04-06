@@ -1,13 +1,13 @@
 {
     "allStations" : {
-        "url" : "/data/channels.xml"
+        "url" : "/data/channels.json"
     },
     "pls" : {
         "url" : "/data/[STATION_ID].pls",
         "key" : "[STATION_ID]"
     },
     "playList" : {
-        "url" : "/data/[STATION_ID].xml",
+        "url" : "/data/songs/[STATION_ID].json",
         "key" : "[STATION_ID]"
     },
     "community" : {

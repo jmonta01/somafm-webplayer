@@ -1,0 +1,5 @@
+{
+  "stream": "http://somafm.com/*.pls",
+  "history": "http://somafm.com/songs/*.json",
+  "songchange": "http://somafm.com/recent/*.test.html"
+}

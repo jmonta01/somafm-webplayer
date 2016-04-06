@@ -1,0 +1,667 @@
+{"channels": [
+	{
+		"id": "7soul",
+		"title": "Seven Inch Soul",
+		"description": "Vintage soul tracks from the original 45 RPM vinyl.",
+		"dj": "Dion Watts Garcia",
+		"djmail": "dion@somafm.com",
+		"genre": "oldies",
+		"image": "http://api.somafm.com/img/7soul120.png",
+		"largeimage": "http://api.somafm.com/logos/256/7soul256.png",
+		"xlimage": "http://api.somafm.com/logos/512/7soul512.png",
+		"twitter": "SevenInchSoul",
+		"updated": "1396144686",
+		"playlists": [
+			{ "url": "http://somafm.com/7soul.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/7soul.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/7soul64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/7soul32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "44",
+		"lastPlaying": "The Quik - Bert's Apple Crumble"
+	},
+	{
+		"id": "bagel",
+		"title": "BAGeL Radio",
+		"description": "What alternative rock radio should sound like. ",
+		"dj": "Bagel Ted",
+		"djmail": "ted@somafm.com",
+		"genre": "alternative|rock",
+		"image": "http://api.somafm.com/img/bagel120.png",
+		"largeimage": "http://api.somafm.com/logos/256/bagel256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/bagel512.jpg",
+		"twitter": "BAGeL_SomaFM",
+		"updated": "1353190673",
+		"playlists": [
+			{ "url": "http://somafm.com/bagel.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/bagel64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/bagel32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "70",
+		"lastPlaying": "Thee Oh Sees - Blood On The Deck"
+	},
+	{
+		"id": "beatblender",
+		"title": "Beat Blender",
+		"description": "A late night blend of deep-house and downtempo chill.",
+		"dj": "DJ Shawn",
+		"djmail": "shawn@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/blender120.png",
+		"largeimage": "http://api.somafm.com/logos/256/beatblender256.png",
+		"xlimage": "http://api.somafm.com/logos/512/beatblender512.png",
+		"twitter": "beatblender",
+		"updated": "1317316730",
+		"playlists": [
+			{ "url": "http://somafm.com/beatblender.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/beatblender64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/beatblender32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "124",
+		"lastPlaying": "Zero 7 - The Pageant Of The Bizarre"
+	},
+	{
+		"id": "bootliquor",
+		"title": "Boot Liquor",
+		"description": "Americana Roots music for Cowhands, Cowpokes and Cowtippers",
+		"dj": "Roy",
+		"djmail": "roy@bootliquor.com",
+		"genre": "americana",
+		"image": "http://api.somafm.com/img/bootliquor120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/bootliquor256.png",
+		"xlimage": "http://api.somafm.com/logos/512/bootliquor512.png",
+		"twitter": "bootliquor",
+		"updated": "1299122827",
+		"playlists": [
+			{ "url": "http://somafm.com/bootliquor320.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/bootliquor.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/bootliquor.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/bootliquor64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/bootliquor32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "83",
+		"lastPlaying": "Dave Alvin - Nine Volt Heart"
+	},
+	{
+		"id": "brfm",
+		"title": "Black Rock FM",
+		"description": "From the Playa to the world, back for the 2015 Burning Man festival.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "eclectic",
+		"image": "http://api.somafm.com/img/1023brc.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/brfm256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/brfm512.jpg",
+		"twitter": "blackrockfm",
+		"updated": "1342301643",
+		"playlists": [
+			{ "url": "http://somafm.com/brfm.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/brfm.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/brfm64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/brfm32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "26",
+		"lastPlaying": "Galactic Rebirth - Cyndonia"
+	},
+	{
+		"id": "cliqhop",
+		"title": "cliqhop idm",
+		"description": "Blips'n'beeps backed mostly w/beats. Intelligent Dance Music.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/cliqhop120.png",
+		"largeimage": "http://api.somafm.com/logos/256/cliqhop256.png",
+		"xlimage": "http://api.somafm.com/logos/512/cliqhop512.jpg",
+		"twitter": "cliqhop",
+		"updated": "1443030419",
+		"playlists": [
+			{ "url": "http://somafm.com/cliqhop.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/cliqhop64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/cliqhop32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "46",
+		"lastPlaying": "Bola - Pae Paoe"
+	},
+	{
+		"id": "covers",
+		"title": "Covers",
+		"description": "Just covers. Songs you know by artists you don't. We've got you covered. ",
+		"dj": "",
+		"djmail": "",
+		"genre": "eclectic",
+		"image": "http://api.somafm.com/img/covers120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/covers256.png",
+		"xlimage": "http://api.somafm.com/logos/512/covers512.png",
+		"twitter": "JustCovers",
+		"updated": "1299185814",
+		"playlists": [
+			{ "url": "http://somafm.com/covers.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/covers64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/covers32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "24",
+		"lastPlaying": "Patti Smith - Midnight Rider"
+	},
+	{
+		"id": "deepspaceone",
+		"title": "Deep Space One",
+		"description": "Deep ambient electronic, experimental and space music. For inner and outer space exploration.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "ambient",
+		"image": "http://api.somafm.com/img/deepspaceone120.gif",
+		"largeimage": "http://api.somafm.com/logos/256/deepspaceone256.png",
+		"xlimage": "http://api.somafm.com/logos/512/deepspaceone512.png",
+		"twitter": "SomaDeepSpace1",
+		"updated": "1378071301",
+		"playlists": [
+			{ "url": "http://somafm.com/deepspaceone.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/deepspaceone.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/deepspaceone64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/deepspaceone32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "189",
+		"lastPlaying": "Bass Communion - Sickness (1996)"
+	},
+	{
+		"id": "defcon",
+		"title": "DEF CON Radio",
+		"description": "Music for Hacking. The DEF CON Year-Round Channel.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica|specials",
+		"image": "http://api.somafm.com/img/defcon120.png",
+		"largeimage": "http://api.somafm.com/logos/256/defcon256.png",
+		"xlimage": "http://api.somafm.com/logos/512/defcon512.png",
+		"twitter": "SomaDefCon",
+		"updated": "1437685754",
+		"playlists": [
+			{ "url": "http://somafm.com/defcon.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/defcon64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/defcon32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "107",
+		"lastPlaying": "Trentemoller - Sycamore Feeling (Gui Boratto Remix)"
+	},
+	{
+		"id": "digitalis",
+		"title": "Digitalis",
+		"description": "Digitally affected analog rock to calm the agitated heart.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica|alternative",
+		"image": "http://api.somafm.com/img/digitalis120.png",
+		"largeimage": "http://api.somafm.com/logos/256/digitalis256.png",
+		"xlimage": "http://api.somafm.com/logos/512/digitalis512.png",
+		"twitter": "digitalis",
+		"updated": "1317316730",
+		"playlists": [
+			{ "url": "http://somafm.com/digitalis.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/digitalis.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/digitalis64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/digitalis32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "49",
+		"lastPlaying": "Boxed In - Wild West"
+	},
+	{
+		"id": "doomed",
+		"title": "Doomed",
+		"description": "Dark industrial/ambient music for tortured souls. ",
+		"dj": "Lucretia",
+		"djmail": "lucretia@somafm.com",
+		"genre": "ambient|industrial",
+		"image": "http://api.somafm.com/img/doomed120.png",
+		"largeimage": "http://api.somafm.com/logos/256/doomed256.png",
+		"xlimage": "http://api.somafm.com/logos/512/doomed512.png",
+		"twitter": "doomed",
+		"updated": "1317316730",
+		"playlists": [
+			{ "url": "http://somafm.com/doomed.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/doomed64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/doomed32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "25",
+		"lastPlaying": "Barry Andrews - Down The Pyramids"
+	},
+	{
+		"id": "dronezone",
+		"title": "Drone Zone",
+		"description": "Served best chilled, safe with most medications. Atmospheric textures with minimal beats.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "ambient",
+		"image": "http://api.somafm.com/img/dronezone120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/dronezone256.png",
+		"xlimage": "http://api.somafm.com/logos/512/dronezone512.png",
+		"twitter": "dronezone",
+		"updated": "1299186962",
+		"playlists": [
+			{ "url": "http://somafm.com/dronezone.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/dronezone.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/dronezone64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/dronezone32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "764",
+		"lastPlaying": "Al Gromer Khan - The Quiet World Of Shree Nitya"
+	},
+	{
+		"id": "dubstep",
+		"title": "Dub Step Beyond",
+		"description": "Dubstep, Dub and Deep Bass. May damage speakers at high volume.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/dubstep120.png",
+		"largeimage": "http://api.somafm.com/logos/256/dubstep256.png",
+		"xlimage": "http://api.somafm.com/logos/512/dubstep512.png",
+		"twitter": "DubstepBeyond",
+		"updated": "1338924204",
+		"playlists": [
+			{ "url": "http://somafm.com/dubstep256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/dubstep.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/dubstep64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/dubstep32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "43",
+		"lastPlaying": "Shigeto - Relentless Drag"
+	},
+	{
+		"id": "earwaves",
+		"title": "Earwaves",
+		"description": "Spanning the history of electronic and experimental music from the early pioneers to the latest innovators. ",
+		"dj": "Dwight Loop",
+		"djmail": "dwight@somafm.com",
+		"genre": "experimental",
+		"image": "http://api.somafm.com/img/earwaves120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/earwaves256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/earwaves512.jpg",
+		"twitter": "SomaEarwaves",
+		"updated": "1380647027",
+		"playlists": [
+			{ "url": "http://somafm.com/earwaves.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/earwaves.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/earwaves64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/earwaves32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "18",
+		"lastPlaying": "James Johnson - House Of Mist"
+	},
+	{
+		"id": "fluid",
+		"title": "Fluid",
+		"description": "NEW! Drown in the electronic sound of instrumental hiphop, future soul and liquid trap.",
+		"dj": "kampf",
+		"djmail": "kampf@somafm.com",
+		"genre": "electronica|hiphop",
+		"image": "http://api.somafm.com/img/fluid120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/fluid256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/fluid512.jpg",
+		"twitter": "SomaFluid",
+		"updated": "1436822911",
+		"playlists": [
+			{ "url": "http://somafm.com/fluid.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/fluid.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/fluid64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/fluid32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "79",
+		"lastPlaying": "Lee Bannon - Suffer Gene"
+	},
+	{
+		"id": "folkfwd",
+		"title": "Folk Forward",
+		"description": "Indie Folk, Alt-folk and the occasional folk classics. ",
+		"dj": "Elise",
+		"djmail": "elise@somafm.com",
+		"genre": "folk|alternative",
+		"image": "http://api.somafm.com/img/folkfwd120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/folkfwd256.png",
+		"xlimage": "http://api.somafm.com/logos/512/folkfwd512.png",
+		"twitter": "FolkForward",
+		"updated": "1359700713",
+		"playlists": [
+			{ "url": "http://somafm.com/folkfwd256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/folkfwd.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/folkfwd64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/folkfwd32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "79",
+		"lastPlaying": "Ah Holly Fam'ly - Young Veins"
+	},
+	{
+		"id": "groovesalad",
+		"title": "Groove Salad",
+		"description": "A nicely chilled plate of ambient/downtempo beats and grooves.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "ambient|electronica",
+		"image": "http://api.somafm.com/img/groovesalad120.png",
+		"largeimage": "http://api.somafm.com/logos/256/groovesalad256.png",
+		"xlimage": "http://api.somafm.com/logos/512/groovesalad512.png",
+		"twitter": "groovesalad",
+		"updated": "1382565808",
+		"playlists": [
+			{ "url": "http://somafm.com/groovesalad.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/groovesalad.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/groovesalad64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/groovesalad32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "1671",
+		"lastPlaying": "Audio Lotion - Farewell To Vesper"
+	},
+	{
+		"id": "illstreet",
+		"title": "Illinois Street Lounge",
+		"description": "Classic bachelor pad, playful exotica and vintage music of tomorrow.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "lounge",
+		"image": "http://api.somafm.com/img/illstreet.jpg",
+		
+		"xlimage": "http://api.somafm.com/logos/512/illstreet512.png",
+		"twitter": "illstreet",
+		"updated": "1325851980",
+		"playlists": [
+			{ "url": "http://somafm.com/illstreet.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/illstreet.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/illstreet64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/illstreet32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "47",
+		"lastPlaying": "Tony Hatch - Theme From Rosemary"
+	},
+	{
+		"id": "indiepop",
+		"title": "Indie Pop Rocks!",
+		"description": "New and classic favorite indie pop tracks.",
+		"dj": "Elise",
+		"djmail": "elise@somafm.com",
+		"genre": "alternative|rock",
+		"image": "http://api.somafm.com/img/indychick.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/indiepop256.png",
+		"xlimage": "http://api.somafm.com/logos/512/indiepop512.png",
+		"twitter": "indiepoprocks",
+		"updated": "1299188003",
+		"playlists": [
+			{ "url": "http://somafm.com/indiepop.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/indiepop.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/indiepop64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/indiepop32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "331",
+		"lastPlaying": "Radio Dept. - Slottet No. 2"
+	},
+	{
+		"id": "lush",
+		"title": "Lush",
+		"description": "Sensuous and mellow vocals, mostly female, with an electronic influence.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/lush-x120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/lush256.png",
+		"xlimage": "http://api.somafm.com/logos/512/lush512.png",
+		"twitter": "somalush",
+		"updated": "1317867202",
+		"playlists": [
+			{ "url": "http://somafm.com/lush.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/lush.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/lush64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/lush32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "305",
+		"lastPlaying": "Federico Aubele Feat. Natalia Clavier - La Noche Lenta (Featuring Natalia Clavier)"
+	},
+	{
+		"id": "missioncontrol",
+		"title": "Mission Control",
+		"description": "Celebrating NASA and Space Explorers everywhere.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "ambient|electronica",
+		"image": "http://api.somafm.com/img/missioncontrol120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/missioncontrol256.png",
+		"xlimage": "http://api.somafm.com/logos/512/missioncontrol512.jpg",
+		"twitter": "xMissionControl",
+		"updated": "1342304342",
+		"playlists": [
+			{ "url": "http://somafm.com/missioncontrol.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/missioncontrol64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/missioncontrol32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "47",
+		"lastPlaying": "Divine Electronics - As Mankind Dies"
+	},
+	{
+		"id": "poptron",
+		"title": "PopTron",
+		"description": "Electropop and indie dance rock with sparkle and pop.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "alternative",
+		"image": "http://api.somafm.com/img/poptron120.png",
+		"largeimage": "http://api.somafm.com/logos/256/poptron256.png",
+		"xlimage": "http://api.somafm.com/logos/512/poptron512.png",
+		"twitter": "Poptron",
+		"updated": "1317316730",
+		"playlists": [
+			{ "url": "http://somafm.com/poptron.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/poptron64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/poptron32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "92",
+		"lastPlaying": "Ratatat - Loud Pipes"
+	},
+	{
+		"id": "secretagent",
+		"title": "Secret Agent",
+		"description": "The soundtrack for your stylish, mysterious, dangerous life. For Spies and PIs too!",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "lounge",
+		"image": "http://api.somafm.com/img/secretagent120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/secretagent256.png",
+		"xlimage": "http://api.somafm.com/logos/512/secretagent512.png",
+		"twitter": "secretagentsoma",
+		"updated": "1299188268",
+		"playlists": [
+			{ "url": "http://somafm.com/secretagent.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/secretagent.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/secretagent64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/secretagent32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "264",
+		"lastPlaying": "Sven Van Hees - Seasonal Bounty (Smooth '94)"
+	},
+	{
+		"id": "seventies",
+		"title": "Left Coast 70s",
+		"description": "NEW! Mellow album rock from the Seventies. Yacht friendly.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "70s|rock",
+		"image": "http://api.somafm.com/img/seventies120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/seventies256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/seventies512.jpg",
+		"twitter": "LeftCoast70s",
+		"updated": "1435992064",
+		"playlists": [
+			{ "url": "http://somafm.com/seventies320.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/seventies.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/seventies.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/seventies64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/seventies32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "82",
+		"lastPlaying": "J.D. Souther - Songs Of Love"
+	},
+	{
+		"id": "sf1033",
+		"title": "SF 10-33",
+		"description": "Ambient music mixed with the sounds of San Francisco public safety radio traffic.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "ambient|news",
+		"image": "http://api.somafm.com/img/sf1033120.png",
+		"largeimage": "http://api.somafm.com/logos/256/sf1033256.png",
+		"xlimage": "http://api.somafm.com/logos/512/sf1033512.png",
+		"twitter": "SF1033",
+		"updated": "1335919868",
+		"playlists": [
+			{ "url": "http://somafm.com/sf1033.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/sf103364.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/sf103332.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "17",
+		"lastPlaying": "Byron Metcalf Featuring Steve Roach - The Shaman's Heart Ii (Part 2)"
+	},
+	{
+		"id": "sonicuniverse",
+		"title": "Sonic Universe",
+		"description": "Transcending the world of jazz with eclectic, avant-garde takes on tradition.",
+		"dj": "Nitya",
+		"djmail": "nitya@somafm.com",
+		"genre": "jazz",
+		"image": "http://api.somafm.com/img/sonicuniverse120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/sonicuniverse256.png",
+		"xlimage": "http://api.somafm.com/logos/512/sonicuniverse512.png",
+		"twitter": "sonicuniverse",
+		"updated": "1299205522",
+		"playlists": [
+			{ "url": "http://somafm.com/sonicuniverse192.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/sonicuniverse.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/sonicuniverse64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/sonicuniverse32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "86",
+		"lastPlaying": "Avishai Cohen - Caravan"
+	},
+	{
+		"id": "spacestation",
+		"title": "Space Station Soma",
+		"description": "Tune in, turn on, space out. Spaced-out ambient and mid-tempo electronica.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/sss.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/spacestation256.png",
+		"xlimage": "http://api.somafm.com/logos/512/spacestation512.png",
+		"twitter": "spacestationsma",
+		"updated": "1299205660",
+		"playlists": [
+			{ "url": "http://somafm.com/spacestation.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/spacestation.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/spacestation64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/spacestation32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "370",
+		"lastPlaying": "Electric Skychurch - Deus"
+	},
+	{
+		"id": "suburbsofgoa",
+		"title": "Suburbs of Goa",
+		"description": "Desi-influenced Asian world beats and beyond.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "world",
+		"image": "http://api.somafm.com/img/sog120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/suburbsofgoa256.png",
+		"xlimage": "http://api.somafm.com/logos/512/suburbsofgoa512.png",
+		"twitter": "suburbsofgoa",
+		"updated": "1342303770",
+		"playlists": [
+			{ "url": "http://somafm.com/suburbsofgoa.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/suburbsofgoa.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/suburbsofgoa64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/suburbsofgoa32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "81",
+		"lastPlaying": "Suns Of Arqa - Misra Pahvadi"
+	},
+	{
+		"id": "thetrip",
+		"title": "The Trip",
+		"description": "Progressive house / trance. Tip top tunes.",
+		"dj": "Milkman",
+		"djmail": "milkman@somafm.com",
+		"genre": "electronica",
+		"image": "http://api.somafm.com/img/thetrip120.jpg",
+		"largeimage": "http://api.somafm.com/logos/256/thetrip256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/thetrip512.jpg",
+		"twitter": "SomaTheTrip",
+		"updated": "1447535353",
+		"playlists": [
+			{ "url": "http://somafm.com/thetrip.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/thetrip64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/thetrip32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "95",
+		"lastPlaying": "Lost Tribe - Gamemaster (Lee Ault Remix)"
+	},
+	{
+		"id": "thistle",
+		"title": "ThistleRadio",
+		"description": "Exploring music from Celtic roots and branches",
+		"dj": "Fiona Ritchie",
+		"djmail": "fiona@somafm.com",
+		"genre": "celtic|world",
+		"image": "http://api.somafm.com/img/thistle120.png",
+		"largeimage": "http://api.somafm.com/logos/256/thistle256.jpg",
+		"xlimage": "http://api.somafm.com/logos/512/thistle512.jpg",
+		"twitter": "ThistleRadio",
+		"updated": "1433009017",
+		"playlists": [
+			{ "url": "http://somafm.com/thistle.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/thistle.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/thistle64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/thistle32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "53",
+		"lastPlaying": "Hanneke Cassel - Natasha McCoy's Reel / Lianne"
+	},
+	{
+		"id": "u80s",
+		"title": "Underground 80s",
+		"description": "Early 80s UK Synthpop and a bit of New Wave.",
+		"dj": "Rusty Hodge",
+		"djmail": "rusty@somafm.com",
+		"genre": "alternative|electronica",
+		"image": "http://api.somafm.com/img/u80s-120.png",
+		"largeimage": "http://api.somafm.com/logos/256/u80s256.png",
+		"xlimage": "http://api.somafm.com/logos/512/u80s512.png",
+		"twitter": "underground80s",
+		"updated": "1418528736",
+		"playlists": [
+			{ "url": "http://somafm.com/u80s256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "http://somafm.com/u80s.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/u80s.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/u80s64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/u80s32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "185",
+		"lastPlaying": "John Foxx - Swimmer 2"
+	},
+	{
+		"id": "metal",
+		"title": "Metal Detector",
+		"description": "NEW! From black to doom, prog to sludge, thrash to post, stoner to crossover, punk to industrial.",
+		"dj": "Mark Luntzel",
+		"djmail": "mark@somafm.com",
+		"genre": "metal",
+		"image": "http://api.somafm.com/img3/metal120.png",
+		"largeimage": "http://api.somafm.com/logos/256/metal256.png",
+		"xlimage": "http://api.somafm.com/logos/512/metal512.png",
+		"twitter": "SomaMetal",
+		"updated": "1438371170",
+		"playlists": [
+			{ "url": "http://somafm.com/metal.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "http://somafm.com/metal.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "http://somafm.com/metal64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "http://somafm.com/metal32.pls", "format": "aacp",  "quality": "low" }
+		],
+		"listeners": "10",
+		"lastPlaying": "Crown - Wings Beating Over Heaven"
+	}
+]}

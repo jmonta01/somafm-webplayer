@@ -2,8 +2,8 @@
 
 angular.module('somafmPlayerApp')
   .factory('StationService', [
-    '$http', '$log', '$q', 'AppURLs', 'FavStationsService', 'StationTransform', 'PlsTransform', 'PlaylistTransform',
-    function ($http, $log, $q, AppURLs, FavStationsService, StationTransform, PlsTransform, PlaylistTransform) {
+    '$http', '$log', '$q', 'AppURLs', 'FavStationsService',
+    function ($http, $log, $q, AppURLs, FavStationsService) {
 
       var parseData = true,
         stations = [];
@@ -13,17 +13,13 @@ angular.module('somafmPlayerApp')
           if (stations.length > 0) {
             resolve(stations);
           } else {
-            var opts = {};
-            if (parseData) {
-              opts['transformResponse'] = StationTransform;
-            }
-            $http.get(AppURLs.allStations.url, opts)
+            $http.get(AppURLs.allStations.url, {})
               .success(function (response) {
                 FavStationsService.getStations().then(
                   function (favs) {
-                    stations = _.map(response, function (station) {
+                    stations = response.channels;
+                    _.each(stations, function (station) {
                       station.favorite = _.contains(favs, station._id);
-                      return station;
                     });
                     resolve(stations);
                   },
@@ -52,7 +48,7 @@ angular.module('somafmPlayerApp')
           var url = AppURLs.pls.url.replace(AppURLs.pls.key, stationId);
           var opts = {};
           if (parseData) {
-            opts['transformResponse'] = PlsTransform;
+            //opts['transformResponse'] = PlsTransform;
           }
           $http.get(url, opts).success(resolve).error(reject);
         });
@@ -63,7 +59,7 @@ angular.module('somafmPlayerApp')
           var url = AppURLs.playList.url.replace(AppURLs.playList.key, stationId);
           var opts = {};
           if (parseData) {
-            opts['transformResponse'] = PlaylistTransform;
+            //opts['transformResponse'] = PlaylistTransform;
           }
           $http.get(url, opts).success(resolve).error(reject);
         });
