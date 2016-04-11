@@ -20,9 +20,11 @@
   </div>
   <div class="list-body">
 
-    <div class="row card" ng-repeat="station in sort.stations" ng-if="sort.selectedType.type !== 'genre'">
+    <div class="row card"
+         ng-if="sort.stations && sort.selectedType.type !== 'genre'"
+         ng-repeat="station in sort.stations">
       <div class="col-xs-2 img-col">
-        <img class="img-responsive" src="{{station.image}}"/>
+        <img class="img-responsive" ng-src="{{station.image}}"/>
       </div>
       <div class="col-xs-8 copy-col">
         <h4>{{station.title}}</h4>
@@ -52,12 +54,14 @@
       </div>
     </div>
 
-    <div class="row" ng-repeat="genre in sort.stations" ng-if="sort.selectedType.type === 'genre'">
+    <div class="row"
+         ng-if="sort.stations && sort.selectedType.type === 'genre'"
+         ng-repeat="genre in sort.stations">
       <div class="col-xs-12">
         <div class="genre">{{genre.label | uppercase}}</div>
         <div class="row card" ng-repeat="station in genre.stations">
           <div class="col-xs-2 img-col">
-            <img class="img-responsive" src="{{station.image}}"/>
+            <img class="img-responsive" ng-src="{{station.image}}"/>
           </div>
           <div class="col-xs-8 copy-col">
             <h4>{{station.title}}</h4>

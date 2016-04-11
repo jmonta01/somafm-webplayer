@@ -4,9 +4,10 @@ angular.module('somafmPlayerApp')
   .factory("PlsTransform", [
     function () {
       return function (data) {
-        var entries = {};
+        var entries = {},
+            dataSplit = data.split('\n');
 
-        angular.forEach(data.split("\n"), function (item) {
+        angular.forEach(dataSplit, function (item) {
           var entry = item.split("=");
           if (entry.length > 1) {
             entries[entry[0].toLowerCase()] = entry[1];

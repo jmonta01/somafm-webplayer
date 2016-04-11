@@ -18,8 +18,8 @@ angular.module('somafmPlayerApp')
           station.favorite = true;
           getStations().then(
             function (stations) {
-              if (stations.indexOf(station._id) == -1) {
-                stations.push(station._id);
+              if (stations.indexOf(station.id) == -1) {
+                stations.push(station.id);
               }
               StorageService.add(key, stations.length > 0 ? stations.join(",") : null);
               resolve();
@@ -34,8 +34,8 @@ angular.module('somafmPlayerApp')
           station.favorite = false;
           getStations().then(
             function (stations) {
-              if (stations.indexOf(station._id) > -1) {
-                stations.splice(stations.indexOf(station._id), 1);
+              if (stations.indexOf(station.id) > -1) {
+                stations.splice(stations.indexOf(station.id), 1);
               }
               StorageService.add(key, stations.length > 0 ? stations.join(",") : null);
               resolve();

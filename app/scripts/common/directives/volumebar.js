@@ -17,26 +17,28 @@ angular.module('somafmPlayerApp')
             scrubber = element.children().eq(1),
             dragging = false;
 
+          var onMouseDown  = function (event) {
+            dragging = true;
+            width =  element[0].getBoundingClientRect().width;
+            offset = element[0].getBoundingClientRect().left;
+          };
+          var onMouseUp = function (event) {
+            dragging = false;
+            _calcScrubberWidth(event.pageX);
+          };
+          var onMouseMove = function (event) {
+            if (dragging) {
+              _calcScrubberWidth(event.pageX);
+            }
+          };
+
           scope.$watch('value', function (val) {
             scrubber.css("width", val / attr.max * 100 + "%");
           });
 
-          element.on('mousedown', function (event) {
-            dragging = true;
-            width =  element[0].getBoundingClientRect().width;
-            offset = element[0].getBoundingClientRect().left;
-          });
-
-          element.on('mouseup', function (event) {
-            dragging = false;
-            _calcScrubberWidth(event.pageX);
-          });
-
-          element.on('mousemove', function (event) {
-            if (dragging) {
-              _calcScrubberWidth(event.pageX);
-            }
-          });
+          element.on('mousedown', onMouseDown);
+          element.on('mouseup', onMouseUp);
+          element.on('mousemove', onMouseMove);
 
           function _calcScrubberWidth (x) {
             var dif = x - offset;
@@ -61,6 +63,12 @@ angular.module('somafmPlayerApp')
 
             scope.$apply();
           }
+
+          scope.$on('$destroy', function () {
+            element.off('mousedown', onMouseDown);
+            element.off('mouseup', onMouseUp);
+            element.off('mousemove', onMouseMove);
+          });
 
         }
       }

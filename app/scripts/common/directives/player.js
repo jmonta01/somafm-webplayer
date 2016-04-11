@@ -34,6 +34,7 @@ angular.module('somafmPlayerApp')
 
           scope.toggleMute = function () {
             WebAudioPlayerService.toggleMute();
+            scope.volume = WebAudioPlayerService.getVolume();
           };
 
           scope.isMuted = function () {

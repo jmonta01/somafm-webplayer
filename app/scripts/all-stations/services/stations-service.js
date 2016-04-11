@@ -2,8 +2,8 @@
 
 angular.module('somafmPlayerApp')
   .factory('StationService', [
-    '$http', '$log', '$q', 'AppURLs', 'FavStationsService',
-    function ($http, $log, $q, AppURLs, FavStationsService) {
+    '$http', '$log', '$q', 'AppURLs', 'FavStationsService', 'DetectorService', 'PlsTransform',
+    function ($http, $log, $q, AppURLs, FavStationsService, DetectorService, PlsTransform) {
 
       var parseData = true,
         stations = [];
@@ -19,7 +19,7 @@ angular.module('somafmPlayerApp')
                   function (favs) {
                     stations = response.channels;
                     _.each(stations, function (station) {
-                      station.favorite = _.contains(favs, station._id);
+                      station.favorite = _.contains(favs, station.id);
                     });
                     resolve(stations);
                   },
@@ -35,7 +35,7 @@ angular.module('somafmPlayerApp')
         return $q(function (resolve, reject) {
           getStations().then(
             function (stations) {
-              var match = _.findWhere(stations, {_id: stationId});
+              var match = _.findWhere(stations, {id: stationId});
               resolve(match != null ? match : null);
             },
             reject
@@ -45,10 +45,13 @@ angular.module('somafmPlayerApp')
 
       var getStationPls = function (stationId) {
         return $q(function (resolve, reject) {
-          var url = AppURLs.pls.url.replace(AppURLs.pls.key, stationId);
+          var url = AppURLs.pls.url;
+          url = url.replace(AppURLs.pls.stationKey, stationId);
+          url = url.replace(AppURLs.pls.qualityKey, DetectorService.getAudioQuality());
+
           var opts = {};
           if (parseData) {
-            //opts['transformResponse'] = PlsTransform;
+            opts['transformResponse'] = PlsTransform;
           }
           $http.get(url, opts).success(resolve).error(reject);
         });

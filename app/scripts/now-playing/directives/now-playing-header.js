@@ -21,7 +21,7 @@ angular.module('somafmPlayerApp')
           ]).then(
             function (results) {
               var station = results[0], favStations = results[1];
-              station.favorite = _.contains(favStations, station._id);
+              station.favorite = _.contains(favStations, station.id);
               scope.station = station;
             },
             function (error) {

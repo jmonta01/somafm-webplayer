@@ -2,61 +2,67 @@
 
 angular.module('somafmPlayerApp')
   .factory('WebAudioPlayerService', [
-    '$q', '$rootScope', 'StationService', 'StorageService', 'Audio', 'AudioContext',
-    function ($q, $rootScope, StationService, StorageService, Audio, AudioContext) {
+    '$q', '$rootScope', 'AppURLs', 'StationService', 'StorageService', 'DetectorService', 'Audio', 'AudioContext',
+    function ($q, $rootScope, AppURLs, StationService, StorageService, DetectorService, Audio, AudioContext) {
 
-      var self = this;
-      self.audioHolder = null,
-      self.audio = null,
-      self.context = null,
-      self.howl = null,
-      self.volumeKey = 'volume';
-      self.lastVolume = null;
-      self.currentTime = 0;
+      var self = {
+        audioHolder: null,
+        audio: null,
+        context: null,
+        howl: null,
+        volumeKey: 'volume',
+        lastVolume: null,
+        currentTime: 0
+      };
+
+      var createStreamSource = function (type, url) {
+        var source = document.createElement('source');
+        source.src = url;
+        return source;
+      };
 
       var loadStreams = function (station) {
-        angular.forEach(station.streamUrls.reverse(), function (url) {
-          var source = document.createElement('source');
-          source.type = self.audio.canPlayType('audio/mpeg;') ? 'audio/mpeg' : source.type = 'audio/ogg';
-          source.src = url;
-          self.audio.appendChild(source);
+        angular.element(self.audio).html('');
+        var typeArray = DetectorService.getAudioTypeArray(self.audio);
+        var qualityArray = DetectorService.getAudioQualityArray();
+
+        _.each(qualityArray, function (quality) {
+          _.each(typeArray, function (type) {
+            var primaryUrl = AppURLs.streams.urls.primary
+              .replace(AppURLs.streams.qualityKey, quality)
+              .replace(AppURLs.streams.typeKey, type)
+              .replace(AppURLs.streams.stationKey, station.id);
+
+            self.audio.appendChild(createStreamSource(type, primaryUrl));
+
+            var alternateUrl = AppURLs.streams.urls.alternate
+              .replace(AppURLs.streams.qualityKey, quality)
+              .replace(AppURLs.streams.typeKey, type)
+              .replace(AppURLs.streams.stationKey, station.id);
+
+            self.audio.appendChild(createStreamSource(type, alternateUrl));
+          })
         });
         self.audio.load();
       };
 
       var playStream = function (station) {
         self.audio.play();
+        station.playing = true;
 
         //var analyser = self.context.createAnalyser();
         //var source = self.context.createMediaElementSource(self.audio);
         //source.connect(analyser);
         //analyser.connect(self.context.destination);
-
-
-        station.playing = true;
       };
 
       var play = function (station) {
         return $q(function (resolve, reject) {
           if ($rootScope.playingStation) $rootScope.playingStation.playing = false;
-          if (station.streamUrls != null) {
-            loadStreams(station);
-            playStream(station);
-            $rootScope.playingStation = station;
-            resolve($rootScope.playingStation);
-          } else {
-            StationService.getStationPls(station._id).then(
-              function (data) {
-                station.streamUrls = data;
-                loadStreams(station);
-                playStream(station);
-                $rootScope.playingStation = station;
-                resolve($rootScope.playingStation);
-              },
-              reject
-            );
-          }
-
+          loadStreams(station);
+          playStream(station);
+          $rootScope.playingStation = station;
+          resolve($rootScope.playingStation);
         });
       };
 
@@ -67,13 +73,9 @@ angular.module('somafmPlayerApp')
       var stop = function () {
         return $q(function (resolve) {
           $rootScope.playingStation.playing = false;
-
           self.audio.pause();
-
-          //self.audio.load();
           self.currentTime = 0;
-
-          self.audioHolder.html("");
+          angular.element(self.audio).html('');
 
           resolve();
         });
@@ -97,19 +99,18 @@ angular.module('somafmPlayerApp')
       var toggleMute = function () {
         if (getMuted()) self.lastVolume = self.audio.volume;
         self.audio.muted = !self.audio.muted;
-        setVolume(self.audio.muted ? 0 : lastVolume);
+        setVolume(self.audio.muted ? 0 : self.lastVolume);
       };
 
       var setMuted = function (value) {
         if (getMuted()) self.lastVolume = self.audio.volume;
         self.audio.muted = value;
-        setVolume(value ? 0 : lastVolume);
+        setVolume(value ? 0 : self.lastVolume);
       };
 
       var getMuted = function () {
         return self.audio ? self.audio.muted : null;
       };
-
 
       var init = function (audioNode) {
         self.audioHolder = angular.element(audioNode);
@@ -118,9 +119,11 @@ angular.module('somafmPlayerApp')
         self.audio.controls = false;
         self.audio.autoplay = true;
 
+        //Android-Chrome play delay: https://www.internet-radio.com/community/threads/very-slow-buffering-in-android.20139/
+
         self.audioHolder[0].appendChild(self.audio);
 
-        self.context = new AudioContext();
+        //self.context = new AudioContext();
 
         initVolume();
       };

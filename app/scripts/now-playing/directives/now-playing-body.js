@@ -24,8 +24,8 @@ angular.module('somafmPlayerApp')
             var loadFavSongs = FavSongsService.get();
             $q.all([loadPlaylist, loadFavSongs]).then(
               function (results) {
-                var songs = results[0], favSongs = results[1];
-                scope.songs = _.map(songs, function (song) {
+                var playlist = results[0], favSongs = results[1];
+                scope.songs = _.map(playlist.songs, function (song) {
                   song.favorite = angular.isDefined(_.findWhere(favSongs, {artist: song.artist, album: song.album, title: song.title}));
                   return song;
                 });

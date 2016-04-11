@@ -10,7 +10,8 @@ angular
     'LocalStorageModule',
     'ui.router',
     'somafm.tpls',
-    'jtt_aping'
+    'jtt_aping',
+    'ng.deviceDetector'
   ])
   .constant('USE_HTML_AUDIO', (function () {
     var elem = document.createElement("audio");

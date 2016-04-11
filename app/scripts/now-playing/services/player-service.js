@@ -5,11 +5,12 @@ angular.module('somafmPlayerApp')
     '$q', '$rootScope', 'StationService', 'StorageService',
     function ($q, $rootScope, StationService, StorageService) {
 
-      var self = this;
-      self.audioNode = null;
-      self.volumeKey = 'volume';
-      self.lastVolume = null;
-      self.currentTime = 0;
+      var self = {
+        audioNode: null,
+        volumeKey: 'volume',
+        lastVolume: null,
+        currentTime: 0
+      };
 
       var loadStreams = function (station) {
         angular.forEach(station.streamUrls.reverse(), function (url) {
@@ -35,7 +36,7 @@ angular.module('somafmPlayerApp')
             $rootScope.playingStation = station;
             resolve($rootScope.playingStation);
           } else {
-            StationService.getStationPls(station._id).then(
+            StationService.getStationPls(station.id).then(
               function (data) {
                 station.streamUrls = data;
                 loadStreams(station);
@@ -56,16 +57,14 @@ angular.module('somafmPlayerApp')
 
       var stop = function () {
         return $q(function (resolve) {
+          debugger;
+
           $rootScope.playingStation.playing = false;
-
           self.audioNode.pause();
-
           //self.audioNode.load();
           self.currentTime = 0;
 
           angular.element(self.audioNode).html("");
-
-
           resolve();
         });
       };

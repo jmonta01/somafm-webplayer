@@ -77,7 +77,7 @@ angular.module('somafmPlayerApp')
           };
 
           scope.playStation = function (station) {
-            $state.go('now-playing', {stationID: station._id});
+            $state.go('now-playing', {stationID: station.id});
           };
 
           scope.isStationPlaying = function (station) {
