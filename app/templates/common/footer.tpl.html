@@ -1,5 +1,5 @@
 <div class="footer">
-  <sf-player ng-show="config.hasPlayer"></sf-player>
+  <sf-player selected-station="selectedStation"></sf-player>
   <nav>
     <a ui-sref-active="selected" ui-sref="all-stations">
       <img ng-if="!isSelected('all-stations')" class="img-responsive" src="images/nav/all_stations_btn.png" />
@@ -17,11 +17,11 @@
       <img ng-if="!isSelected('community')" class="img-responsive" src="images/nav/community_btn.png" />
       <img ng-if="isSelected('community')" class="img-responsive" src="images/nav/community_selected_btn.png" />
     </a>
-    <a ng-if="!$root.playingStation" class="disabled">
+    <a ng-if="!selectedStation" class="disabled">
       <div class="dimmer"></div>
       <img class="img-responsive" src="images/nav/now_playing_btn.png" />
     </a>
-    <a ng-if="$root.playingStation" ui-sref-active="selected" ui-sref="now-playing({stationID: $root.playingStation.id})">
+    <a ng-if="selectedStation" ui-sref-active="selected" ui-sref="now-playing({stationID: selectedStation.id})">
       <img ng-if="!isSelected('now-playing')" class="img-responsive" src="images/nav/now_playing_btn.png" />
       <img ng-if="isSelected('now-playing')" class="img-responsive" src="images/nav/now_playing_selected_btn.png" />
     </a>

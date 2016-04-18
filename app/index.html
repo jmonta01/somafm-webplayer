@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <!-- build:css(app/.tmp) styles/app.css -->
-    <link rel="stylesheet" href=".tmp/styles/app.css">
+    <!-- build:css(app) styles/app.css -->
+    <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
 
   </head>
@@ -20,9 +20,9 @@
     <![endif]-->
 
     <div class="container" ng-controller="MainCtrl as mainCtrl" >
-      <sf-header config="mainCtrl.config"></sf-header>
-      <sf-body config="mainCtrl.config"></sf-body>
-      <sf-footer config="mainCtrl.config"></sf-footer>
+      <sf-header large-header="mainCtrl.largeHeader"></sf-header>
+      <sf-body large-header="mainCtrl.largeHeader" selected-station="mainCtrl.selectedStation"></sf-body>
+      <sf-footer selected-station="mainCtrl.selectedStation"></sf-footer>
     </div>
 
 

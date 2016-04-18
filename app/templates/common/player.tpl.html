@@ -1,9 +1,10 @@
-<div class="player">
+<div class="player" ng-show="selectedStation">
+
   <div id='audioPlayer'></div>
 
   <div class="background">
     <div class="image-container">
-      <img class="station-img" src="{{$root.playingStation.image}}"/>
+      <img class="station-img" src="{{selectedStation.image}}"/>
     </div>
   </div>
 
@@ -11,30 +12,30 @@
     <div class="controls">
 
       <!--Play Button-->
-      <button ng-if='!$root.playingStation.playing' class='btn btn-link' ng-disabled='!$root.playingStation' ng-click='play($root.playingStation)'>
+      <button ng-if='!selectedStation.playing' class='btn btn-link' ng-disabled='!selectedStation' ng-click='play()'>
         <i class="fa fa-fw fa-lg fa-play"></i>
       </button>
 
       <!--Stop Button-->
-      <button ng-if='$root.playingStation.playing' class='btn btn-link' ng-disabled='!$root.playingStation' ng-click='stop()'>
+      <button ng-if='selectedStation.playing' class='btn btn-link' ng-disabled='!selectedStation' ng-click='stop()'>
         <i class="fa fa-fw fa-lg fa-stop"></i>
       </button>
 
       <!--Volume Down-->
-      <button ng-if='!isMuted()' class='btn btn-link' ng-disabled='!$root.playingStation' ng-click='toggleMute()'>
+      <button ng-if='!isMuted()' class='btn btn-link' ng-disabled='!selectedStation' ng-click='toggleMute()'>
         <i class="fa fa-fw fa-lg fa-volume-down"></i>
       </button>
 
       <!--Volume Off-->
-      <button ng-if='isMuted()' class='btn btn-link' ng-disabled='!$root.playingStation' ng-click='toggleMute()'>
+      <button ng-if='isMuted()' class='btn btn-link' ng-disabled='!selectedStation' ng-click='toggleMute()'>
         <i class="fa fa-fw fa-lg fa-volume-off"></i>
       </button>
 
       <!--Volume Bar-->
-      <sf-volumebar value='volume' min='0' max='1' ng-disabled='!$root.playingStation' value-change='updateVolume(val)'></sf-volumebar>
+      <sf-volumebar value='volume' min='0' max='1' ng-disabled='!selectedStation' value-change='updateVolume(val)'></sf-volumebar>
 
       <!--Volume Up-->
-      <button class='btn btn-link' ng-disabled='!$root.playingStation' ng-click='maxVolume()'>
+      <button class='btn btn-link' ng-disabled='!selectedStation' ng-click='maxVolume()'>
         <i class="fa fa-fw fa-lg fa-volume-up"></i>
       </button>
 

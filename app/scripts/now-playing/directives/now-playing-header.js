@@ -15,19 +15,25 @@ angular.module('somafmPlayerApp')
             FavStationsService.toggle(scope.station);
           };
 
-          $q.all([
-            StationService.getStationDetails($stateParams.stationID),
-            FavStationsService.getStations()
-          ]).then(
-            function (results) {
-              var station = results[0], favStations = results[1];
-              station.favorite = _.contains(favStations, station.id);
-              scope.station = station;
+          scope.$watch(
+            function () {
+              return StationService.getSelectedStation();
             },
-            function (error) {
-              console.log(error);
+            function (station) {
+              if (station) {
+                FavStationsService.getStations().then(
+                  function (favStations) {
+                    station.favorite = _.contains(favStations, station.id);
+                    scope.station = station;
+                  },
+                  function (error) {
+                    console.log(error);
+                  }
+                );
+              }
             }
-          );
+          )
+
         }
       }
     }

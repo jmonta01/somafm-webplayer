@@ -2,13 +2,11 @@
 
 angular.module('somafmPlayerApp')
   .controller('MainCtrl', [
-    '$rootScope', '$scope', '$state', 'PlayerService',
-    function ($rootScope, $scope, $state, PlayerService) {
+    '$scope', '$state', 'StationService', 'DetectorService',
+    function ($scope, $state, StationService, DetectorService) {
       var self = this;
-      self.config = {
-        largeHeader: false,
-        hasPlayer: false
-      };
+      self.largeHeader = false;
+      self.selectedStation = null;
 
       $scope.$watch(
         function () {
@@ -16,15 +14,24 @@ angular.module('somafmPlayerApp')
         },
         function (state) {
           if (state.data) {
-            self.config.largeHeader = state.data.largeHeader;
+            self.largeHeader = state.data.largeHeader;
           }
         }
       );
 
-      $rootScope.$watch('playingStation', function (playingStation) {
-        self.config.hasPlayer = playingStation != null;
-      });
+      $scope.$watch(
+        function () {
+          return StationService.getSelectedStation();
+        },
+        function (station) {
+          self.selectedStation = station;
+        }
+      );
 
+      $scope.$on('$stateChangeStart', function(e, to, toParams, from) {
+        toParams.autoPlay = angular.isDefined(toParams.autoPlay) ?
+          toParams.autoPlay : from.name == '' && DetectorService.canAutoPlay();
+      });
 
     }
   ]);

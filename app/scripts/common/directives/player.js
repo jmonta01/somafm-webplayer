@@ -2,18 +2,20 @@
 
 angular.module('somafmPlayerApp')
   .directive("sfPlayer", [
-    '$rootScope', '$timeout', 'PlayerService', 'WebAudioPlayerService',
-    function ($rootScope, $timeout, PlayerService, WebAudioPlayerService) {
+    'StationService', 'WebAudioPlayerService',
+    function (StationService, WebAudioPlayerService) {
       return {
         restrict :"E",
         replace: true,
-        scope: {},
+        scope: {
+          selectedStation: '='
+        },
         templateUrl: 'common/player.tpl.html',
         link: function (scope, element, attr) {
           scope.playing = false;
 
-          scope.play = function (station) {
-            WebAudioPlayerService.play(station);
+          scope.play = function () {
+            WebAudioPlayerService.play(scope.selectedStation);
           };
 
           scope.stop = function () {
@@ -47,10 +49,6 @@ angular.module('somafmPlayerApp')
           };
 
           scope.init();
-
-          $rootScope.$watch('playingStation', function (station) {
-            scope.playing = station != null ? station.playing : false;
-          });
 
         }
       }

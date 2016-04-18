@@ -98,6 +98,9 @@ angular
           data: {
             largeHeader: false
           },
+          params: {
+            autoPlay: undefined
+          },
           views: {
             header: {
               template: '<sf-now-playing-header></sf-now-playing-header>'

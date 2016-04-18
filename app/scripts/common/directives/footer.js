@@ -8,14 +8,13 @@ angular.module('somafmPlayerApp')
         restrict :"E",
         replace: true,
         scope: {
-          config: '='
+          selectedStation: '='
         },
         templateUrl: 'common/footer.tpl.html',
         link: function (scope, element, attr) {
-
           scope.isSelected = function (name) {
             return $state.current.name == name;
-          }
+          };
 
         }
       }

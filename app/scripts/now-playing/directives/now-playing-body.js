@@ -15,8 +15,6 @@ angular.module('somafmPlayerApp')
         templateUrl: 'now-playing/body.tpl.html',
         link: function (scope, element, attr) {
           var timer = null;
-
-          scope.station = null;
           scope.songs = [];
 
           scope.loadSongs  = function () {
@@ -53,16 +51,30 @@ angular.module('somafmPlayerApp')
             $timeout.cancel(timer);
           });
 
+          console.log($stateParams.autoPlay)
+
           if ($stateParams.stationID) {
             scope.loadSongs();
-            StationService.getStationDetails($stateParams.stationID).then(
-              function (station) {
-                scope.station = station;
-                WebAudioPlayerService.play(scope.station);
+            var lastSelectedStation = StationService.getSelectedStation();
+            if (!lastSelectedStation || lastSelectedStation.id != $stateParams.stationID) {
+              StationService.selectStation($stateParams.stationID).then(
+                function (station) {
+                  if ($stateParams.autoPlay) {
+                    WebAudioPlayerService.play(station);
+                  }
+                },
+                function (error) {
+                  console.error(error);
+                  $state.go('all-stations');
+                }
+              );
+            } else {
+              if ($stateParams.autoPlay) {
+                WebAudioPlayerService.play(lastSelectedStation);
               }
-            );
+            }
           } else {
-            $state.go('');
+            $state.go('all-stations');
           }
 
         }

@@ -12,10 +12,10 @@
 		"twitter": "SevenInchSoul",
 		"updated": "1396144686",
 		"playlists": [
-			{ "url": "http://somafm.com/7soul.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/7soul.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/7soul64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/7soul32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/7soul.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/7soul.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/7soul64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/7soul32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "44",
 		"lastPlaying": "The Quik - Bert's Apple Crumble"
@@ -33,9 +33,9 @@
 		"twitter": "BAGeL_SomaFM",
 		"updated": "1353190673",
 		"playlists": [
-			{ "url": "http://somafm.com/bagel.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/bagel64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/bagel32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/bagel.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/bagel64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/bagel32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "70",
 		"lastPlaying": "Thee Oh Sees - Blood On The Deck"
@@ -53,9 +53,9 @@
 		"twitter": "beatblender",
 		"updated": "1317316730",
 		"playlists": [
-			{ "url": "http://somafm.com/beatblender.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/beatblender64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/beatblender32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/beatblender.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/beatblender64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/beatblender32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "124",
 		"lastPlaying": "Zero 7 - The Pageant Of The Bizarre"
@@ -73,11 +73,11 @@
 		"twitter": "bootliquor",
 		"updated": "1299122827",
 		"playlists": [
-			{ "url": "http://somafm.com/bootliquor320.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/bootliquor.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/bootliquor.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/bootliquor64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/bootliquor32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/bootliquor320.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/bootliquor.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/bootliquor.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/bootliquor64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/bootliquor32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "83",
 		"lastPlaying": "Dave Alvin - Nine Volt Heart"
@@ -95,10 +95,10 @@
 		"twitter": "blackrockfm",
 		"updated": "1342301643",
 		"playlists": [
-			{ "url": "http://somafm.com/brfm.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/brfm.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/brfm64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/brfm32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/brfm.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/brfm.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/brfm64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/brfm32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "26",
 		"lastPlaying": "Galactic Rebirth - Cyndonia"
@@ -116,9 +116,9 @@
 		"twitter": "cliqhop",
 		"updated": "1443030419",
 		"playlists": [
-			{ "url": "http://somafm.com/cliqhop.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/cliqhop64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/cliqhop32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/cliqhop.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/cliqhop64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/cliqhop32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "46",
 		"lastPlaying": "Bola - Pae Paoe"
@@ -136,9 +136,9 @@
 		"twitter": "JustCovers",
 		"updated": "1299185814",
 		"playlists": [
-			{ "url": "http://somafm.com/covers.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/covers64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/covers32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/covers.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/covers64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/covers32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "24",
 		"lastPlaying": "Patti Smith - Midnight Rider"
@@ -156,10 +156,10 @@
 		"twitter": "SomaDeepSpace1",
 		"updated": "1378071301",
 		"playlists": [
-			{ "url": "http://somafm.com/deepspaceone.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/deepspaceone.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/deepspaceone64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/deepspaceone32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/deepspaceone.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/deepspaceone.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/deepspaceone64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/deepspaceone32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "189",
 		"lastPlaying": "Bass Communion - Sickness (1996)"
@@ -177,9 +177,9 @@
 		"twitter": "SomaDefCon",
 		"updated": "1437685754",
 		"playlists": [
-			{ "url": "http://somafm.com/defcon.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/defcon64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/defcon32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/defcon.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/defcon64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/defcon32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "107",
 		"lastPlaying": "Trentemoller - Sycamore Feeling (Gui Boratto Remix)"
@@ -197,10 +197,10 @@
 		"twitter": "digitalis",
 		"updated": "1317316730",
 		"playlists": [
-			{ "url": "http://somafm.com/digitalis.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/digitalis.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/digitalis64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/digitalis32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/digitalis.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/digitalis.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/digitalis64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/digitalis32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "49",
 		"lastPlaying": "Boxed In - Wild West"
@@ -218,9 +218,9 @@
 		"twitter": "doomed",
 		"updated": "1317316730",
 		"playlists": [
-			{ "url": "http://somafm.com/doomed.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/doomed64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/doomed32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/doomed.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/doomed64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/doomed32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "25",
 		"lastPlaying": "Barry Andrews - Down The Pyramids"
@@ -238,10 +238,10 @@
 		"twitter": "dronezone",
 		"updated": "1299186962",
 		"playlists": [
-			{ "url": "http://somafm.com/dronezone.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/dronezone.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/dronezone64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/dronezone32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/dronezone.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/dronezone.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/dronezone64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/dronezone32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "764",
 		"lastPlaying": "Al Gromer Khan - The Quiet World Of Shree Nitya"
@@ -259,10 +259,10 @@
 		"twitter": "DubstepBeyond",
 		"updated": "1338924204",
 		"playlists": [
-			{ "url": "http://somafm.com/dubstep256.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/dubstep.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/dubstep64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/dubstep32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/dubstep256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/dubstep.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/dubstep64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/dubstep32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "43",
 		"lastPlaying": "Shigeto - Relentless Drag"
@@ -280,10 +280,10 @@
 		"twitter": "SomaEarwaves",
 		"updated": "1380647027",
 		"playlists": [
-			{ "url": "http://somafm.com/earwaves.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/earwaves.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/earwaves64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/earwaves32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/earwaves.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/earwaves.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/earwaves64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/earwaves32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "18",
 		"lastPlaying": "James Johnson - House Of Mist"
@@ -301,10 +301,10 @@
 		"twitter": "SomaFluid",
 		"updated": "1436822911",
 		"playlists": [
-			{ "url": "http://somafm.com/fluid.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/fluid.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/fluid64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/fluid32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/fluid.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/fluid.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/fluid64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/fluid32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "79",
 		"lastPlaying": "Lee Bannon - Suffer Gene"
@@ -322,10 +322,10 @@
 		"twitter": "FolkForward",
 		"updated": "1359700713",
 		"playlists": [
-			{ "url": "http://somafm.com/folkfwd256.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/folkfwd.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/folkfwd64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/folkfwd32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/folkfwd256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/folkfwd.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/folkfwd64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/folkfwd32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "79",
 		"lastPlaying": "Ah Holly Fam'ly - Young Veins"
@@ -343,10 +343,10 @@
 		"twitter": "groovesalad",
 		"updated": "1382565808",
 		"playlists": [
-			{ "url": "http://somafm.com/groovesalad.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/groovesalad.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/groovesalad64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/groovesalad32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/groovesalad.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/groovesalad.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/groovesalad64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/groovesalad32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "1671",
 		"lastPlaying": "Audio Lotion - Farewell To Vesper"
@@ -359,15 +359,15 @@
 		"djmail": "rusty@somafm.com",
 		"genre": "lounge",
 		"image": "http://api.somafm.com/img/illstreet.jpg",
-		
+
 		"xlimage": "http://api.somafm.com/logos/512/illstreet512.png",
 		"twitter": "illstreet",
 		"updated": "1325851980",
 		"playlists": [
-			{ "url": "http://somafm.com/illstreet.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/illstreet.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/illstreet64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/illstreet32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/illstreet.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/illstreet.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/illstreet64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/illstreet32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "47",
 		"lastPlaying": "Tony Hatch - Theme From Rosemary"
@@ -385,10 +385,10 @@
 		"twitter": "indiepoprocks",
 		"updated": "1299188003",
 		"playlists": [
-			{ "url": "http://somafm.com/indiepop.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/indiepop.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/indiepop64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/indiepop32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/indiepop.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/indiepop.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/indiepop64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/indiepop32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "331",
 		"lastPlaying": "Radio Dept. - Slottet No. 2"
@@ -406,10 +406,10 @@
 		"twitter": "somalush",
 		"updated": "1317867202",
 		"playlists": [
-			{ "url": "http://somafm.com/lush.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/lush.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/lush64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/lush32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/lush.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/lush.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/lush64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/lush32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "305",
 		"lastPlaying": "Federico Aubele Feat. Natalia Clavier - La Noche Lenta (Featuring Natalia Clavier)"
@@ -427,9 +427,9 @@
 		"twitter": "xMissionControl",
 		"updated": "1342304342",
 		"playlists": [
-			{ "url": "http://somafm.com/missioncontrol.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/missioncontrol64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/missioncontrol32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/missioncontrol.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/missioncontrol64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/missioncontrol32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "47",
 		"lastPlaying": "Divine Electronics - As Mankind Dies"
@@ -447,9 +447,9 @@
 		"twitter": "Poptron",
 		"updated": "1317316730",
 		"playlists": [
-			{ "url": "http://somafm.com/poptron.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/poptron64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/poptron32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/poptron.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/poptron64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/poptron32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "92",
 		"lastPlaying": "Ratatat - Loud Pipes"
@@ -467,10 +467,10 @@
 		"twitter": "secretagentsoma",
 		"updated": "1299188268",
 		"playlists": [
-			{ "url": "http://somafm.com/secretagent.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/secretagent.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/secretagent64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/secretagent32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/secretagent.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/secretagent.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/secretagent64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/secretagent32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "264",
 		"lastPlaying": "Sven Van Hees - Seasonal Bounty (Smooth '94)"
@@ -488,11 +488,11 @@
 		"twitter": "LeftCoast70s",
 		"updated": "1435992064",
 		"playlists": [
-			{ "url": "http://somafm.com/seventies320.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/seventies.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/seventies.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/seventies64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/seventies32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/seventies320.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/seventies.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/seventies.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/seventies64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/seventies32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "82",
 		"lastPlaying": "J.D. Souther - Songs Of Love"
@@ -510,9 +510,9 @@
 		"twitter": "SF1033",
 		"updated": "1335919868",
 		"playlists": [
-			{ "url": "http://somafm.com/sf1033.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/sf103364.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/sf103332.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/sf1033.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/sf103364.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/sf103332.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "17",
 		"lastPlaying": "Byron Metcalf Featuring Steve Roach - The Shaman's Heart Ii (Part 2)"
@@ -530,10 +530,10 @@
 		"twitter": "sonicuniverse",
 		"updated": "1299205522",
 		"playlists": [
-			{ "url": "http://somafm.com/sonicuniverse192.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/sonicuniverse.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/sonicuniverse64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/sonicuniverse32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/sonicuniverse192.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/sonicuniverse.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/sonicuniverse64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/sonicuniverse32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "86",
 		"lastPlaying": "Avishai Cohen - Caravan"
@@ -551,10 +551,10 @@
 		"twitter": "spacestationsma",
 		"updated": "1299205660",
 		"playlists": [
-			{ "url": "http://somafm.com/spacestation.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/spacestation.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/spacestation64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/spacestation32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/spacestation.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/spacestation.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/spacestation64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/spacestation32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "370",
 		"lastPlaying": "Electric Skychurch - Deus"
@@ -572,10 +572,10 @@
 		"twitter": "suburbsofgoa",
 		"updated": "1342303770",
 		"playlists": [
-			{ "url": "http://somafm.com/suburbsofgoa.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/suburbsofgoa.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/suburbsofgoa64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/suburbsofgoa32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/suburbsofgoa.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/suburbsofgoa.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/suburbsofgoa64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/suburbsofgoa32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "81",
 		"lastPlaying": "Suns Of Arqa - Misra Pahvadi"
@@ -593,9 +593,9 @@
 		"twitter": "SomaTheTrip",
 		"updated": "1447535353",
 		"playlists": [
-			{ "url": "http://somafm.com/thetrip.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/thetrip64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/thetrip32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/thetrip.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/thetrip64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/thetrip32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "95",
 		"lastPlaying": "Lost Tribe - Gamemaster (Lee Ault Remix)"
@@ -613,10 +613,10 @@
 		"twitter": "ThistleRadio",
 		"updated": "1433009017",
 		"playlists": [
-			{ "url": "http://somafm.com/thistle.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/thistle.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/thistle64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/thistle32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/thistle.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/thistle.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/thistle64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/thistle32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "53",
 		"lastPlaying": "Hanneke Cassel - Natasha McCoy's Reel / Lianne"
@@ -634,11 +634,11 @@
 		"twitter": "underground80s",
 		"updated": "1418528736",
 		"playlists": [
-			{ "url": "http://somafm.com/u80s256.pls", "format": "mp3",  "quality": "highest" },
-			{ "url": "http://somafm.com/u80s.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/u80s.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/u80s64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/u80s32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/u80s256.pls", "format": "mp3",  "quality": "highest" },
+			{ "url": "data/u80s.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/u80s.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/u80s64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/u80s32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "185",
 		"lastPlaying": "John Foxx - Swimmer 2"
@@ -656,10 +656,10 @@
 		"twitter": "SomaMetal",
 		"updated": "1438371170",
 		"playlists": [
-			{ "url": "http://somafm.com/metal.pls", "format": "aacp",  "quality": "highest" },
-			{ "url": "http://somafm.com/metal.pls", "format": "mp3",  "quality": "high" },
-			{ "url": "http://somafm.com/metal64.pls", "format": "aacp",  "quality": "high" },
-			{ "url": "http://somafm.com/metal32.pls", "format": "aacp",  "quality": "low" }
+			{ "url": "data/metal.pls", "format": "aacp",  "quality": "highest" },
+			{ "url": "data/metal.pls", "format": "mp3",  "quality": "high" },
+			{ "url": "data/metal64.pls", "format": "aacp",  "quality": "high" },
+			{ "url": "data/metal32.pls", "format": "aacp",  "quality": "low" }
 		],
 		"listeners": "10",
 		"lastPlaying": "Crown - Wings Beating Over Heaven"

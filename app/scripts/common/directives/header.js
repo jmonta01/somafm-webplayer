@@ -7,7 +7,7 @@ angular.module('somafmPlayerApp')
         restrict :"E",
         replace: true,
         scope: {
-          config: '='
+          largeHeader: '='
         },
         templateUrl: 'common/header.tpl.html',
         link: function (scope, element, attr) {

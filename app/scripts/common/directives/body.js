@@ -2,16 +2,17 @@
 
 angular.module('somafmPlayerApp')
   .directive("sfBody", [
-    'PlayerService',
-    function (PlayerService) {
+    function () {
       return {
         restrict :"E",
         replace: true,
         scope: {
-          config: '='
+          largeHeader: '=',
+          selectedStation: '='
         },
         templateUrl: 'common/body.tpl.html',
-        link: function (scope, element, attr) {}
+        link: function (scope, element, attr) {
+        }
       }
     }
   ]);

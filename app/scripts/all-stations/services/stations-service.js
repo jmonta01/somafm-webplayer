@@ -5,23 +5,25 @@ angular.module('somafmPlayerApp')
     '$http', '$log', '$q', 'AppURLs', 'FavStationsService', 'DetectorService', 'PlsTransform',
     function ($http, $log, $q, AppURLs, FavStationsService, DetectorService, PlsTransform) {
 
-      var parseData = true,
-        stations = [];
+      var self = {
+        stations: [],
+        selectedStation: null
+      };
 
       var getStations = function () {
         return $q(function (resolve, reject) {
-          if (stations.length > 0) {
-            resolve(stations);
+          if (self.stations.length > 0) {
+            resolve(self.stations);
           } else {
             $http.get(AppURLs.allStations.url, {})
               .success(function (response) {
                 FavStationsService.getStations().then(
                   function (favs) {
-                    stations = response.channels;
-                    _.each(stations, function (station) {
+                    self.stations = response.channels;
+                    _.each(self.stations, function (station) {
                       station.favorite = _.contains(favs, station.id);
                     });
-                    resolve(stations);
+                    resolve(self.stations);
                   },
                   reject
                 );
@@ -31,29 +33,93 @@ angular.module('somafmPlayerApp')
         });
       };
 
+      var selectStation = function (stationId) {
+        return $q(function (resolve, reject) {
+          if (self.selectedStation && self.selectedStation.id == stationId) {
+            resolve(self.selectedStation);
+          } else {
+            getStationDetails(stationId).then(
+              function (station) {
+                getStationPls(station).then(
+                  function () {
+                    self.selectedStation = station;
+                    resolve(self.selectedStation);
+                  },
+                  reject
+                );
+              },
+              reject
+            );
+          }
+        });
+      };
+
+      var getSelectedStation = function () {
+        return self.selectedStation;
+      };
+
       var getStationDetails = function (stationId) {
         return $q(function (resolve, reject) {
           getStations().then(
             function (stations) {
-              var match = _.findWhere(stations, {id: stationId});
-              resolve(match != null ? match : null);
+              var station = _.findWhere(stations, {id: stationId}) || null;
+              resolve(station);
             },
             reject
           );
         });
       };
 
-      var getStationPls = function (stationId) {
+      var getStationPls = function (station) {
         return $q(function (resolve, reject) {
-          var url = AppURLs.pls.url;
-          url = url.replace(AppURLs.pls.stationKey, stationId);
-          url = url.replace(AppURLs.pls.qualityKey, DetectorService.getAudioQuality());
 
-          var opts = {};
-          if (parseData) {
-            opts['transformResponse'] = PlsTransform;
+          if (station.streamUrls) {
+            resolve(station);
+          } else {
+            var formatArray = DetectorService.getAudioFormatArray(),
+              qualityArray = DetectorService.getAudioQualityArray(),
+              opts = {
+                transformResponse: PlsTransform
+              },
+              calls = [];
+
+            _.each(station.playlists, function (playlist) {
+              calls.push($q(function (resolve, reject) {
+                $http.get(playlist.url, opts).success(
+                  function (result) {
+                    playlist.streamUrls = result;
+                    resolve(playlist);
+                  }
+                )
+                  .error(reject);
+              }));
+            });
+
+            $q.all(calls).then(
+              function () {
+                station.streamUrls = [];
+
+                _.each(qualityArray, function (quality) {
+                  _.each(formatArray, function (format) {
+                    var playlist = _.findWhere(station.playlists, {format: format.key, quality: quality});
+                    if (angular.isDefined(playlist)) {
+                      playlist.streamUrls = _.map(playlist.streamUrls, function (streamUrl) {
+                        return {
+                          type: format.codec,
+                          url: streamUrl
+                        }
+                      });
+                      station.streamUrls.push(playlist.streamUrls);
+                    }
+                  });
+                });
+
+                station.streamUrls = _.flatten(station.streamUrls);
+                resolve(station);
+              },
+              reject
+            );
           }
-          $http.get(url, opts).success(resolve).error(reject);
         });
       };
 
@@ -61,21 +127,17 @@ angular.module('somafmPlayerApp')
         return $q(function (resolve, reject) {
           var url = AppURLs.playList.url.replace(AppURLs.playList.key, stationId);
           var opts = {};
-          if (parseData) {
-            //opts['transformResponse'] = PlaylistTransform;
-          }
           $http.get(url, opts).success(resolve).error(reject);
         });
       };
 
       return {
+        selectStation: selectStation,
+        getSelectedStation: getSelectedStation,
         getStations: getStations,
         getStationDetails: getStationDetails,
         getStationPls: getStationPls,
-        getStationPlayList: getStationPlayList,
-        parseXML: function (val) {
-          parseData = val;
-        }
+        getStationPlayList: getStationPlayList
       }
     }
   ]);

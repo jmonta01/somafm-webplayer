@@ -193,7 +193,7 @@ module.exports = function (grunt) {
       },
       server: {
         files: {
-          '<%= yeoman.app %>/.tmp/styles/app.css': '<%= yeoman.app %>/styles/main.scss'
+          '<%= yeoman.app %>/styles/app.css': '<%= yeoman.app %>/styles/main.scss'
         }
       },
       dist: {
@@ -201,7 +201,7 @@ module.exports = function (grunt) {
           sourceMap: false
         },
         files: {
-          '<%= yeoman.app %>/.tmp/styles/app.css': '<%= yeoman.app %>/styles/main.scss'
+          '<%= yeoman.app %>/styles/app.css': '<%= yeoman.app %>/styles/main.scss'
         }
       }
     },

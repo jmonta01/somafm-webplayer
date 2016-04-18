@@ -2,33 +2,43 @@
 
 angular.module('somafmPlayerApp')
   .factory('DetectorService', [
-    'deviceDetector',
-    function (deviceDetector) {
+    'deviceDetector', 'Audio',
+    function (deviceDetector, Audio) {
 
-      var mobileOsList = ['ios', 'android', 'windows-phone'];
-      var types = [
-        { codec: 'audio/aac', key: 'aac' },
-        { codec: 'audio/mpeg', key: 'mp3' }
-      ];
+      var audioEl = new Audio(),
+        mobileOsList = [
+        'ios', 'android', 'windows-phone'
+        ],
+        formats = [
+          { codec: 'audio/aac', key: 'aacp'},
+          { codec: 'audio/mpeg', key: 'mp3' }
+        ],
+        blacklist = {
+          'android': ['aacp']
+        };
 
       var getAudioQualityArray = function () {
-        return mobileOsList.indexOf(deviceDetector.os) > -1 ? ['32', '64', '128'] : ['128', '64', '32'];
+        return mobileOsList.indexOf(deviceDetector.os) > -1 ? ['low', 'high', 'highest'] : ['highest', 'high', 'low'];
       };
 
-      var getAudioTypeArray = function (audio) {
-        return _.chain(types)
-          .filter(function (type) {
-            return audio.canPlayType(type.codec) == 'probably';
+      var canAutoPlay = function () {
+        return mobileOsList.indexOf(deviceDetector.os) == -1;
+      };
+
+      var getAudioFormatArray = function (audio) {
+        return _.chain(formats)
+          .filter(function (format) {
+            var browserCanPlay = audioEl.canPlayType(format.codec) == 'probably' || audioEl.canPlayType(format.codec) == 'maybe';
+            var isOnBlacklist = blacklist.hasOwnProperty(deviceDetector.os) ? blacklist[deviceDetector.os].indexOf(format.key) > -1 : false;
+            return browserCanPlay && !isOnBlacklist;
           })
-          .pluck('key')
           .value();
       };
 
-
-
       return {
         getAudioQualityArray: getAudioQualityArray,
-        getAudioTypeArray: getAudioTypeArray
+        getAudioFormatArray: getAudioFormatArray,
+        canAutoPlay: canAutoPlay
       }
 
     }
